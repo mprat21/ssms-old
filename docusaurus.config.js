@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'KOBIL mID Solutions',
+  title: 'KOBIL mID',
   tagline: 'Welcome to KOBIL mID documentation',
   url: 'https://kobil-mID.com',
   baseUrl: '/',
