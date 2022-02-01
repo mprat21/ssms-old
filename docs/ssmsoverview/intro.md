@@ -1,10 +1,8 @@
----
-sidebar_position: 1
----
 
-# Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+# KOBIL SSMS Overview (Multi-tenant)
+
+## KOBIL Smart Security Management Server (SSMS)
 
 ## Getting Started
 
