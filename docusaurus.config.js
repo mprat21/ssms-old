@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'KOBIL mID Solutions',
   tagline: 'Welcome to KOBIL mID documentation',
-  url: 'https://kobil-mID-solutions.com',
+  url: 'https://kobil-mID.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
