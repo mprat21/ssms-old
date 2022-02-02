@@ -1,8 +1,6 @@
 
 
-# KOBIL SSMS Overview (Multi-tenant)
-
-## KOBIL Smart Security Management Server (SSMS)
+# KOBIL mID Server (SSMS)
 KOBIL System's Smart Security Management Server (SSMS) is a multi-client capable server that handles identities and provides security features. SSMS manages users and their devices. A user can have one or more devices, one device can be used by one or more users. The devices can be either mobile (iOS or Android) or desktop devices (Windows, MacOS). SSMS manages and protects the apps which are operated on the devices. SSMS also interacts with the customer's back end systems to protect business processes end-2-end. The security features of SSMS are based on the included PKI (public key infrastructure) and the included CA (certificate authority).
 
 ### Overview
@@ -32,36 +30,3 @@ The System Administrator deploys the SSMS system and manages it. Managing the SS
 
 ### Database Layer
 The core of the feature is basically to provide all functionality of the previous SSMS versions in the scope of different tenants, so that services can be provided to different customers based on one SSMS cluster. Data separation is achieved by discriminating data with an tenantId with each relation in the database (shared-schema approach). Likewise, accesses to the SSMS's APIs are discriminated based on the provided credentials. 
-
-
-- [Node.js](https://nodejs.org/en/download/) version 14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
