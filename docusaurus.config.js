@@ -12,10 +12,10 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  algolia: {
+  /*algolia: {
     apiKey: '3a99f31d42dc63c4005d14253d0c0421',
     indexName: 'mid'
-  },
+  },*/
   favicon: 'img/favicon.svg',
   organizationName: 'KOBIL', // Usually your GitHub org/user name.
   projectName: 'KOBIL mID Solutions', // Usually your repo name.
