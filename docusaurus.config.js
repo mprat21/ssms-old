@@ -12,6 +12,10 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  algolia: {
+    apiKey: '3a99f31d42dc63c4005d14253d0c0421',
+    indexName: 'mid'
+  },
   favicon: 'img/favicon.svg',
   organizationName: 'KOBIL', // Usually your GitHub org/user name.
   projectName: 'KOBIL mID Solutions', // Usually your repo name.
@@ -66,7 +70,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
+         /* {
             title: 'Docs',
             items: [
               {
@@ -104,9 +108,9 @@ const config = {
                 href: 'https://github.com/facebook/docusaurus',
               },
             ],
-          },
+          },*/
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © KOBIL Systems GmbH`,
       },
       prism: {
         theme: lightCodeTheme,
