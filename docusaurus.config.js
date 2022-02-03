@@ -62,7 +62,11 @@ const config = {
         apiKey: 'fd33214602b7c597d3462fcb379f88f3',
   
         indexName: 'mid',
+<<<<<<< HEAD
         //...Algolia params
+=======
+        //...other Algolia params
+>>>>>>> 25e9945894a51445e0b9f6d27c683af6fc9d51a6
         position: 'right',
       },
 
