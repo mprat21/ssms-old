@@ -17,7 +17,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/ssmsoverview/intro">
-            Learn more about our Products
+            Learn everything about our Products
           </Link>
         </div>
       </div>

@@ -7,17 +7,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'KOBIL mID',
-  tagline: 'Welcome to KOBIL mID documentation',
+  tagline: 'Welcome To KOBIL mID Documentation',
   url: 'https://kobil-mID.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  /*
-  algolia: {
-    apiKey: '3a99f31d42dc63c4005d14253d0c0421',
-    indexName: 'mid'
-  },
-  */
   favicon: 'img/favicon.svg',
   organizationName: 'KOBIL', // Usually your GitHub org/user name.
   projectName: 'KOBIL mID Solutions', // Usually your repo name.
@@ -30,13 +24,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          //editUrl: 'https://github.com/kobildeveloper/mid-server',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/kobildeveloper/mid-server',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -60,15 +54,18 @@ const config = {
             docId: 'ssmsoverview/intro',
             position: 'left',
             label: 'mID Server',
-          },
-          //{to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          },        
         ],
       },
+      algolia: {
+        // Public API key: it is safe to commit it
+        apiKey: 'fd33214602b7c597d3462fcb379f88f3',
+  
+        indexName: 'mid',
+        //... other Algolia params
+        position: 'right',
+      },
+
       footer: {
         style: 'dark',
         links: [
@@ -112,7 +109,7 @@ const config = {
             ],
           },*/
         ],
-        copyright: `Copyright © KOBIL Systems GmbH`,
+        copyright: `Copyright © ${new Date().getFullYear()} KOBIL GmbH. All Rights Reserved.`,
       },
       prism: {
         theme: lightCodeTheme,
