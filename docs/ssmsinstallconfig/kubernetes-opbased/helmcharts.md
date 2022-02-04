@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Helm Chart Installation  
 
-Installation steps using Helm charts :  
+mPower (SSMS) installation steps :  
 
 1. Login to OpenShift:  
        oc login api.ocptest.ist.sn:6443 -u kubeadmin -p …  
@@ -86,7 +86,7 @@ opencensus:
 
     enabled: false  
 
-## Uninstallation  
+## Uninstallation using Helm
 
 In order to uninstall the SSMS server from your OpenShift you can run the following command.
 
