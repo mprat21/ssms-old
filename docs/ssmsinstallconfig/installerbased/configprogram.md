@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# Installation
+# Installation & Configuration
 
 Start the installation program for Windows or Linux and follow the instructions below:
 
