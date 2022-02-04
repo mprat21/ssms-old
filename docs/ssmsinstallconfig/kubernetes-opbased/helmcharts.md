@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Helm Chart Installation  
 
-mPower (SSMS) installation steps :  
+Installation steps :  
 
 1. Login to OpenShift:  
        oc login api.ocptest.ist.sn:6443 -u kubeadmin -p …  
