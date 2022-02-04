@@ -86,7 +86,7 @@ opencensus:
 
     enabled: false  
 
-## Uninstallation  
+## Uninstallation using Helm
 
 In order to uninstall the SSMS server from your OpenShift you can run the following command.
 
