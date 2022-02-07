@@ -1,10 +1,10 @@
 {
   "index_name": "kobil-ssms",
   "start_urls": [
-    "https://federicotartarini.github.io/docusaurus-example-youtube/"
+    "https://github.com/mprat21/ssms-documentation.git/"
   ],
   "sitemap_urls": [
-    "https://federicotartarini.github.io/docusaurus-example-youtube/sitemap.xml"
+    "https://github.com/mprat21/ssms-documentation.git/sitemap.xml"
   ],
   "sitemap_alternate_links": true,
   "stop_urls": [],
