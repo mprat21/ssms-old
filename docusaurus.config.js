@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'KOBIL mID',
   tagline: 'Welcome To KOBIL mID Documentation',
-  url: 'https://kobil-mID.com',
+  url: 'https://kobil-mID.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -54,13 +54,13 @@ const config = {
             docId: 'ssmsoverview/intro',
             position: 'left',
             label: 'mID Server',
-          },        
+          },
         ],
       },
       algolia: {
         // Public API key: it is safe to commit it
         apiKey: 'fd33214602b7c597d3462fcb379f88f3',
-  
+
         indexName: 'mid',
 
         //...Algolia params
