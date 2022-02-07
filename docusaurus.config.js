@@ -61,7 +61,6 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: '7740d07f6d36df294fea2aa6584211d7',
         indexName: 'kobil-ssms',
-        appid: 'UH8M0E9EEO'
       },
 
       footer: {
