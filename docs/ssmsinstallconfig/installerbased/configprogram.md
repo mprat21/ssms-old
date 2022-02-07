@@ -5,11 +5,11 @@ sidebar_position: 1
 
 Start the installation program for Windows or Linux and follow the instructions below:
 
-## Windows
+### Windows
 
 Start set up.exe by double clicking with the left mouse button.
 
-## Linux
+### Linux
 
 After the download, open the terminal. Here, switch to the directory containing the installation program.  
 Type in the command: sh./setup.bin.  
