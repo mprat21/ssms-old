@@ -7,8 +7,8 @@
 # Generated files
 .docusaurus
 .cache-loader
-.env
-config.json
+# .env
+# config.json
 
 # Misc
 .DS_Store
