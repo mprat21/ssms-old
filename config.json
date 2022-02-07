@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "index_name": "kobil-ssms",
+=======
+  "index_name": "edy",
+>>>>>>> 9fa735913d7baa01beee0cb457b34e5417287612
   "start_urls": [
     "https://github.com/mprat21/ssms-documentation/"
   ],
