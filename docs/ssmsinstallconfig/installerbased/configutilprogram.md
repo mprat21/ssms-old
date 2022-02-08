@@ -13,7 +13,7 @@ If you install many management and services nodes in a cluster, you must run the
 
 **On Windows**, start "KOBIL SSMS Configuration Utility.exe". You can find this file in the SSMS installation directory or as a shortcut on the desktop or in the start menu. This depends on your settings during the installation. The default path for Windows is  
 
-    C:\\Program Files\\KOBIL Systems\\SSMS  
+    C:\\Program Files\KOBIL Systems\SSMS  
 
 **On Linux**, start the shell script "KOBIL SSMS Configuration Utility". With default settings, you can find the directory on  
 
@@ -87,7 +87,7 @@ After configuring the database, you are required to configure the database users
 
 As additional parameters, you can define values for creating the database, which depend on the JDBC driver. You can also leave this value empty.  
 
-**Note:**  **Information on database permissions (GRANT) are available under:** **\SSMS_INSTALL\modules\(modulename)\db\grant*.sql**  
+**Note:**  Information on database permissions (GRANT) are available under: **\SSMS_INSTALL\modules\(modulename)\db\grant*.sql**  
 
 ![configurationdatabasesetup](config_databasesetup.png)  
 
@@ -98,7 +98,7 @@ In order to create the database and the tables after the selection of MSSQL, MyS
 
 **MYSQL:**
 
-**MSSQL:** [http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774]
+**MSSQL:** http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774
 
 The MySQL package only contains one connector with the file name **mysql-connector-java-/<version/>-bin.jar** which is the one to be integrated.
 In addition, note the license agreement for the Oracle database JDBC connector. You can find the license agreement in the directory <SSMS_INSTALL>/doc/licences.
