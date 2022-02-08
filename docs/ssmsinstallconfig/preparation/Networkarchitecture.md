@@ -9,27 +9,27 @@ sidebar_position: 2
 
 ### Routes
 
-| Route Name | From -> To                                                |
+| Route Name | From → To                                                |
 |------------|----------------------------------------------------------|
-| Route 1    | Apps/Services -> mID Provider/OIDC                       |
-| Route 2    | Apps/Services -> mID Provider/Login Web Frontend         |
-| Route 3    | Apps/Services -> mID Provider/Account                    |
-| Route 4    | KOBIL SDK -> mID Server/Digitanium Channel               |
-| Route 5    | Apps/Services -> mID API                                 |
-| Route 6    | IdP/UMA -> mID Connector                                 |
-| Route 7    | mID Connector -> mID Server Management                   |
-| Route 8    | mID Connector -> mID Server Services                     |
-| Route 9    | KOBIL Pooler -> mID Server Services                      |
+| Route 1    | Apps/Services → mID Provider/OIDC                       |
+| Route 2    | Apps/Services → mID Provider/Login Web Frontend         |
+| Route 3    | Apps/Services → mID Provider/Account                    |
+| Route 4    | KOBIL SDK → mID Server/Digitanium Channel               |
+| Route 5    | Apps/Services → mID API                                 |
+| Route 6    | IdP/UMA → mID Connector                                 |
+| Route 7    | mID Connector → mID Server Management                   |
+| Route 8    | mID Connector → mID Server Services                     |
+| Route 9    | KOBIL Pooler → mID Server Services                      |
 | Route 10   | Redis ↔ Pooler                                           |
 | Route 11   | mID Connector ↔ Redis                                    |
 | Route 12   | Pooler Callback via IdP extension                        |
-| Route 20   | mID Provider -> Database                                 |
-| Route 22   | mID Server -> Database                                   |
+| Route 20   | mID Provider → Database                                 |
+| Route 22   | mID Server → Database                                   |
 | Route 23   | Redis → File database                                    |
-| Route 30   | Admin(Browser) -> mID Provider Admin dashboard           |
+| Route 30   | Admin(Browser) → mID Provider Admin dashboard           |
 | Route 31   | Admin(Browser) → Grafana Dashboard                       |
-| Route 32   | Admin(Browser) -> mID Server Admin dashboard             |
-| Route 33   | Admin(Browser) -> mID Server Admin Configuration utility |
+| Route 32   | Admin(Browser) → mID Server Admin dashboard             |
+| Route 33   | Admin(Browser) → mID Server Admin Configuration utility |
 
 ## Endpoints and Ports
 
