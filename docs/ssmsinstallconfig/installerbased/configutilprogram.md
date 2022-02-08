@@ -13,7 +13,7 @@ If you install many management and services nodes in a cluster, you must run the
 
 **On Windows**, start "KOBIL SSMS Configuration Utility.exe". You can find this file in the SSMS installation directory or as a shortcut on the desktop or in the start menu. This depends on your settings during the installation. The default path for Windows is  
 
-    C:\Program Files\KOBIL Systems\SSMS  
+    C:\\Program Files\\KOBIL Systems\\SSMS  
 
 **On Linux**, start the shell script "KOBIL SSMS Configuration Utility". With default settings, you can find the directory on  
 
@@ -88,7 +88,7 @@ After configuring the database, you are required to configure the database users
 
 As additional parameters, you can define values for creating the database, which depend on the JDBC driver. You can also leave this value empty.  
 
-**Note:**  **Information on database permissions (GRANT) are available under: \SSMS_INSTALL\modules\(modulename)\db\grant*.sql**  
+**Note:**  **Information on database permissions (GRANT) are available under: \\SSMS_INSTALL\\modules\\(modulename)\\db\\grant*.sql**  
 
 ![configurationdatabasesetup](config_databasesetup.png)  
 
@@ -195,5 +195,3 @@ Almost all requests require a database connection to read data from or write dat
 #### Database Connection Pool  
 
 A connection pool is a cache of database connections, used for requests. If a new connection would be created for every request, this would cost too much effort and resources. Instead, an existing connection is used from the connection pool. Connection pools improve the speed of the request and reduce the resources used.  
-
-        
