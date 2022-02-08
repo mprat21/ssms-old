@@ -18,9 +18,9 @@ The mAST solution platform comes with these components:
 
   * KOBIL mIDentity Server (SSMS) is the security management system with device management system that enables a constant online connection and verification of the secure app. At each point in the authentication process, it is checked whether the device, the identity and the app are in a secure environment and whether the authentication or authorization of transactions can take place. In addition to the security functions, the SSMS ensures an audited security channel for end-to-end encrypted communication and the management of identities, apps and devices.
   * SDK for the operating systems iOS and Android to integrate the KOBIL technology with the ePA app with the features:
-   ..* Trusted App , the app protection to protect the applications from malware
-   ..* Trusted Login , the safe and BVA/BAS compliant way to identify yourself.
-   ..* Trusted Verify for signing transactions
+   * Trusted App , the app protection to protect the applications from malware
+   * Trusted Login , the safe and BVA/BAS compliant way to identify yourself.
+   * Trusted Verify for signing transactions
   * KOBIL IAM for ePA for the management of identities and devices as well as token generation and exchange.
 
 ###  KOBIL mIDentity Provider
