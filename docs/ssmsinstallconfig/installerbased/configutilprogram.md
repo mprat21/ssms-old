@@ -100,7 +100,7 @@ In order to create the database and the tables after the selection of MSSQL, MyS
 
 **MYSQL:**
 
-**MSSQL:** http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774  
+**MSSQL:** [http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774]
 
 The MySQL package only contains one connector with the file name “mysql-connector-java-<version>-bin.jar”,
 
