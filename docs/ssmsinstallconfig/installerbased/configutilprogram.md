@@ -100,10 +100,8 @@ In order to create the database and the tables after the selection of MSSQL, MyS
 
 **MSSQL:** [http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774]
 
-The MySQL package only contains one connector with the file name **mysql-connector-java-<version>-bin.jar** which is the one to be integrated.
-
+The MySQL package only contains one connector with the file name **mysql-connector-java-/<version/>-bin.jar** which is the one to be integrated.
 In addition, note the license agreement for the Oracle database JDBC connector. You can find the license agreement in the directory <SSMS_INSTALL>/doc/licences.
-
 In case you need to substitute the database driver for Oracle and MSSQL, you must copy the correct driver (JAR file) into the following directory:
 
     opt/KOBIL/SSMS/modules/kernel/mgt
