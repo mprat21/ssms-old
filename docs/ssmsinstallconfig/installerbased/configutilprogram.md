@@ -70,12 +70,11 @@ config.xml contains information for:
 * the configuration utility (password and port)  
 * the database configuration of the SSMS (databaseEncryptionKey, database name, connections to the database, node ID)  
 
-![configurationimpportexport](config_impportexport.png)  
+![configurationimpportexport](config_impportexport.png)
 
 The file config.xml is always stored in <SSMS_HOME>\configutil  
 
-## 8. Database  
-
+## 8. Database
 You are required to configure the database as second step. You can select the database type among the options and you can specify the name of the database to be created. To do this, you must have installed a database management system.  
 
 There are two ways to connect to the database:  
@@ -88,23 +87,20 @@ After configuring the database, you are required to configure the database users
 
 As additional parameters, you can define values for creating the database, which depend on the JDBC driver. You can also leave this value empty.  
 
-**Note:**  **Information on database permissions (GRANT) are available under: \\SSMS_INSTALL\\modules\\(modulename)\\db\\grant*.sql**  
+**Note:**  **Information on database permissions (GRANT) are available under:** **\SSMS_INSTALL\modules\(modulename)\db\grant*.sql**  
 
 ![configurationdatabasesetup](config_databasesetup.png)  
 
 ![configurationdatabasesetup1](config_databasesetup1.png)  
 
 ## 9. Database driver  
-
 In order to create the database and the tables after the selection of MSSQL, MySQL or Oracle Database, you additionally need the corresponding database connector (JDBC). The connector is delivered with installation for MSSQL and Oracle and may not be imported additionally. For MySQL the import is required and can be carried out via the button “Import database driver”. You can download the appropriate database driver (connectors) for MySQL at the following URL:  
 
 **MYSQL:**
 
 **MSSQL:** [http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774]
 
-The MySQL package only contains one connector with the file name “mysql-connector-java-<version>-bin.jar”,
-
-which is the one to be integrated.
+The MySQL package only contains one connector with the file name **mysql-connector-java-<version>-bin.jar** which is the one to be integrated.
 
 In addition, note the license agreement for the Oracle database JDBC connector. You can find the license agreement in the directory <SSMS_INSTALL>/doc/licences.
 
