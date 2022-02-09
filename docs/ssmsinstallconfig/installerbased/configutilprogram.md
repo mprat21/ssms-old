@@ -42,23 +42,23 @@ You can see an overview of the open issues, to be processed chronologically, on 
 
 On the first page, a setup overview, you can change the password. The setup page shows you the general values settings made during the installation: the port for reaching the configuration utility as well as the installation and the home directory. On the setup page, you can also limit the access to the configuration utility to specified external IPv4 addresses.  
 
-## Change Password  
+### Change Password  
 
 You can change the password, which was set during installation process. The password preserves the configuration settings and protects against unauthorized access to the configuration utility. To do that, click on "Change password" and set a password.  
 
 ![configurationchangepassword](./files/config_changepassword.png)  
 
-## IP Addresses  
+### IP Addresses  
 
 You can access the configuration utility from everywhere. However, you can limit the access by entering an IP address range and saving it. Define only comma-separated IP addresses in IPv4 format.  
 
 :warning: **Use only IP addresses in IPv4 format!**  
 
-## Save Settings  
+### Save Settings  
 
 Click on "Save" to save the settings made on the setup page.  
 
-## Exporting and Importing the Configuration  
+### Exporting and Importing the Configuration  
 
 If you install several nodes, please export the configuration file config.xml from the previous installation and then import it for each additional node. With the import of the file config.xml, every additional node contains the same database key databaseEncryptionKey, stored in this file along with other information.  
 
@@ -166,7 +166,7 @@ To make SSMS work efficiently with the database, please be careful in the config
 
 The next chapter contains a detailed description of the quantity of database connections of the SSMS and how they are configured.  
 
-## General Information  
+### General Information  
 
 SSMS is a request driven system. Every request requires a thread to execute the job. These threads are maintained in 3 pools by different components of SSMS:  
 
@@ -194,7 +194,7 @@ Almost all requests require a database connection to read data from or write dat
 
 A connection pool is a cache of database connections, used for requests. If a new connection would be created for every request, this would cost too much effort and resources. Instead, an existing connection is used from the connection pool. Connection pools improve the speed of the request and reduce the resources used.  
 
-## Database connection pool settings  
+#### Database connection pool settings  
 
 SSMS uses the open source framework c3p0 for database pooling. Please find detailed information about this framework on the web site. This chapter only contains information about the settings of the database pool.
 
@@ -251,7 +251,7 @@ Otherwise, you can carry out a test installation of the server. The test install
 
 ![configurationcertificates](./files/config_certificates.png)  
 
-## Test Installation  
+### Test Installation  
 
 Read this chapter only if you would like to test the system and its functionalities with a test installation. If you would like to install the system for the routine use, skip this chapter.  
 
@@ -288,7 +288,7 @@ After KOBIL issues the CA certificate based on the request (ssms-ca.p10), you th
 
 :warning: **As a general rule, it is the responsibility of each administrator to ensure of certificate- and license validity**
 
-##  Integrate CA Certificates / License upload  
+###  Integrate CA Certificates / License upload  
 
 You can integrate the certificates delivered by KOBIL as a ZIP file, by clicking on “Upload” at the top-right of the certificates view.  
 
@@ -379,7 +379,7 @@ You must adjust the preconfigured connections according to your SSMS installatio
 
 ![configurationconnection](./files/config_connection.png)  
 
-## Node Settings  
+### Node Settings  
 
 First, you must define the node name (Node ID), which is the unique name under which the node can be reached. You must also define its node type: Management (MGT), Services (SVC) or both.  
 
@@ -410,7 +410,7 @@ In case you saved the node as a reference, you also can change the scalability f
 
 :warning: **When you delete a node, you also eliminate all information referring to it. If the deletion occurs during running operations, it will lead to loss of data. Be sure that you stopped the SSMS on the node to delete**  
 
-### maxConfigValues.Properties  
+#### maxConfigValues.Properties  
 
 This file contains properties in order to configure the maximum configuration values for the SSMS parameters. This file is in <SSMS_HOME>.  
 
@@ -426,7 +426,7 @@ This file contains properties in order to configure the maximum configuration va
 ||cluster.oob.threadPoolSize=250|Maximum size of the jGroup OOB Thread Pool. Please make sure that this value is higher than the minimal value **oob_thread_pool.min_threads** (in the file communication.xml) as SSMS would not be able to start.|
 |**SSMS**|kernelTaskExecuter.threadPoolSize=400|Maximum value of the Kernel Task Executer Thread Pool.|
 
-## Tomcat  
+### Tomcat  
 
 The SSMS server uses the open source software Apache Tomcat as Java Servlet Container, which contains a number of configuration possibilities. Please find more information about these configurations on the corresponding web pages. However, you can change some important settings here.
 
@@ -442,21 +442,21 @@ The following dialog shows the standard ciphers:
 
 For more information about the supported ciphers, take a look at: http://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html  
 
-### Session Cookie Path  
+#### Session Cookie Path  
 
 Within the Tomcat configuration you can enable a session cookie path. The session cookie path is a tomcat setting of the file <SSMS_INSTALL>\tomcat\conf\context.xml with the name sessionCookiePath. This parameter defines the URL path for which the Tomcat sends back its session cookies to HTTP requests. This setting is required in case there are additional proxies in front of the SSMS, which process the URL path of the SSMS. Please put a checkmark and enter the path into the input field “Session Cookie Path” in order to activate this option.  
 
-### URL encoding  
+#### URL encoding  
 
 This option sets the encoding format for the connectors in the server.xml file. During the deployment, the encoding is stored within the server.xml for all five connectors. The most commonly used encodings here would be the UTF-8, UTF-16 and UTF-32. SSMS default use UTF-8 (which is different from the usual standard of ISO- 8859-1). The encoding also affects AJP in case it is activated.  
 
-## Management  
+### Management  
 
 The management contains the configuration of the context name and the port of the SSMS management node. The web context name for SSMS management is part of the URL, under which the management node is reachable later (Management GUI and SOAP).
 
 Standard port is 8443.  
 
-## Services  
+### Services  
 
 Services include the different services of the services node.
 
@@ -468,11 +468,11 @@ The standard port of the services node is 8445 and is only used for the SOAP ser
 
 External services refer particularly to the App Security Technology, which communicates with the SSMS via the following default ports. Port 80 is for external services and port 443 for a secure connection of the external services. It is possible to deactivate port 80 for external services, in this case the complete communication is done via external services secure port 443.  
 
-### Save Settings  
+#### Save Settings  
 
 After you have configured and adjusted all the settings, please confirm them with "Save" before continuing with the modules view.  
 
-### Reset  
+#### Reset  
 
 The button “Reset” resets all settings on the SSMS to the default values of the SSMS.  
 
@@ -506,7 +506,7 @@ To install the module, please check the box of the module to update, and click o
 
 To use the new web application, you must deploy it again. Now, you can start the SSMS with the new modules.  
 
-## Deploy  
+### Deploy  
 
 Finally, you can deploy the modules in the Tomcat via the Deploy view.
 
@@ -552,7 +552,7 @@ The management SSL keystore is the SSMS server certificate for the Management GU
 
 The services SSL keystore is the SSMS server certificate for the Services SOAP-API connection. This certificate is derived from the SSMS-CA and the KOBIL_ROOT certificate.  
 
-### Registration Nodes  
+## Registration Nodes  
 
 The registration node is the management node where new nodes of the cluster are registered, so that they can be integrated into the cluster. You should install and use at least two management nodes, because if a management node does not work, the other can register and manage other nodes. When you install additional nodes, the node ID and type (management or services) will be added to the list; then, you can arrange the list according to the priority of each node.  
 
@@ -633,18 +633,18 @@ You can then access the SSMS graphical interface, provided that you defined a UR
 
 After the deploy process the access permissions are stored in the ssms_configuration_util.log file according to chapter 1.3.8.  
 
-## Advanced configuration possibilities for connections Deploy  
+### Advanced configuration possibilities for connections Deploy  
 
-The connections (connectors) that make the SSMS reachable from the outside, are usually defined in the Configuration Utility (see 3.8) and activated for the SSMS during the deploy process (see 3.9).
+The connections (connectors) that make the SSMS reachable from the outside, are usually defined in the Configuration Utility and activated for the SSMS during the deploy process.
 
-In the deploy process a Template is read (SSMS HOME/configutil/server.xml.template) where the defined values in the Configuration Utility are inserted. Afterwards the file “server.xml” required for the integrated Tomcat is created and stored.
+In the deploy process a Template is read **(SSMS HOME/configutil/server.xml.template)** where the defined values in the Configuration Utility are inserted. Afterwards the file “server.xml” required for the integrated Tomcat is created and stored.
 
 Specific configurations to the connections can, if necessary, be changed in the Template. These are activated for the SSMS during the Deploy process.
 
-The settings in the Configuration Utility to be verified are represented in the template through a placeholder. This placeholder is then substituted during the deploy process. The placeholder has the form ${/<name/>}.
+The settings in the Configuration Utility to be verified are represented in the template through a placeholder. This placeholder is then substituted during the deploy process. The placeholder has the form **$\{<name\>\}**
 
 The name of a placeholder is structured as the following:
-/<Prefix/>./<Parameter/>./<Prefix/> has one of the following five values:  
+**<Prefix\>\.<Parameter\>\.<Prefix\>** has one of the following five values:  
 
 * **mgt**:  SOAP access to UI and MGT  
 * **svc**:  SOAP access to SVC and REST  
@@ -654,9 +654,9 @@ The name of a placeholder is structured as the following:
 
 For example the placeholder ${mgt.port} is substituted by the selected value in the Configuration Utility for the Management Port.
 
-Additionally there is a placeholder, which starts with ${connector./<prefix/>.start} und end with
-
-${connector./<prefix/>.end}. These limit the definition of a connector in the template. In case a connector is not configured, these placeholders are substituted by corresponding comment symbols. In case an SSMS node is configured only as services node and not as management node, the management connector is not used. Correspondingly the following substitutions are carried out during the deploy process:  
+Additionally there is a placeholder, which starts with **$\{connector\.<prefix\>\.start\}** und end with
+**$\{connector\.<prefix\>\.end\}**.
+These limit the definition of a connector in the template. In case a connector is not configured, these placeholders are substituted by corresponding comment symbols. In case an SSMS node is configured only as services node and not as management node, the management connector is not used. Correspondingly the following substitutions are carried out during the deploy process:  
 
 * ${connector.mgt.start} receives the value „<!--"
 * ${connector.mgt.end} receives the value „-->“  
@@ -667,7 +667,7 @@ The connector is thus commented out and is not activated in the SSMS.
 
 ## Uninstallation  
 
-The configuration utility can also be completely uninstalled with all its files, settings and services. For this purpose, close the configuration utility and proceed to the uninstallation. Note the different procedures depending on the operating system in Chapters 3.10.1 and 3.10.2.
+The configuration utility can also be completely uninstalled with all its files, settings and services. For this purpose, close the configuration utility and proceed to the uninstallation.
 
 Please note that the certificates imported in the browser and the database are not affected by the installation; thus, they must be manually deleted.
 
@@ -675,7 +675,12 @@ The following figure illustrates the option to choose if you want to retain all 
 
 ![configurationuninstallation](./files/config_uninstallation.png)  
 
-## Uninstallation on Windows  
+### Uninstallation on Windows
 
+On Windows, you can uninstall all the program components by going to "Programs and features" in the control panel. Select "KOBIL SSMS" and click "uninstall".
+You can also run the program “Uninstall SSMS Installation.exe” in the directory
+><SSMS_INSTALL>/_SSMS_installation.
+
+### Uninstallation on Linux
 On Linux, you can uninstall all the program components by running the file "Uninstall SSMS Installation" in the folder   
 >SSMS_INSTALL/_SSMS_installation/.
