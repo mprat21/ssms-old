@@ -5,7 +5,7 @@ sidebar_position: 2
 
 With the configuration utility, you can adjust all the settings required to start the SSMS. More precisely, you can for example create the required database tables, generate the certificates, and install the SSMS modules.  
 
-:warning: :**Before starting the configuration utility, assure yourself that any other installed SSMS instance has been stopped and that it is not running in parallel.**  
+:warning: **Before starting the configuration utility, assure yourself that any other installed SSMS instance has been stopped and that it is not running in parallel**  
 
 If you install many management and services nodes in a cluster, you must run the installation program on every node.  
 
@@ -52,7 +52,7 @@ You can change the password, which was set during installation process. The pass
 
 You can access the configuration utility from everywhere. However, you can limit the access by entering an IP address range and saving it. Define only comma-separated IP addresses in IPv4 format.  
 
-:warning: : **Use only IP addresses in IPv4 format!**  
+:warning: **Use only IP addresses in IPv4 format!**  
 
 ## 6. Save Settings  
 
@@ -62,7 +62,7 @@ Click on "Save" to save the settings made on the setup page.
 
 If you install several nodes, please export the configuration file config.xml from the previous installation and then import it for each additional node. With the import of the file config.xml, every additional node contains the same database key databaseEncryptionKey, stored in this file along with other information.  
 
-:warning: :  Please create the export newly after the update of the SSMS so that changed values in the export are considered. Please check the imported values in the configuration utility for correctness.  
+:warning: Please create the export newly after the update of the SSMS so that changed values in the export are considered. Please check the imported values in the configuration utility for correctness.  
 
 Therefore, you can export the configuration only after creating the database. To do this, follow the instructions in the next chapter.  
 
@@ -88,7 +88,7 @@ After configuring the database, you are required to configure the database users
 
 As additional parameters, you can define values for creating the database, which depend on the JDBC driver. You can also leave this value empty.  
 
-:warning: : **Information on database permissions (GRANT) are available under: \SSMS_INSTALL\modules\(modulename)\db\grant*.sql**  
+:warning: **Information on database permissions (GRANT) are available under: \SSMS_INSTALL\modules\(modulename)\db\grant*.sql**  
 
 ![configurationdatabasesetup](config_databasesetup.png)  
 
@@ -130,7 +130,7 @@ If the database was created, you can test the connection to the database by clic
 
 You must keep the database key "databaseEncryptionKey" in a safe place. The database key is stored both in the database and in the config.xml file. You can back up the database key by copying the config.xml to another data storage device. To export the file, click on "Export configuration" in the "Setup" window.  
 
-:warning: **The databaseEncryptionKey is only generated once and saved in the config.xml file. Therefore, if you install and set up multiple nodes or servers, please export this file in the "Setup" window by clicking on “Export configuration” and import it on every additional node, so that every node contains the same databaseEncryptionKey.**  
+:warning: **The databaseEncryptionKey is only generated once and saved in the config.xml file. Therefore, if you install and set up multiple nodes or servers, please export this file in the "Setup" window by clicking on “Export configuration” and import it on every additional node, so that every node contains the same databaseEncryptionKey**  
 
 ## Oracle Database with use of an Oracle Client  
 
@@ -144,7 +144,7 @@ In case you want to use an Oracle database with an Oracle Client, for example be
 
        opt/KOBIL/SSMS/modules/kernel/mgt and opt/KOBIL/SSMS/modules/kernel/svc to this directory opt/KOBIL/SSMS/tomcat/lib
 
-:warning: **Please note that KOBIL does not guarantee the correct functioning of other drivers than the ones delivered.**  
+:warning: **Please note that KOBIL does not guarantee the correct functioning of other drivers than the ones delivered**  
 
 ## Configuration of the Oracle Client in the CU  
 
@@ -158,7 +158,7 @@ Additionally you must change the files KOBIL SSMS Configuration Utility.lax and 
 
 In case you use JBDC OCI, enter the following URL:          Jdbc:oracle:oci:@Service_Name  
 
-:warning: **Please note that all the settings described in chapter 3.4.3 are deleted in case you update the SSMS. Therefore, you must repeat all the above steps.**  
+:warning: **Please note that all the settings described in chapter 3.4.3 are deleted in case you update the SSMS. Therefore, you must repeat all the above steps**  
 
 ## SSMS database connection pool settings  
 
@@ -223,7 +223,7 @@ The settings of the data connection pool require for the management and services
 
 The settings in the Database Connection Pool are changed in the CU and stored in the config.xml. The file contains two fields, which stand for the settings for the services and for the management-node. When starting the CU, a basic configuration is available in the config.xml and is overwritten during the CU process. Settings for the services nodes are written in the field svcConPoolConfig and the settings for the management nodes in the mgtConPoolConfig field of the config.xml.  
 
-:warning: Please be sure that the server is stopped before changing the CU.  
+:warning: **Please be sure that the server is stopped before changing the CU**
 
 In the view Node settings you have the possibility to carry out the configuration of the desired nodes. In case of settings for both nodes, for management as well as for services, both fields must be checked:  
 
@@ -241,7 +241,7 @@ In case only the services node is selected, the dialog box for setting the Datab
 
 ![configurationpoolparameters2](config_poolparameters2.png)  
 
-:warning: **NOTE**: After a migration / update please check the connection settings of the Database Connection Pool. The existing configuration is migrated during the start of the CU into the new form. Not configured values receive default values. Therefore a verification of the Database Connection Pool necessary!  
+:warning: **After a migration / update please check the connection settings of the Database Connection Pool. The existing configuration is migrated during the start of the CU into the new form. Not configured values receive default values. Therefore a verification of the Database Connection Pool necessary!**
 
 ## Certificates  
 
@@ -255,7 +255,7 @@ Otherwise, you can carry out a test installation of the server. The test install
 
 Read this chapter only if you would like to test the system and its functionalities with a test installation. If you would like to install the system for the routine use, skip this chapter.  
 
-:warning: **NOTE**: **you may not install the system with test certificates for the routine use. Once you want to routinely use the system, you must install the SSMS once again.**  
+:warning: **You may not install the system with test certificates for the routine use. Once you want to routinely use the system, you must install the SSMS once again**  
 
 To test the system, you can create a test certificate by clicking on “Create test certificate” on the top-right of the certificates window. Doing this, you receive a test system for all modules with a time limited license:  
 
@@ -286,7 +286,7 @@ Finally, you save the certificate as DER encoded certificate (ssms-ca.p10) with 
 
 After KOBIL issues the CA certificate based on the request (ssms-ca.p10), you then receive the required CA- and x509 certificates from KOBIL. You must then integrate both certificates into the database, by uploading the ZIP file that contains them.  
 
-:warning: **As a general rule, it is the responsibility of each administrator to ensure of certificate- and license validity**.  
+:warning: **As a general rule, it is the responsibility of each administrator to ensure of certificate- and license validity**
 
 ##  Integrate CA Certificates / License upload  
 
@@ -318,7 +318,7 @@ The super administrator needs an SSMS Administrator SSL Client Certificate (supe
 
 Enter the common name, the organization, the country code (DE, FR, GB, US, etc.) and the email address under which the super administrator can be reached. You are also required to enter the password assigned to the CA key (see CA key password) for the certificate request in step 3.6.1  
 
-:warning: **During the generation of the super administrator certificate, you have the option to save the password of the superadministrator (keystore password) as well as that of the truststore in the configuration file portalLib.xml, contained in the directory <SSMS_HOME>. To do so, check the box “Save Password”. Find more information about this file in the integration manual**.  
+:warning: **During the generation of the super administrator certificate, you have the option to save the password of the superadministrator (keystore password) as well as that of the truststore in the configuration file portalLib.xml, contained in the directory <SSMS_HOME>. To do so, check the box “Save Password”. Find more information about this file in the integration manual**
 
 You then receive the message that a certificate has been successfully generated:  
 
@@ -404,17 +404,17 @@ You can enter additional system properties (e.g.: -Dkey1=value1 -Dkey2=value2) t
 
 In case you saved the node as a reference, you also can change the scalability factor of the SSMS configuration parameters for the reference node. This function is only possible in relation with a reference node because the values of all cluster nodes must be identical. Default value is 5, which you can change moving the slider from a minimum of 1 to a maximum of 10. You can check the values you set by clicking on the information icon on the right. In addition, the values you set are also stored in the config.xml (SSMS/configutil). The maximum values are saved in a property file (SSMS_HOME/maxConfigValues.properties) generated during the installation and which can be changed by a user with permissions. In case the file is not present or one or more parameters are not valid, the default maximum values are taken. During the cluster communication large UDP packets are also sent (> 40kB), which fragmented at the IP level. Routers must allow this.  
 
-:warning::**Note: Some parameters are dependent on other parameters**  
+:warning: **Some parameters are dependent on other parameters**  
 
 “Save as reference” is to signal, that this node will operate as a reference when setting additional nodes. When you set up another node, the version installed on the reference node is checked, because in the case of a cluster installation (see chapter 4), all nodes must have the same SSMS version installed. Finally, confirm the node settings by clicking on “Save node”. After you saved the node settings, you receive the message that you successfully saved the settings. Then you can continue the configuration.  
 
-:warning::**Note: when you delete a node, you also eliminate all information referring to it. If the deletion occurs during running operations, it will lead to loss of data. Be sure that you stopped the SSMS on the node to delete.**  
+:warning: **When you delete a node, you also eliminate all information referring to it. If the deletion occurs during running operations, it will lead to loss of data. Be sure that you stopped the SSMS on the node to delete**  
 
 ## maxConfigValues.Properties  
 
 This file contains properties in order to configure the maximum configuration values for the SSMS parameters. This file is in <SSMS_HOME>.  
 
-:warning::**Please note that the configuration values are configured on the basis of the scalability factor in the Configuration Utility.**  
+:warning: **Please note that the configuration values are configured on the basis of the scalability factor in the Configuration Utility**  
 
 ||**Parameters**|**Description**|
 |:--:|:--:|:--:|
@@ -528,7 +528,7 @@ If you set up multiple nodes, then you must generate the keystores again on ever
 
 Please generate the certificate exclusively with the configuration utility. However, if you require the keystore of another CA, you can upload the keystore in PKCS#12 format.  
 
-:warning:: **Note: SSMS does not support Elliptic Curve based keys.**  
+:warning: **SSMS does not support Elliptic Curve based keys**  
 
 ### External Services Keystore  
 
@@ -542,7 +542,7 @@ External Services Keystore
 
 This certificate chain will be the truststore for the App Configuration bundle, thus, it will be written to the SDK_config.xml.  
 
-:warning:: **Be sure that the host name is the same as the "External SSMS DNS name"!  If you run a reverse proxy between the SSMS and mIDentity App, which terminates the SSL, you must give it a trust chain. The trust chain corresponds to the certificates stored in the External Services Keystore. If you generated the keystore in the configuration utility, the trust chain consists of the certificates KOBIL_ROOT and SSMS-CA.**  
+:warning: **Be sure that the host name is the same as the "External SSMS DNS name"!  If you run a reverse proxy between the SSMS and mIDentity App, which terminates the SSL, you must give it a trust chain. The trust chain corresponds to the certificates stored in the External Services Keystore. If you generated the keystore in the configuration utility, the trust chain consists of the certificates KOBIL_ROOT and SSMS-CA**  
 
 ### Management SSL Keystore  
 
@@ -662,7 +662,7 @@ ${connector./<prefix/>.end}. These limit the definition of a connector in the te
 
 The connector is thus commented out and is not activated in the SSMS.  
 
-:warning:: **Please note: in case you changed the Template, you must deploy these in the Configuration Utility in order to be effective.**  
+:warning: **Please note in case you changed the Template, you must deploy these in the Configuration Utility in order to be effective**  
 
 ## Uninstallation  
 
