@@ -27,7 +27,7 @@ The hardware requirements represent minimum values and are only intended as a gu
 
 Refer to the following directory structure:
 
-<SSMS_INSTALL> refers to Installation directory with the other files and subdirectories whereas <SSMS_HOME> refers to Home directory of the installation, with the local settings and log files of the SSMS 
+<SSMS_INSTALL> refers to Installation directory with the other files and subdirectories whereas <SSMS_HOME> refers to Home directory of the installation, with the local settings and log files of the SSMS
 
 **On Linux**
 
@@ -35,7 +35,7 @@ Refer to the following directory structure:
 |:-----------------:|:---------------------:|
 | <SSMS_INSTALL>    |    /opt/KOBIL/        |
 | <SSMS_HOME>       |   /opt/KOBIL/SSMS/    |
- 
+
 
 **On Windows**
 
@@ -59,14 +59,14 @@ You will need to have installed a database management system (DBMS) to set up an
 ### Support of database collations
 SSMS requires some database columns to be case sensitive (like a user’s Id), while others are treated case insensitive (like the name of a role).
 
-**MYSQL**: SSMS applies the collation type 'utf8_general_ci' as default. That means per default all columns are case insensitive. Case sensitive columns are additionally bear the BINARY attribute.
-**MSSQL**: SSMS applies the collation type 'Latin1_General_CI_AS' as default. That means per default all columns are case insensitive. SSMS configures case sensitive columns to have the collation type 'SQL_Latin1_General_Cp1_CS_AS'. Please note that 'Latin1' aspect of the collation types does not interfere with supported Unicode character sets.
-**ORACLE**: By default ORACLE is case sensitive. The possibility to change this on a per column basis has been introduced with ORACLE 12.2. Because of compatibility to ORACLE 11 and to avoid performance issues on the database side all columns in SSMS are case sensitive. That means ORACLE provides the possibility to create for example two roles wit h the names 'Testrole' and 'testrole'. When changing data directly on database level, the use of large and lower case must comply to SSMS conventions.
+- **MYSQL**: SSMS applies the collation type 'utf8_general_ci' as default. That means per default all columns are case insensitive. Case sensitive columns are additionally bear the BINARY attribute.
+- **MSSQL**: SSMS applies the collation type 'Latin1_General_CI_AS' as default. That means per default all columns are case insensitive. SSMS configures case sensitive columns to have the collation type 'SQL_Latin1_General_Cp1_CS_AS'. Please note that 'Latin1' aspect of the collation types does not interfere with supported Unicode character sets.
+- **ORACLE**: By default ORACLE is case sensitive. The possibility to change this on a per column basis has been introduced with ORACLE 12.2. Because of compatibility to ORACLE 11 and to avoid performance issues on the database side all columns in SSMS are case sensitive. That means ORACLE provides the possibility to create for example two roles wit h the names 'Testrole' and 'testrole'. When changing data directly on database level, the use of large and lower case must comply to SSMS conventions.
 
 ### Options for Creating the SSMS Database
 You have various options for creating the SSMS database:
 
-**Option A**: No database exists before the SSMS installation. This means that the complete SSMS database with all the tables for every module will be created with the configuration utility. In this case, you need administrator rights for the creation of the database. Note that this option does not work with the Oracle Database, so this database must always be created before the installation.
-**Option B**: The database already exists without tables and is empty. This means that you first create the database without table, which are then created by the configuration utility. The database may not contain external tables. In addition, you require database permissions to create and write tables for the already existing database.
-**Option C**: An SSMS database with tables already exists and it must be migrated.
+- **Option A**: No database exists before the SSMS installation. This means that the complete SSMS database with all the tables for every module will be created with the configuration utility. In this case, you need administrator rights for the creation of the database. Note that this option does not work with the Oracle Database, so this database must always be created before the installation.
+- **Option B**: The database already exists without tables and is empty. This means that you first create the database without table, which are then created by the configuration utility. The database may not contain external tables. In addition, you require database permissions to create and write tables for the already existing database.
+- **Option C**: An SSMS database with tables already exists and it must be migrated.
 In options A and B, the database permissions can be transferred by the configuration utility. The database administrator can thus use the configuration utility to create the complete SSMS database. After that, the database administrator gives the CU or the SSMS administrator the needed rights.
