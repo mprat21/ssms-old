@@ -42,12 +42,11 @@ Please accept the license agreement before installing the SSMS:
 You can change the default installation paths described below:
 * Windows:
 
-    C:\ Program Files\KOBIL Systems\SSMS  
+          C:\ Program Files\KOBIL Systems\SSMS  
 
 * Linux:
 
-    /opt/KOBIL/SSMS  
-
+          /opt/KOBIL/SSMS  
 
 ![chooseinstallfolder](./files/installation_chooseinstallfolder.png)  
 
