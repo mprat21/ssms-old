@@ -102,9 +102,11 @@ Once you have completed the installation, the program starts automatically the c
 
 You can also start the installation program and install the SSMS in the terminal with the required options. Run the following command on Linux:  
 - **Linux**
+
            ./setup.bin -i console  
 
 - **Windows**
+
             setup.exe -i  console  
 
 You will then be prompted to give the values of all the parameters. Press Enter to accept the default values or enter your own values to change the installation.  
