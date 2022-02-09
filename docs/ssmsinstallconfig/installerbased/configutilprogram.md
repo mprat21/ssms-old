@@ -9,7 +9,7 @@ With the configuration utility, you can adjust all the settings required to star
 
 If you install many management and services nodes in a cluster, you must run the installation program on every node.  
 
-## 1. Start the Configuration Utility  
+## Start the Configuration Utility  
 
 **On Windows**, start "KOBIL SSMS Configuration Utility.exe". You can find this file in the SSMS installation directory or as a shortcut on the desktop or in the start menu. This depends on your settings during the installation. The default path for Windows is  
 
@@ -23,7 +23,7 @@ After starting the configuration utility, open the browser and go to the followi
 
 The port depends on the installation settings, so, if you did not change it during the installation, it remains 9000.  
 
-## 2. Overview of the Configuration Program  
+## Overview of the Configuration Program  
 
 After entering the URL in the browser, you see the overview page with the following navigation menu
 * Set-up  
@@ -38,27 +38,27 @@ You can see an overview of the open issues, to be processed chronologically, on 
 
 ![configurationutility](config_utility.png)  
 
-## 3. Setup  
+## Setup  
 
 On the first page, a setup overview, you can change the password. The setup page shows you the general values settings made during the installation: the port for reaching the configuration utility as well as the installation and the home directory. On the setup page, you can also limit the access to the configuration utility to specified external IPv4 addresses.  
 
-## 4. Change Password  
+## Change Password  
 
 You can change the password, which was set during installation process. The password preserves the configuration settings and protects against unauthorized access to the configuration utility. To do that, click on "Change password" and set a password.  
 
 ![configurationchangepassword](config_changepassword.png)  
 
-## 5. IP Addresses  
+## IP Addresses  
 
 You can access the configuration utility from everywhere. However, you can limit the access by entering an IP address range and saving it. Define only comma-separated IP addresses in IPv4 format.  
 
 :warning: **Use only IP addresses in IPv4 format!**  
 
-## 6. Save Settings  
+## Save Settings  
 
 Click on "Save" to save the settings made on the setup page.  
 
-## 7. Exporting and Importing the Configuration  
+## Exporting and Importing the Configuration  
 
 If you install several nodes, please export the configuration file config.xml from the previous installation and then import it for each additional node. With the import of the file config.xml, every additional node contains the same database key databaseEncryptionKey, stored in this file along with other information.  
 
@@ -74,7 +74,7 @@ config.xml contains information for:
 
 The file config.xml is always stored in <SSMS_HOME>\configutil  
 
-## 8. Database  
+## Database  
 
 You are required to configure the database as second step. You can select the database type among the options and you can specify the name of the database to be created. To do this, you must have installed a database management system.  
 
@@ -94,7 +94,7 @@ As additional parameters, you can define values for creating the database, which
 
 ![configurationdatabasesetup1](config_databasesetup1.png)  
 
-## 9. Database driver  
+### Database driver  
 
 In order to create the database and the tables after the selection of MSSQL, MySQL or Oracle Database, you additionally need the corresponding database connector (JDBC). The connector is delivered with installation for MSSQL and Oracle and may not be imported additionally. For MySQL the import is required and can be carried out via the button “Import database driver”. You can download the appropriate database driver (connectors) for MySQL at the following URL:  
 
@@ -120,7 +120,7 @@ for **MSSQL:** com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 for **Oracle:** oracle.jdbc.driver.OracleDriver  
 
-## 10. Create Database Tables  
+### Create Database Tables  
 
 After entering the password, you create the database by clicking on “Create Database”.
 
@@ -132,21 +132,21 @@ You must keep the database key "databaseEncryptionKey" in a safe place. The data
 
 :warning: **The databaseEncryptionKey is only generated once and saved in the config.xml file. Therefore, if you install and set up multiple nodes or servers, please export this file in the "Setup" window by clicking on “Export configuration” and import it on every additional node, so that every node contains the same databaseEncryptionKey**  
 
-## Oracle Database with use of an Oracle Client  
+### Oracle Database with use of an Oracle Client  
 
 In case you want to use an Oracle database with an Oracle Client, for example because you need additional database functions, note the following points:  
 
 1. The Oracle Client must be installed on the same system as the  
 2. The SSMS uses the Oracle driver in version 19.3.0.0. The version of the Oracle client, which you can download from the Oracle web site, must be identical to the version of the  
-2. In case you need another version of the Oracle Client, you must substitute the driver on the SSMS.  
+3. In case you need another version of the Oracle Client, you must substitute the driver on the SSMS.  
 
-3. In case you want to let MGT and SVC run on the same, the driver delivered with the SSMS (ojdbc8-19.3.0.0.jar) be moved from these directories
+4. In case you want to let MGT and SVC run on the same, the driver delivered with the SSMS (ojdbc8-19.3.0.0.jar) be moved from these directories
 
        opt/KOBIL/SSMS/modules/kernel/mgt and opt/KOBIL/SSMS/modules/kernel/svc to this directory opt/KOBIL/SSMS/tomcat/lib
 
 :warning: **Please note that KOBIL does not guarantee the correct functioning of other drivers than the ones delivered**  
 
-## Configuration of the Oracle Client in the CU  
+### Configuration of the Oracle Client in the CU  
 
 In the database view of the Configuration Utility you must select the option “Use Direct JDBC URL”. Additionally change the JDBC-URL according to the JDBC driver used.  In case you use JDBC thin, suggested by Oracle, enter the following URL:  
 
@@ -160,7 +160,7 @@ In case you use JBDC OCI, enter the following URL:          Jdbc:oracle:oci:@Ser
 
 :warning: **Please note that all the settings described in chapter 3.4.3 are deleted in case you update the SSMS. Therefore, you must repeat all the above steps**  
 
-## SSMS database connection pool settings  
+### SSMS database connection pool settings  
 
 To make SSMS work efficiently with the database, please be careful in the configuration of the database connection pool. The default installation of SSMS is so configured that it works properly in most environments. This means that for the first installation and configuration of an SSMS test environment, you can skip this chapter and directly read chapter 3.6. However in case of installations with a very high load, administrators should monitor the database, the SSMS performance and the amount of used database connections. Please find more information in the chapter Monitoring in the Kernel manual.
 
@@ -268,7 +268,7 @@ but you do not have to request and to upload the certificates signed by KOBIL. T
 
 ![configurationcertificaterequest](config_certificaterequest.png)  
 
-## Create the Certificate / License Request  
+### Create the Certificate / License Request  
 
 You need the following input values to create the certificate request:  
 * **Common name**: Name of the CA certificate (e.g. KOBIL SSMS CA)  
@@ -306,7 +306,7 @@ You receive the following message as a confirmation that you could successfully 
 
 ![configurationcertificateupload3](config_certificateupload3.png)  
 
-## The SSMS Super Administrator Certificate  
+### The SSMS Super Administrator Certificate  
 
 The option and the button to generate the SSMS Super Administrator SSL Client Certificate are shown to you only after you integrated the two CA certificates.  
 
@@ -330,21 +330,21 @@ You can now download the Administrator SSL Client Certificate (super administrat
 
 With the option "Download and import in browser", you can only download the super administrator certificate, but not import it in the browser. Please carry out this step separately.  
 
-## SuperAdmin Access Recovery  
+### SuperAdmin Access Recovery  
 
 In case you change the super administrator permissions in the SSMS GUI and you do not have access to the SSMS anymore, you also can reactivate the Super Administrator role in the CU, by clicking “SuperAdmin Access Recovery”. With this action, the default permissions of the super administrator and the access to the SSMS Kernel module are restored.  
 
-## Certificates Required to Start the SSMS  
+### Certificates Required to Start the SSMS  
 
 You require three certificates to start and access the graphical interface of the SSMS via the browser: the SSMS Administrator SSL client certificate (also referred to as the super administrator certificate), which you created in Chapter 3.6.4, and both the two issuer certificates which you can download to integrate them into the super administrator browser:  
 
 ![configurationissuercertificate](config_issuercertificate.png)  
 
-## Update CA Certificates  
+### Update CA Certificates  
 
 It is possible to update both the Root CA and your SSMS-CA certificates. This becomes necessary for recertification, including other cryptographic algorithms upon signature creation, and certificate renewal use cases.  
 
-## Recreation of CA Request  
+### Recreation of CA Request  
 
 Analogously to chapter 3.6.2, you can create a CA certificate request based exactly on the same data that was used for the initial certification process.  
 
@@ -410,7 +410,7 @@ In case you saved the node as a reference, you also can change the scalability f
 
 :warning: **When you delete a node, you also eliminate all information referring to it. If the deletion occurs during running operations, it will lead to loss of data. Be sure that you stopped the SSMS on the node to delete**  
 
-## maxConfigValues.Properties  
+### maxConfigValues.Properties  
 
 This file contains properties in order to configure the maximum configuration values for the SSMS parameters. This file is in <SSMS_HOME>.  
 
@@ -442,11 +442,11 @@ The following dialog shows the standard ciphers:
 
 For more information about the supported ciphers, take a look at: http://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html  
 
-## Session Cookie Path  
+### Session Cookie Path  
 
 Within the Tomcat configuration you can enable a session cookie path. The session cookie path is a tomcat setting of the file <SSMS_INSTALL>\tomcat\conf\context.xml with the name sessionCookiePath. This parameter defines the URL path for which the Tomcat sends back its session cookies to HTTP requests. This setting is required in case there are additional proxies in front of the SSMS, which process the URL path of the SSMS. Please put a checkmark and enter the path into the input field “Session Cookie Path” in order to activate this option.  
 
-## URL encoding  
+### URL encoding  
 
 This option sets the encoding format for the connectors in the server.xml file. During the deployment, the encoding is stored within the server.xml for all five connectors. The most commonly used encodings here would be the UTF-8, UTF-16 and UTF-32. SSMS default use UTF-8 (which is different from the usual standard of ISO- 8859-1). The encoding also affects AJP in case it is activated.  
 
@@ -464,15 +464,15 @@ The web context name for SSMS services is part of the URL, under which the servi
 
 The standard port of the services node is 8445 and is only used for the SOAP services.  
 
-## External Services  
+### External Services  
 
 External services refer particularly to the App Security Technology, which communicates with the SSMS via the following default ports. Port 80 is for external services and port 443 for a secure connection of the external services. It is possible to deactivate port 80 for external services, in this case the complete communication is done via external services secure port 443.  
 
-## Save Settings  
+### Save Settings  
 
 After you have configured and adjusted all the settings, please confirm them with "Save" before continuing with the modules view.  
 
-## Reset  
+### Reset  
 
 The button “Reset” resets all settings on the SSMS to the default values of the SSMS.  
 
@@ -490,7 +490,7 @@ By confirming the procedure with “Save”, you create the module-specific data
 
 Finally, you must deploy the web application, as suggested by the notification under the navigation menu “Next step”.  
 
-## Install and Update Additional Modules  
+### Install and Update Additional Modules  
 
 With the option “Install/Update”, you can add new modules or update the version of the already existing modules.
 
