@@ -13,7 +13,7 @@ Start set up.exe by double clicking with the left mouse button.
 
 After the download, open the terminal. Here, switch to the directory containing the installation program.  
 Type in the command:
->sh./setup.bin.  
+    sh./setup.bin.  
 
 ## The Installation Process
 
@@ -41,10 +41,10 @@ Please accept the license agreement before installing the SSMS:
 
 You can change the default installation paths described below:
 * Windows:
-        >C:\ Program Files\KOBIL Systems\SSMS  
+    C:\ Program Files\KOBIL Systems\SSMS  
 
 * Linux:
-        >/opt/KOBIL/SSMS  
+    /opt/KOBIL/SSMS  
 
 
 ![chooseinstallfolder](./files/installation_chooseinstallfolder.png)  
@@ -102,9 +102,9 @@ Once you have completed the installation, the program starts automatically the c
 
 You can also start the installation program and install the SSMS in the terminal with the required options. Run the following command on Linux:  
 - **Linux**
-           >./setup.bin -i console  
+           ./setup.bin -i console  
 
 - **Windows**
-            >setup.exe -i  console  
+            setup.exe -i  console  
 
 You will then be prompted to give the values of all the parameters. Press Enter to accept the default values or enter your own values to change the installation.  
