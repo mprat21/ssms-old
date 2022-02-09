@@ -679,10 +679,8 @@ You can also run the program “Uninstall SSMS Installation.exe” in the direct
 ><SSMS_INSTALL>/_SSMS_installation.
 
 ### Uninstallation on Linux
-On Linux, you can uninstall all the program components by running the file "Uninstall SSMS Installation" in the folder   
->SSMS_INSTALL/_SSMS_installation/.
-On Windows, you can uninstall all the program components by going to "Programs and features" in the control panel. Select "KOBIL SSMS" and click "uninstall".  
+On Linux, you can uninstall all the program components by running the file "Uninstall SSMS Installation" in the folder.    
 
 You can also run the program “Uninstall SSMS Installation.exe” in the directory.  
 
-\<SSMS_INSTALL\>/_SSMS_installation/.  
+>\<SSMS_INSTALL\>/_SSMS_installation/.  
