@@ -26,7 +26,7 @@ Please carry out the installation with administrator rights on Windows and as ro
 
 The introduction provides a brief overview of the possible options during the installation and general information a bout the installation program.
 
-![Introduction](installation_introduction.png)  
+![Introduction](./files/installation_introduction.png)  
 
 Click "Next" to continue or "Cancel" to terminate the process. In the further steps, click "Previous" to return to the previous step of the installation.  
 
@@ -34,7 +34,7 @@ Click "Next" to continue or "Cancel" to terminate the process. In the further st
 
 Please accept the license agreement before installing the SSMS:  
 
-![Licenceagreement](installation_licenceagreement.png)  
+![Licenceagreement](./files/installation_licenceagreement.png)  
 
 ### Selecting the Installation Path  
 
@@ -43,13 +43,13 @@ You can change the default installation paths described below:
 * Linux: /opt/KOBIL/SSMS  
 
 
-![chooseinstallfolder](installation_chooseinstallfolder.png)  
+![chooseinstallfolder](./files/installation_chooseinstallfolder.png)  
 
 ### Creating the Shortcuts  
 
 The following illustrates the options to create shortcuts on Windows. On Linux, you can create shortcuts to the configuration utility and to the browser in the home directory of the current user.  
 
-![chooseshortcutfolder](installation_chooseshortcutfolder.png)  
+![chooseshortcutfolder](./files/installation_chooseshortcutfolder.png)  
 
 
 ## Configuration  
@@ -58,39 +58,39 @@ At Windows it is possible to specify the user which is used to start the SSMS se
 
 **ATTENTION**: This user requires the permission "Log on as a service”.
 
-![configuration](installation_configuration.png)  
+![configuration](./files/installation_configuration.png)  
 
 The configuration utility requires a port to access its user interface. Default setting is port 9000.  
 
-![configuration9000](installation_configuration9000.png)  
+![configuration9000](./files/installation_configuration9000.png)  
 
 ### Information concerning the Linux installation  
 
 On Linux, you can let the system run at start-up.  
 
-![configurationlinux](installation_configurationlinux.png)  
+![configurationlinux](./files/installation_configurationlinux.png)  
 
 On Linux, the SSMS runs with the privileges of a specific user, the SSMS user, who has restricted permissions in comparison to the root user. Even if you do not configure a user, an SSMS user account will automatically be created.  
 
-![configurationlinuxusername](installation_configurationlinuxusername.png)  
+![configurationlinuxusername](./files/installation_configurationlinuxusername.png)  
 
 ### Creating password for the Configuration Utility  
 
 The access to the Configuration Utility is only possible with a password. Please set the password for the Configuration Utility. The password must contain 4 to 20 characters. Initially, the plain text password is transferred to CU. Once CU has been started this password becomes encrypted and stored in the configuration file. This password prevents unauthorized access to the settings you have configured.  
 
-![configurationpassword](installation_configurationpassword.png)  
+![configurationpassword](./files/installation_configurationpassword.png)  
 
  ## Summary of the Settings  
 
  Before completing the installation, you receive a summary of the settings configured so far. You can confirm them by clicking on "Install":  
 
- ![pre-installationsummary](installation_summary.png)  
+ ![pre-installationsummary](./files/installation_summary.png)  
 
  ## Completing the Installation  
 
 In conclusion, you receive a summary of the installation process with information about the directory path where you can find the respective log file. Click on "Done" to end the installation program.  
 
-  ![installationcompletion](installation_completion.png)  
+  ![installationcompletion](./files/installation_completion.png)  
 
 Once you have completed the installation, the program starts automatically the configuration utility with its web interface for the SSMS configuration.  
 
