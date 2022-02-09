@@ -88,7 +88,9 @@ After configuring the database, you are required to configure the database users
 
 As additional parameters, you can define values for creating the database, which depend on the JDBC driver. You can also leave this value empty.  
 
-:warning: **Information on database permissions (GRANT) are available under: \<SSMS_INSTALL\>modules\(modulename)\db\grant*.sql**  
+:warning: **Information on database permissions (GRANT) are available under:**
+
+        \<SSMS_INSTALL\>modules\(modulename)\db\grant*.sql  
 
 ![configurationdatabasesetup](./files/config_databasesetup.png)  
 
@@ -98,27 +100,37 @@ As additional parameters, you can define values for creating the database, which
 
 In order to create the database and the tables after the selection of MSSQL, MySQL or Oracle Database, you additionally need the corresponding database connector (JDBC). The connector is delivered with installation for MSSQL and Oracle and may not be imported additionally. For MySQL the import is required and can be carried out via the button “Import database driver”. You can download the appropriate database driver (connectors) for MySQL at the following URL:  
 
-**MYSQL:** [mysql-connector-java-8.0.20](./files/mysql-connector-java-8.0.20.jar)
+**MYSQL:**
+        [mysql-connector-java-8.0.20](./files/mysql-connector-java-8.0.20.jar)
 
-**MSSQL:** http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774  
+**MSSQL:**
+        http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774  
 
 The MySQL package only contains one connector with the file name “mysql-connector-java-\<version\>-bin.jar”, which is the one to be integrated.
 
-In addition, note the license agreement for the Oracle database JDBC connector. You can find the license agreement in the directory \<SSMS_INSTALL\>/doc/licences.
+In addition, note the license agreement for the Oracle database JDBC connector. You can find the license agreement in the directory
+
+        \<SSMS_INSTALL\>/doc/licences
 
 In case you need to substitute the database driver for Oracle and MSSQL, you must copy the correct driver (JAR file) into the following directory:
 
-    opt/KOBIL/SSMS/modules/kernel/mgt
+        opt/KOBIL/SSMS/modules/kernel/mgt
 
-    opt/KOBIL/SSMS/modules/kernel/svc
 
-    opt/KOBIL/SSMS/configutil/WebContent/WEB-INF/lib
+        opt/KOBIL/SSMS/modules/kernel/svc
+
+
+        opt/KOBIL/SSMS/configutil/WebContent/WEB-INF/lib
 
  Please note that the names of your database driver classes must correspond to one of the following, according to the database used:
 
-for **MSSQL:** com.microsoft.sqlserver.jdbc.SQLServerDriver
+for **MSSQL:**
 
-for **Oracle:** oracle.jdbc.driver.OracleDriver  
+        com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+for **Oracle:**
+
+        oracle.jdbc.driver.OracleDriver  
 
 ### Create Database Tables  
 
@@ -142,7 +154,15 @@ In case you want to use an Oracle database with an Oracle Client, for example be
 
 4. In case you want to let MGT and SVC run on the same, the driver delivered with the SSMS (ojdbc8-19.3.0.0.jar) be moved from these directories
 
-       opt/KOBIL/SSMS/modules/kernel/mgt and opt/KOBIL/SSMS/modules/kernel/svc to this directory opt/KOBIL/SSMS/tomcat/lib
+       opt/KOBIL/SSMS/modules/kernel/mgt
+
+       and
+
+       opt/KOBIL/SSMS/modules/kernel/svc
+
+       to this directory
+
+       opt/KOBIL/SSMS/tomcat/lib
 
 :warning: **Please note that KOBIL does not guarantee the correct functioning of other drivers than the ones delivered**  
 
@@ -198,8 +218,9 @@ A connection pool is a cache of database connections, used for requests. If a ne
 
 SSMS uses the open source framework c3p0 for database pooling. Please find detailed information about this framework on the web site. This chapter only contains information about the settings of the database pool.
 
-In the config.xml file, you can adjust the database settings for every SSMS node of a cluster. The default directory where to find the file after the installation is:  
-* \<SSMS_HOME\>/configutil  
+In the config.xml file, you can adjust the database settings for every SSMS node of a cluster. The default directory where to find the file after the installation is:
+
+         \<SSMS_HOME\>/configutil  
 
 The settings of the data connection pool require for the management and services nodes different resources. While the management node requires less connection resources, the services nodes require more resources and another configuration of the connection pooling. The following table describes the default settings for every node.  
 
@@ -523,7 +544,10 @@ The keystore files are required for the various SSMS services and must therefore
 ![configurationkeystores](./files/config_keystores.png)  
 
 In addition, you can download, view details about the keystores and delete them. The keystores are provided in PKCS#12 format and are located in the following directory:  
-* \<SSMS_HOME\>/ <br/>  <br/> If you set up multiple nodes, then you must generate the keystores again on every system because they are generated including the host name of the respective node.
+
+      \<SSMS_HOME\>/
+
+If you set up multiple nodes, then you must generate the keystores again on every system because they are generated including the host name of the respective node.
 
 Please generate the certificate exclusively with the configuration utility. However, if you require the keystore of another CA, you can upload the keystore in PKCS#12 format.  
 
