@@ -43,10 +43,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'mID',
+        title: 'KOBIL mID',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/kobil-logo.png',
+          src: 'img/mylogo.jpg',
         },
         items: [
           {
