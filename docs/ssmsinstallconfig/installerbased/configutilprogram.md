@@ -643,7 +643,7 @@ Specific configurations to the connections can, if necessary, be changed in the 
 
 The settings in the Configuration Utility to be verified are represented in the template through a placeholder. This placeholder is then substituted during the deploy process. The placeholder has the form ${/<name/>}.
 
-The name of a placeholder is structured as the following: <Prefix>.<Parameter>. <Prefix> has one of the following five values:  
+The name of a placeholder is structured as the following: /<Prefix/>.<Parameter>. /<Prefix/> has one of the following five values:  
 
 * **mgt**:  SOAP access to UI and MGT  
 * **svc**:  SOAP access to SVC and REST  
@@ -653,9 +653,9 @@ The name of a placeholder is structured as the following: <Prefix>.<Parameter>. 
 
 For example the placeholder ${mgt.port} is substituted by the selected value in the Configuration Utility for the Management Port.
 
-Additionally there is a placeholder, which starts with ${connector.<prefix>.start} und end with
+Additionally there is a placeholder, which starts with ${connector./<prefix/>.start} und end with
 
-${connector.<prefix>.end}. These limit the definition of a connector in the template. In case a connector is not configured, these placeholders are substituted by corresponding comment symbols. In case an SSMS node is configured only as services node and not as management node, the management connector is not used. Correspondingly the following substitutions are carried out during the deploy process:  
+${connector./<prefix/>.end}. These limit the definition of a connector in the template. In case a connector is not configured, these placeholders are substituted by corresponding comment symbols. In case an SSMS node is configured only as services node and not as management node, the management connector is not used. Correspondingly the following substitutions are carried out during the deploy process:  
 
 * ${connector.mgt.start} receives the value „<!--"
 * ${connector.mgt.end} receives the value „-->“  
