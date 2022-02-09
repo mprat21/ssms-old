@@ -101,12 +101,10 @@ As additional parameters, you can define values for creating the database, which
 In order to create the database and the tables after the selection of MSSQL, MySQL or Oracle Database, you additionally need the corresponding database connector (JDBC). The connector is delivered with installation for MSSQL and Oracle and may not be imported additionally. For MySQL the import is required and can be carried out via the button “Import database driver”. You can download the appropriate database driver (connectors) for MySQL at the following URL:  
 
 **MYSQL:**
-
         [mysql-connector-java-8.0.20](./files/mysql-connector-java-8.0.20.jar)
 
 **MSSQL:**
-
-        http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774  
+         http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774  
 
 The MySQL package only contains one connector with the file name “mysql-connector-java-\<version\>-bin.jar”, which is the one to be integrated.
 
