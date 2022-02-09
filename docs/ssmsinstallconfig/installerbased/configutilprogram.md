@@ -534,11 +534,11 @@ Please generate the certificate exclusively with the configuration utility. Howe
 
 The External Services keystore is the server certificate for the secure SSL connection of the mIDentity Apps with the SSMS. This certificate is derived from the SSMS-CA and from the KOBIL_ROOT certificate. The following is the illustration of the certificate chain:
 
-KOBIL_ROOT certificate
+- KOBIL_ROOT certificate
 
-SSMS_CA certificate
+- SSMS_CA certificate
 
-External Services Keystore
+- External Services Keystore
 
 This certificate chain will be the truststore for the App Configuration bundle, thus, it will be written to the SDK_config.xml.  
 
@@ -615,13 +615,11 @@ Either you adjust the settings and the options in the configuration utility or y
 |Probability|Probability for probability-based sampling. E.g. With probability 0.1, approximately 1 in 10 traces will be sampled. (Default: 0.0)  This setting has an effect only in the case when the ‘Trace Sampler’ is set to ‘Probabilistic’. See the ‘Trace Sampler’ description for more details.|  
 |Trace Auditing|If this flag is activated, auditing data will be placed to distributing tracing. Default value is unchecked.|  
 
-Click on “Save” to save the settings.  
+Click on **Save** to save the settings.  
 
 ## Deploy  
 
-“Deploy” means installing the previously defined modules and node types in the Tomcat. Before you click on
-
-“Deploy”, be sure that the SSMS is stopped if it has been started previously.
+“Deploy” means installing the previously defined modules and node types in the Tomcat. Before you click on **Deploy**, be sure that the SSMS is stopped if it has been started previously.
 
 ![configurationdeployment](./files/config_deployment.png)  
 
@@ -631,7 +629,7 @@ If the deployment process was successful, you receive the following message and 
 
 You can then access the SSMS graphical interface, provided that you defined a URL and imported the required certificates (see Chapter 3.6) in the browser.
 
-After the deploy process the access permissions are stored in the ssms_configuration_util.log file according to chapter 1.3.8.  
+After the deploy process the access permissions are stored in the ssms_configuration_util.log file.
 
 ### Advanced configuration possibilities for connections Deploy  
 
