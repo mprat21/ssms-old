@@ -88,7 +88,7 @@ After configuring the database, you are required to configure the database users
 
 As additional parameters, you can define values for creating the database, which depend on the JDBC driver. You can also leave this value empty.  
 
-:warning: **Information on database permissions (GRANT) are available under: \SSMS_INSTALL\modules\(modulename)\db\grant*.sql**  
+:warning: **Information on database permissions (GRANT) are available under: \<SSMS_INSTALL\>modules\(modulename)\db\grant*.sql**  
 
 ![configurationdatabasesetup](./files/config_databasesetup.png)  
 
@@ -102,9 +102,9 @@ In order to create the database and the tables after the selection of MSSQL, MyS
 
 **MSSQL:** http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774  
 
-The MySQL package only contains one connector with the file name “mysql-connector-java-/<version/>-bin.jar”, which is the one to be integrated.
+The MySQL package only contains one connector with the file name “mysql-connector-java-\<version\>-bin.jar”, which is the one to be integrated.
 
-In addition, note the license agreement for the Oracle database JDBC connector. You can find the license agreement in the directory <SSMS_INSTALL>/doc/licences.
+In addition, note the license agreement for the Oracle database JDBC connector. You can find the license agreement in the directory \<SSMS_INSTALL\>/doc/licences.
 
 In case you need to substitute the database driver for Oracle and MSSQL, you must copy the correct driver (JAR file) into the following directory:
 
@@ -156,7 +156,7 @@ Additionally you must change the files KOBIL SSMS Configuration Utility.lax and 
 
 **lax.nl.java.option.additional =-Doracle.net.tns_admin=path to the file tnsnames.ora in the installation of the Oracle Client**  
 
-In case you use JBDC OCI, enter the following URL:          Jdbc:oracle:oci:@Service_Name  
+In case you use JBDC OCI, enter the following URL:Jdbc:oracle:oci:@Service_Name  
 
 :warning: **Please note that all the settings described in chapter 3.4.3 are deleted in case you update the SSMS. Therefore, you must repeat all the above steps**  
 
@@ -199,26 +199,26 @@ A connection pool is a cache of database connections, used for requests. If a ne
 SSMS uses the open source framework c3p0 for database pooling. Please find detailed information about this framework on the web site. This chapter only contains information about the settings of the database pool.
 
 In the config.xml file, you can adjust the database settings for every SSMS node of a cluster. The default directory where to find the file after the installation is:  
-* SSMS_HOME/configutil  
+* \<SSMS_HOME\>/configutil  
 
 The settings of the data connection pool require for the management and services nodes different resources. While the management node requires less connection resources, the services nodes require more resources and another configuration of the connection pooling. The following table describes the default settings for every node.  
 
 |Setting                                  |                  Description                          |  
 |:---------------------------------------:|:-----------------------------------------------------|  
-|**databasePoolMinimum**  c3p0= minPoolSize|On startup the SSMS will establish an amount of “databasePoolMinimum” connections to the database for SSMS requests. <br/> If more connections   are necessary, the amount of actual connections will be increased to the configured maximum. The value must be smaller or as small as databasePoolMaximum. Default values are:  
+|**databasePoolMinimum** <br/> c3p0= minPoolSize|On startup the SSMS will establish an amount of “databasePoolMinimum” connections to the database for SSMS requests. If more connections   are necessary, the amount of actual connections will be increased to the configured maximum. The value must be smaller or as small as databasePoolMaximum. <br/> <br/> Default values are:  
 |                                         |MGT=10,                        SVC=20                  |
-|**databasePoolMaximum**  c3p0 = „maxPoolSize“|This value defines the maximum amount of databaseconnections SSMS will establish to the database.  In case of a high load this value limits the communication of SSMS to the database. It is important that the database must also be configured to be able to handle this amount of connections. Please also note other SSMS in the cluster as well as other applications using this database.    **Note**: Since SSMS 2.6.9 the value databasePoolMaximum is not defined anymore via the scalability factor, but can be directly configured over the GUI of the CU. This must be configured separately for management and services. The value must be bigger or as big as databasePoolMinimum  Default values are:|
+|**databasePoolMaximum** <br/> c3p0 = „maxPoolSize“|This value defines the maximum amount of databaseconnections SSMS will establish to the database. <br/>  In case of a high load this value limits the communication of SSMS to the database. It is important that the database must also be configured to be able to handle this amount of connections. Please also note other SSMS in the cluster as well as other applications using this database.   <br/> <br/> **Note**: Since SSMS 2.6.9 the value databasePoolMaximum is not defined anymore via the scalability factor, but can be directly configured over the GUI of the CU. This must be configured separately for management and services. The value must be bigger or as big as databasePoolMinimum.  <br/> <br/>Default values are:|
 |                                        |MGT=20,                        SVC=200 |
-|**databasePoolTimeout**  c3p0 = „maxIdleTime“|This setting will close all idle database connections of the pool,  i.e. after this timeout, in order to avoid having connections in the pool that do not operate anymore. These closed connections are opened again only if the number of the active connections is under the minimum value.  In case **maxIdleTimeExcessConnections** is configured, then this is valid only when <= minimum number of connections in the pool is available.  The default value for both nodes is 21600 seconds (6 Hours).  **Note**: The default value until SSMS version 2.6.2 (and older) was 600 seconds (10 minutes). This had the drawback that the connections were being re-connected too often.  If you are updating SSMS from previous versions to 2.6.3 (and above) you might want to correct this value “manually”, because the SSMS installer will not modify any settings of existing installations.  |
-|**maxIdleTimeExcessConnections**|The idle database connections above the minimum pool settings (see databasePoolMinimum) are ended when this time elapses. This setting is available since SSMS 2.6.3 and is used when a greater number than the configured minimum of poll connections is available.  With this setting, you can avoid establishing and destroying database connections too often, for example if SSMS reaches a request peek the connections will remain for this time and will not be disconnected and reconnected for every request.   The default value is for both nodes 1200 seconds (20 minutes)  **Note**: Until SSMS 2.6.2 “maxIdleTimeExcessConnections” was always set to zero. This had the drawback, that database connections were too often established and destroyed.|  
-|**databasePoolCheckConnectionInterval**  c3p0 = idleConnectionTestPeriod|After this time interval every database connection will be validated by sending a “keep alive” to the database. This is necessary to verify any interrupted connections.  The default value is for both nodes 600 seconds (10 Minutes)  **Note**: This corresponds to the C3p0 setting "idle_test_period".|
-|**checkoutTimeout**|This is the time SSMS will wait to get a database connection until it will reject the request with failure.This might happen for example if the database is not reachable or the pool maximum is reached.  § The default value is for both nodes 10 seconds|
-|**acquireIncrement**|In case the pool requires another database connection it will request the configured number of connection (until the maximum) from the database all at once  Default value:|
+|**databasePoolTimeout** <br/> c3p0 = „maxIdleTime“|This setting will close all idle database connections of the pool, <br/><br/>  i.e. after this timeout, in order to avoid having connections in the pool that do not operate anymore. These closed connections are opened again only if the number of the active connections is under the minimum value.  In case **maxIdleTimeExcessConnections** is configured, then this is valid only when <= minimum number of connections in the pool is available.<br/><br/>  The default value for both nodes is 21600 seconds (6 Hours). <br/><br/> **Note**: The default value until SSMS version 2.6.2 (and older) was 600 seconds (10 minutes). This had the drawback that the connections were being re-connected too often.<br/>  If you are updating SSMS from previous versions to 2.6.3 (and above) you might want to correct this value “manually”, because the SSMS installer will not modify any settings of existing installations.  |
+|**maxIdleTimeExcessConnections**|The idle database connections above the minimum pool settings (see databasePoolMinimum) are ended when this time elapses. This setting is available since SSMS 2.6.3 and is used when a greater number than the configured minimum of poll connections is available.<br/>  With this setting, you can avoid establishing and destroying database connections too often, for example if SSMS reaches a request peek the connections will remain for this time and will not be disconnected and reconnected for every request. <br/><br/>  The default value is for both nodes 1200 seconds (20 minutes) <br/><br/> **Note**: Until SSMS 2.6.2 “maxIdleTimeExcessConnections” was always set to zero. This had the drawback, that database connections were too often established and destroyed.|  
+|**databasePoolCheckConnectionInterval** <br/> c3p0 = idleConnectionTestPeriod|After this time interval every database connection will be validated by sending a “keep alive” to the database. This is necessary to verify any interrupted connections. <br/><br/>  The default value is for both nodes 600 seconds (10 Minutes). <br/><br/> **Note**: This corresponds to the C3p0 setting "idle_test_period".|
+|**checkoutTimeout**|This is the time SSMS will wait to get a database connection until it will reject the request with failure.This might happen for example if the database is not reachable or the pool maximum is reached. <br/><br/> § The default value is for both nodes 10 seconds|
+|**acquireIncrement**|In case the pool requires another database connection it will request the configured number of connection (until the maximum) from the database all at once.<br/><br/>  Default value:|
 ||MGT=2, SVC=5|
-|**acquireRetryAttempts**|The parameter defines how often the pool tries to request a new connection from the database.  Default value is for both nodes 10 milliseconds|  
-|**acquireRetryDelay**|The parameter defines the waiting time between an unsuccessful connection request and the next trial  Default value is for both nodes 1000 milliseconds|
-|**maxStatements**|Defines the number of the database statements that the pool takes for all connections before running them, in order to prepare them.  Default value is for both nodes 50|
-|**helperThreads**|Number of threads in pool for slow JDBC operations. C3p0 uses these Helper Threads in order to accelerate slow JDBC operations  Default value:|
+|**acquireRetryAttempts**|The parameter defines how often the pool tries to request a new connection from the database. <br/><br/> Default value is for both nodes 10 milliseconds|  
+|**acquireRetryDelay**|The parameter defines the waiting time between an unsuccessful connection request and the next trial.<br/><br/>  Default value is for both nodes 1000 milliseconds|
+|**maxStatements**|Defines the number of the database statements that the pool takes for all connections before running them, in order to prepare them.<br/><br/>  Default value is for both nodes 50|
+|**helperThreads**|Number of threads in pool for slow JDBC operations. C3p0 uses these Helper Threads in order to accelerate slow JDBC operations. <br/><br/>  Default value:|
 ||MGT = 5, SVC = 50|  
 
 The settings in the Database Connection Pool are changed in the CU and stored in the config.xml. The file contains two fields, which stand for the settings for the services and for the management-node. When starting the CU, a basic configuration is available in the config.xml and is overwritten during the CU process. Settings for the services nodes are written in the field svcConPoolConfig and the settings for the management nodes in the mgtConPoolConfig field of the config.xml.  
@@ -318,7 +318,7 @@ The super administrator needs an SSMS Administrator SSL Client Certificate (supe
 
 Enter the common name, the organization, the country code (DE, FR, GB, US, etc.) and the email address under which the super administrator can be reached. You are also required to enter the password assigned to the CA key (see CA key password) for the certificate request in step 3.6.1  
 
-:warning: **During the generation of the super administrator certificate, you have the option to save the password of the superadministrator (keystore password) as well as that of the truststore in the configuration file portalLib.xml, contained in the directory <SSMS_HOME>. To do so, check the box “Save Password”. Find more information about this file in the integration manual**
+:warning: **During the generation of the super administrator certificate, you have the option to save the password of the superadministrator (keystore password) as well as that of the truststore in the configuration file portalLib.xml, contained in the directory \<SSMS_HOME\>. To do so, check the box “Save Password”. Find more information about this file in the integration manual**
 
 You then receive the message that a certificate has been successfully generated:  
 
@@ -412,7 +412,7 @@ In case you saved the node as a reference, you also can change the scalability f
 
 #### maxConfigValues.Properties  
 
-This file contains properties in order to configure the maximum configuration values for the SSMS parameters. This file is in <SSMS_HOME>.  
+This file contains properties in order to configure the maximum configuration values for the SSMS parameters. This file is in \<SSMS_HOME\>.  
 
 :warning: **Please note that the configuration values are configured on the basis of the scalability factor in the Configuration Utility**  
 
@@ -444,7 +444,7 @@ For more information about the supported ciphers, take a look at: http://docs.or
 
 #### Session Cookie Path  
 
-Within the Tomcat configuration you can enable a session cookie path. The session cookie path is a tomcat setting of the file <SSMS_INSTALL>\tomcat\conf\context.xml with the name sessionCookiePath. This parameter defines the URL path for which the Tomcat sends back its session cookies to HTTP requests. This setting is required in case there are additional proxies in front of the SSMS, which process the URL path of the SSMS. Please put a checkmark and enter the path into the input field “Session Cookie Path” in order to activate this option.  
+Within the Tomcat configuration you can enable a session cookie path. The session cookie path is a tomcat setting of the file \<SSMS_INSTALL>\tomcat\conf\context.xml with the name sessionCookiePath. This parameter defines the URL path for which the Tomcat sends back its session cookies to HTTP requests. This setting is required in case there are additional proxies in front of the SSMS, which process the URL path of the SSMS. Please put a checkmark and enter the path into the input field “Session Cookie Path” in order to activate this option.  
 
 #### URL encoding  
 
@@ -523,8 +523,7 @@ The keystore files are required for the various SSMS services and must therefore
 ![configurationkeystores](./files/config_keystores.png)  
 
 In addition, you can download, view details about the keystores and delete them. The keystores are provided in PKCS#12 format and are located in the following directory:  
-* SSMS_HOME/  
-If you set up multiple nodes, then you must generate the keystores again on every system because they are generated including the host name of the respective node.
+* \<SSMS_HOME\>/ <br/>  <br/> If you set up multiple nodes, then you must generate the keystores again on every system because they are generated including the host name of the respective node.
 
 Please generate the certificate exclusively with the configuration utility. However, if you require the keystore of another CA, you can upload the keystore in PKCS#12 format.  
 
@@ -596,9 +595,9 @@ Either you adjust the settings and the options in the configuration utility or y
 |Password For RESTServices|Basic-Authentication credentials for REST-Services. Default value is empty.|  
 |Enable Operator Credential Authentification|Operator can login to SSMS-GUI or call SOAP-MGT-methods with operator name and password (HttpBasicAuthentication). Default value is checked.|  
 |Enable SSL Session Verification|During login to SSMS-GUI or for a SOAP-MGT-call SSMS validates the SSL session ID in addition to the ID of the current HTTP session. Default value is unchecked|  
-|Client Inactivity Timeout|The inactivity time out for management GUI client users defined in seconds. The management GUI client user will be logged off automatically after this time of inactivity in the GUI. The session expired page will be displayed. The user needs to authenticate himself again to re-enter the management GUI. Default: 15 minutes (900 seconds).  Minimum: 60 seconds, Maximum: 5400 seconds|  
+|Client Inactivity Timeout|The inactivity time out for management GUI client users defined in seconds. The management GUI client user will be logged off automatically after this time of inactivity in the GUI. The session expired page will be displayed. The user needs to authenticate himself again to re-enter the management GUI. Default: 15 minutes (900 seconds).<br/>  <br/>    Minimum: 60 seconds, Maximum: 5400 seconds|  
 |SOAP Session Inactivity Timeout|The SOAP session (management only) will be automatically discarded after this inactivity timeout (in minutes). Default value is 10 minutes.|  
-|Audit Filter|Filter for audit actions (separated by "") that shall be ignored (means: those actions are not stored in database). Format: 'ACTION""ACTION""...'. Example: 'SSMSLOGIN""SSMSLOGIN_SOAP'. Default value is empty.  Note: If the format of an action is invalid or the action is unknown actions will be ignored.|  
+|Audit Filter|Filter for audit actions (separated by \|) that shall be ignored (means: those actions are not stored in database). Format: 'ACTION\|ACTION\|...'. Example: 'SSMSLOGIN\|SSMSLOGIN_SOAP'. Default value is empty. <br/>  <br/>    Note: If the format of an action is invalid or the action is unknown actions will be ignored.|  
 |Urls Address Book Servers|Comma-separated list (maximum 2 entries!) of URLs to address book servers.  For example, 'http://server:1234/rest/v1/'|  
 |Address Book Eco Identifier|The Eco Identifier is part of the URL of an Address Book server and is required to access certain methods of the Address Book server. If nothing is defined, the node ID of the SSMS server is used.|  
 |Address Book User Name|The username for Basic authentication of Address Book server.|  
@@ -609,10 +608,10 @@ Either you adjust the settings and the options in the configuration utility or y
 |Address Book Task Handlers|Maximum number of processing threads that are handled to communicate with the Address Book server.|  
 |Address Book Task Accept Count|Maximum number of messages for the Address Book server that are buffered by the SSMS when all the processing threads are busy in the SSMS. If the number is exceeded, each additional message is not sent to the Address Book server but stored in a file until processing threads are available again.|  
 |Address Book Idle Connection Timeout In Pool|Address Book Server: Timespan in seconds indicates how long connection stays idle in an Address Book Connection Pool.|  
-|Trace Exporter|Export traces to chosen Trace Exporter (Default: None). This denotes the backend for the collected trace data.  The setting 'None' implies turning off the tracing feature at all. In particular, messages sent from SSMS to external components will not carry any span context information.|  
-|Trace Sampler|Process/Export trace span based on chosen sampling method (Default: Never).  This setting has an effect only in the case when SSMS initiates a root span, and thus a new trace. In all other cases, SSMS will export or drop spans as given in the context of the foregoing (remote) parent span.  Note: External component may override the sampling flag of spans inside an ongoing trace during their processing. SSMS does not do this.  Note: Opting for 'Never' sampling in combination with the 'Trace Exporter' set to something other than 'None', will keep internal processing of traces, spans and their contexts activated. In particular, messages sent from SSMS to external components will carry span context information.|  
+|Trace Exporter|Export traces to chosen Trace Exporter (Default: None). This denotes the backend for the collected trace data. <br/>  <br/>    The setting 'None' implies turning off the tracing feature at all. In particular, messages sent from SSMS to external components will not carry any span context information.|  
+|Trace Sampler|Process/Export trace span based on chosen sampling method (Default: Never). <br/>  <br/>   This setting has an effect only in the case when SSMS initiates a root span, and thus a new trace. In all other cases, SSMS will export or drop spans as given in the context of the foregoing (remote) parent span.<br/>  <br/>    Note: External component may override the sampling flag of spans inside an ongoing trace during their processing. SSMS does not do this. <br/>  <br/>   Note: Opting for 'Never' sampling in combination with the 'Trace Exporter' set to something other than 'None', will keep internal processing of traces, spans and their contexts activated. In particular, messages sent from SSMS to external components will carry span context information.|  
 |Trace Exporter Url|URL for Trace Exporter. The URL must be complete, containing the IP/DNS name, port, and path.|  
-|Probability|Probability for probability-based sampling. E.g. With probability 0.1, approximately 1 in 10 traces will be sampled. (Default: 0.0)  This setting has an effect only in the case when the ‘Trace Sampler’ is set to ‘Probabilistic’. See the ‘Trace Sampler’ description for more details.|  
+|Probability|Probability for probability-based sampling. E.g. With probability 0.1, approximately 1 in 10 traces will be sampled.<br/> <br/>   (Default: 0.0).<br/>   <br/>  This setting has an effect only in the case when the ‘Trace Sampler’ is set to ‘Probabilistic’. See the ‘Trace Sampler’ description for more details.|  
 |Trace Auditing|If this flag is activated, auditing data will be placed to distributing tracing. Default value is unchecked.|  
 
 Click on **Save** to save the settings.  
@@ -680,5 +679,8 @@ You can also run the program “Uninstall SSMS Installation.exe” in the direct
 ><SSMS_INSTALL>/_SSMS_installation.
 
 ### Uninstallation on Linux
-On Linux, you can uninstall all the program components by running the file "Uninstall SSMS Installation" in the folder   
->SSMS_INSTALL/_SSMS_installation/.
+On Linux, you can uninstall all the program components by running the file "Uninstall SSMS Installation" in the folder.    
+
+You can also run the program “Uninstall SSMS Installation.exe” in the directory.  
+
+>\<SSMS_INSTALL\>/_SSMS_installation/.  
