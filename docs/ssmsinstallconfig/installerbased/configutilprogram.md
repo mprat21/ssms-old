@@ -110,7 +110,7 @@ The MySQL package only contains one connector with the file name “mysql-connec
 
 In addition, note the license agreement for the Oracle database JDBC connector. You can find the license agreement in the directory
 
-        \<SSMS_INSTALL\>/doc/licences.
+        \<SSMS_INSTALL\>/doc/licences
 
 In case you need to substitute the database driver for Oracle and MSSQL, you must copy the correct driver (JAR file) into the following directory:
 
