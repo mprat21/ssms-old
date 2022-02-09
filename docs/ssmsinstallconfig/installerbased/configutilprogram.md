@@ -641,7 +641,7 @@ In the deploy process a Template is read (SSMS HOME/configutil/server.xml.templa
 
 Specific configurations to the connections can, if necessary, be changed in the Template. These are activated for the SSMS during the Deploy process.
 
-The settings in the Configuration Utility to be verified are represented in the template through a placeholder. This placeholder is then substituted during the deploy process. The placeholder has the form ${<name>}.
+The settings in the Configuration Utility to be verified are represented in the template through a placeholder. This placeholder is then substituted during the deploy process. The placeholder has the form ${/<name/>}.
 
 The name of a placeholder is structured as the following: <Prefix>.<Parameter>. <Prefix> has one of the following five values:  
 
