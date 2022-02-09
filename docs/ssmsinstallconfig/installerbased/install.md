@@ -12,7 +12,8 @@ Start set up.exe by double clicking with the left mouse button.
 ### Linux
 
 After the download, open the terminal. Here, switch to the directory containing the installation program.  
-Type in the command: sh./setup.bin.  
+Type in the command:
+>sh./setup.bin.  
 
 ## The Installation Process
 
@@ -56,7 +57,7 @@ The following illustrates the options to create shortcuts on Windows. On Linux, 
 
 At Windows it is possible to specify the user which is used to start the SSMS service.
 
-**ATTENTION**: This user requires the permission "Log on as a service”.
+**:warning: This user requires the permission "Log on as a service”.**
 
 ![configuration](./files/installation_configuration.png)  
 
@@ -80,13 +81,13 @@ The access to the Configuration Utility is only possible with a password. Please
 
 ![configurationpassword](./files/installation_configurationpassword.png)  
 
- ## Summary of the Settings  
+## Summary of the Settings  
 
  Before completing the installation, you receive a summary of the settings configured so far. You can confirm them by clicking on "Install":  
 
  ![pre-installationsummary](./files/installation_summary.png)  
 
- ## Completing the Installation  
+## Completing the Installation  
 
 In conclusion, you receive a summary of the installation process with information about the directory path where you can find the respective log file. Click on "Done" to end the installation program.  
 
@@ -94,12 +95,13 @@ In conclusion, you receive a summary of the installation process with informatio
 
 Once you have completed the installation, the program starts automatically the configuration utility with its web interface for the SSMS configuration.  
 
-  ## Installation with the Terminal  
+## Installation with the Terminal  
 
 You can also start the installation program and install the SSMS in the terminal with the required options. Run the following command on Linux:  
-  **Linux**
-           ./setup.bin -i console  
-  **Windows**
-            setup.exe -i  console  
+  - **Linux**
+           >./setup.bin -i console  
+
+  - **Windows**
+            >setup.exe -i  console  
 
 You will then be prompted to give the values of all the parameters. Press Enter to accept the default values or enter your own values to change the installation.  
