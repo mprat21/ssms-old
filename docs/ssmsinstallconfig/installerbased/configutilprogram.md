@@ -177,16 +177,16 @@ SSMS is a request driven system. Every request requires a thread to execute the 
 A request can be one of the following:  
 
 1. An ASM device sends data to SSMS    
-  a. A thread from the amount of Tomcat threads is used  
+    - A thread from the amount of Tomcat threads is used  
 
 2. The portal calls a SOAP Method  
-  b. A thread from the amount of Tomcat threads is used  
+    - A thread from the amount of Tomcat threads is used  
 
 3. An SSMS node calls another SSMS node  
-  c. A thread from the amount of cluster threads is used  
+    - A thread from the amount of cluster threads is used  
 
 4. Background tasks  
-  d. A thread from the amount of SSMS internal task executer thread pool is used  
+    - A thread from the amount of SSMS internal task executer thread pool is used  
 
 Almost all requests require a database connection to read data from or write data to the database. These connections are taken from the database connection pool and returned to the pool when the requests terminates.  
 
