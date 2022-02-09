@@ -62,7 +62,7 @@ Click on "Save" to save the settings made on the setup page.
 
 If you install several nodes, please export the configuration file config.xml from the previous installation and then import it for each additional node. With the import of the file config.xml, every additional node contains the same database key databaseEncryptionKey, stored in this file along with other information.  
 
-:warning: Please create the export newly after the update of the SSMS so that changed values in the export are considered. Please check the imported values in the configuration utility for correctness.  
+:warning: **Please create the export newly after the update of the SSMS so that changed values in the export are considered. Please check the imported values in the configuration utility for correctness**
 
 Therefore, you can export the configuration only after creating the database. To do this, follow the instructions in the next chapter.  
 
