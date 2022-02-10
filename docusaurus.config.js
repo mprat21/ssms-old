@@ -35,7 +35,7 @@ const config = {
       }),
     ],
   ],
-/* plugins: [
+ plugins: [
     [
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
@@ -55,10 +55,10 @@ const config = {
     }
     ]
   ],
-  */
+
 //  themes: ['@docusaurus/theme-search-algolia'],
   themeConfig:
-    @type {import('@docusaurus/preset-classic').ThemeConfig}
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
         title: 'KOBIL mID',
@@ -77,6 +77,7 @@ const config = {
       },
 
 
+            /*
      algolia: {
         // Public API key: it is safe to commit it
         apiKey: '96440888ab5870fd4f0587db05468243',
@@ -84,7 +85,6 @@ const config = {
         appId: '5XMQ2C4NAT',
       },
 
-      /*
       algoliasearchNetlify:
       {
     appId: '5XMQ2C4NAT',
