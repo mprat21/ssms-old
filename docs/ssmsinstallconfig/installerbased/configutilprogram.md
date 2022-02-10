@@ -264,7 +264,7 @@ In case only the services node is selected, the dialog box for setting the Datab
 
 :warning: **After a migration / update please check the connection settings of the Database Connection Pool. The existing configuration is migrated during the start of the CU into the new form. Not configured values receive default values. Therefore a verification of the Database Connection Pool necessary!**
 
-## Certificates  
+## Certificates (#certificates)  
 
 After successfully creating the database, you can click the next step of the open issues to go to the certificates view. In the certificates view, you can create and manage the SSMS certificates as well as secure the SSMS with SSL. You have to request a certificate by clicking on “Create” if you want to configure the server for the routine use. The certificate request must be signed by KOBIL and you received then the required CA and x509 certificate in order to continue with the installation.
 
@@ -650,7 +650,7 @@ If the deployment process was successful, you receive the following message and 
 
 ![configurationdeployment1](./files/config_deployment1.png)  
 
-You can then access the SSMS graphical interface, provided that you defined a URL and imported the required [certificates](##certificates) in the browser.
+You can then access the SSMS graphical interface, provided that you defined a URL and imported the required [certificates](#certificates) in the browser.
 
 After the deploy process the access permissions are stored in the ssms_configuration_util.log file.  ([path]())
 
