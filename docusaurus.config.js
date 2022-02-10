@@ -47,7 +47,6 @@ const config = {
         indexDocSidebarParentCategories: 0,
         indexBlog: true,
         indexPages: false,
-        language: "en",
         style: undefined,
         lunr: {
             tokenizerSeparator: /[\s\-]+/,
