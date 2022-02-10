@@ -57,6 +57,7 @@ const config = {
             contentBoost: 1,
             parentCategoriesBoost: 2,
       }
+    }
     ]
   ],
   themeConfig:
