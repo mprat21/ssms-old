@@ -40,7 +40,7 @@ const config = {
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         indexDocs: true,
-        indexDocSidebarParentCategories: 0,
+        indexDocSidebarParentCategories: 5,
         indexBlog: true,
         indexPages: false,
         style: undefined,
