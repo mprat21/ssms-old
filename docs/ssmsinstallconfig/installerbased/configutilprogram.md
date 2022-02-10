@@ -178,7 +178,7 @@ Additionally you must change the files KOBIL SSMS Configuration Utility.lax and 
 
 In case you use JBDC OCI, enter the following URL:Jdbc:oracle:oci:@Service_Name  
 
-:warning: **Please note that all the settings described in this [topic](###OracleDatabasewithuseofanOracleClient) are deleted in case you update the SSMS. Therefore, you must repeat all the above steps**  
+:warning: **Please note that all the settings described in this [topic](#OracleDatabasewithuseofanOracleClient) are deleted in case you update the SSMS. Therefore, you must repeat all the above steps**  
 
 ### SSMS database connection pool settings  
 
@@ -337,7 +337,7 @@ The super administrator needs an SSMS Administrator SSL Client Certificate (supe
 
 ![configurationadmincertificate1](./files/config_admincertificate1.png)  
 
-Enter the common name, the organization, the country code (DE, FR, GB, US, etc.) and the email address under which the super administrator can be reached. You are also required to enter the password assigned to the CA key (see CA key password) for the certificate request in this [step](###TestInstallation)  
+Enter the common name, the organization, the country code (DE, FR, GB, US, etc.) and the email address under which the super administrator can be reached. You are also required to enter the password assigned to the CA key (see CA key password) for the certificate request in this [step](#TestInstallation)  
 
 :warning: **During the generation of the super administrator certificate, you have the option to save the password of the superadministrator (keystore password) as well as that of the truststore in the configuration file portalLib.xml, contained in the directory \<SSMS_HOME\>. To do so, check the box “Save Password”. Find more information about this file in the integration manual**
 
@@ -357,7 +357,7 @@ In case you change the super administrator permissions in the SSMS GUI and you d
 
 ### Certificates Required to Start the SSMS  
 
-You require three certificates to start and access the graphical interface of the SSMS via the browser: the SSMS Administrator SSL client certificate (also referred to as the super administrator certificate), which you created in this [topic](###TheSSMSSuperAdministratorCertificate), and both the two issuer certificates which you can download to integrate them into the super administrator browser:  
+You require three certificates to start and access the graphical interface of the SSMS via the browser: the SSMS Administrator SSL client certificate (also referred to as the super administrator certificate), which you created in this [topic](#TheSSMSSuperAdministratorCertificate), and both the two issuer certificates which you can download to integrate them into the super administrator browser:  
 
 ![configurationissuercertificate](./files/config_issuercertificate.png)  
 
@@ -367,7 +367,7 @@ It is possible to update both the Root CA and your SSMS-CA certificates. This be
 
 ### Recreation of CA Request  
 
-Analogously to the [topic](###CreatetheCertificate/LicenseRequest), you can create a CA certificate request based exactly on the same data that was used for the initial certification process.  
+Analogously to the [topic](#CreatetheCertificate/LicenseRequest), you can create a CA certificate request based exactly on the same data that was used for the initial certification process.  
 
 ![configurationrecreationcertificate](./files/config_recreationcertificate.png)  
 
@@ -650,13 +650,13 @@ If the deployment process was successful, you receive the following message and 
 
 ![configurationdeployment1](./files/config_deployment1.png)  
 
-You can then access the SSMS graphical interface, provided that you defined a URL and imported the required [certificates](##certificates) in the browser.
+You can then access the SSMS graphical interface, provided that you defined a URL and imported the required [certificates](#certificates) in the browser.
 
 After the deploy process the access permissions are stored in the ssms_configuration_util.log file.
 
 ### Advanced configuration possibilities for connections Deploy  
 
-The connections (connectors) that make the SSMS reachable from the outside, are usually defined in the [Configuration Utility](##Modules) and activated for the SSMS during the [deploy process](##Deploy).
+The connections (connectors) that make the SSMS reachable from the outside, are usually defined in the [Configuration Utility](#Modules) and activated for the SSMS during the [deploy process](#Deploy).
 
 In the deploy process a Template is read **(SSMS HOME/configutil/server.xml.template)** where the defined values in the Configuration Utility are inserted. Afterwards the file “server.xml” required for the integrated Tomcat is created and stored.
 
