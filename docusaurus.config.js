@@ -56,6 +56,7 @@ const config = {
     ]
   ],
   */
+  themes: ['@docusaurus/theme-search-algolia'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -83,7 +84,6 @@ const config = {
         appId: '5XMQ2C4NAT',
         branch: 'master-main',
         siteId: 'e1a12213-e46b-4768-ad8f-237eaf256b48',
-
       },
 
 
