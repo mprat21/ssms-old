@@ -15,6 +15,7 @@ const config = {
   favicon: 'img/favicon.svg',
   organizationName: 'KOBIL', // Usually your GitHub org/user name.
   projectName: 'KOBIL mID Solutions', // Usually your repo name.
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
 
   presets: [
     [
@@ -38,7 +39,26 @@ const config = {
       }),
     ],
   ],
-
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        indexDocs: true,
+        indexDocSidebarParentCategories: 0,
+        indexBlog: true,
+        indexPages: false,
+        language: "en",
+        style: undefined,
+        lunr: {
+            tokenizerSeparator: /[\s\-]+/,
+            b: 0.75,
+            k1: 1.2,
+            titleBoost: 5,
+            contentBoost: 1,
+            parentCategoriesBoost: 2,
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
