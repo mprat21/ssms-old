@@ -56,7 +56,7 @@ const config = {
     ]
   ],
   */
-  themes: ['@docusaurus/theme-search-algolia'],
+//  themes: ['@docusaurus/theme-search-algolia'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -83,7 +83,7 @@ const config = {
         indexName: 'kobil-ssms',
         appId: '5XMQ2C4NAT',
       },
-      
+
       /*
       algoliasearchNetlify:
       {
