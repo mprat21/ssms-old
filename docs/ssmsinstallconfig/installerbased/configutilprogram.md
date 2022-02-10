@@ -650,7 +650,7 @@ If the deployment process was successful, you receive the following message and 
 
 ![configurationdeployment1](./files/config_deployment1.png)  
 
-You can then access the SSMS graphical interface, provided that you defined a URL and imported the required [certificates](#Certificates) in the browser.
+You can then access the SSMS graphical interface, provided that you defined a URL and imported the required [certificates](#certificates) in the browser.
 
 After the deploy process the access permissions are stored in the ssms_configuration_util.log file.
 
