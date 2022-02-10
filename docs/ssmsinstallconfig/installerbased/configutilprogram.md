@@ -337,7 +337,7 @@ The super administrator needs an SSMS Administrator SSL Client Certificate (supe
 
 ![configurationadmincertificate1](./files/config_admincertificate1.png)  
 
-Enter the common name, the organization, the country code (DE, FR, GB, US, etc.) and the email address under which the super administrator can be reached. You are also required to enter the password assigned to the CA key (see CA key password) for the certificate request in this [step](#TestInstallation)  
+Enter the common name, the organization, the country code (DE, FR, GB, US, etc.) and the email address under which the super administrator can be reached. You are also required to enter the password assigned to the CA key (see CA key password) for the certificate request in this [step](#test-installation)  
 
 :warning: **During the generation of the super administrator certificate, you have the option to save the password of the superadministrator (keystore password) as well as that of the truststore in the configuration file portalLib.xml, contained in the directory \<SSMS_HOME\>. To do so, check the box “Save Password”. Find more information about this file in the integration manual**
 
