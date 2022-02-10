@@ -40,10 +40,10 @@ const config = {
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         indexDocs: true,
-        indexDocSidebarParentCategories: 1,
+        indexDocSidebarParentCategories: 0,
         indexBlog: true,
         indexPages: false,
-        style: lightCodeTheme,
+        style: none,
         lunr: {
             tokenizerSeparator: /[\s\-]+/,
             b: 0.75,
