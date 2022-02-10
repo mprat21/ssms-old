@@ -144,7 +144,7 @@ You must keep the database key "databaseEncryptionKey" in a safe place. The data
 
 :warning: **The databaseEncryptionKey is only generated once and saved in the config.xml file. Therefore, if you install and set up multiple nodes or servers, please export this file in the "Setup" window by clicking on “Export configuration” and import it on every additional node, so that every node contains the same databaseEncryptionKey**  
 
-### Oracle Database with use of an Oracle Client (#OracleDatabasewithuseofanOracleClient)
+### Oracle Database with use of an Oracle Client
 
 In case you want to use an Oracle database with an Oracle Client, for example because you need additional database functions, note the following points:  
 
@@ -264,7 +264,7 @@ In case only the services node is selected, the dialog box for setting the Datab
 
 :warning: **After a migration / update please check the connection settings of the Database Connection Pool. The existing configuration is migrated during the start of the CU into the new form. Not configured values receive default values. Therefore a verification of the Database Connection Pool necessary!**
 
-## Certificates (#Certificates)  
+## Certificates  
 
 After successfully creating the database, you can click the next step of the open issues to go to the certificates view. In the certificates view, you can create and manage the SSMS certificates as well as secure the SSMS with SSL. You have to request a certificate by clicking on “Create” if you want to configure the server for the routine use. The certificate request must be signed by KOBIL and you received then the required CA and x509 certificate in order to continue with the installation.
 
@@ -272,7 +272,7 @@ Otherwise, you can carry out a test installation of the server. The test install
 
 ![configurationcertificates](./files/config_certificates.png)  
 
-### Test Installation (#TestInstallation)
+### Test Installation
 
 Read this chapter only if you would like to test the system and its functionalities with a test installation. If you would like to install the system for the routine use, skip this chapter.  
 
@@ -289,7 +289,7 @@ but you do not have to request and to upload the certificates signed by KOBIL. T
 
 ![configurationcertificaterequest](./files/config_certificaterequest.png)  
 
-### Create the Certificate / License Request (#LicenseRequest)
+### Create the Certificate / License Request
 
 You need the following input values to create the certificate request:  
 * **Common name**: Name of the CA certificate (e.g. KOBIL SSMS CA)  
@@ -327,7 +327,7 @@ You receive the following message as a confirmation that you could successfully 
 
 ![configurationcertificateupload3](./files/config_certificateupload3.png)  
 
-### The SSMS Super Administrator Certificate (#TheSSMSSuperAdministratorCertificate)
+### The SSMS Super Administrator Certificate
 
 The option and the button to generate the SSMS Super Administrator SSL Client Certificate are shown to you only after you integrated the two CA certificates.  
 
@@ -337,8 +337,7 @@ The super administrator needs an SSMS Administrator SSL Client Certificate (supe
 
 ![configurationadmincertificate1](./files/config_admincertificate1.png)  
 
-Enter the common name, the organization, the country code (DE, FR, GB, US, etc.) and the email address under which the super administrator can be reached. You are also required to enter the password assigned to the CA key (see CA key password) for the certificate request in this [step](#test-installation)  
-
+Enter the common name, the organization, the country code (DE, FR, GB, US, etc.) and the email address under which the super administrator can be reached. You are also required to enter the password assigned to the CA key (see CA key password) for the certificate request in this [step](#TestInstallation)  
 
 :warning: **During the generation of the super administrator certificate, you have the option to save the password of the superadministrator (keystore password) as well as that of the truststore in the configuration file portalLib.xml, contained in the directory \<SSMS_HOME\>. To do so, check the box “Save Password”. Find more information about this file in the integration manual**
 
@@ -368,7 +367,7 @@ It is possible to update both the Root CA and your SSMS-CA certificates. This be
 
 ### Recreation of CA Request  
 
-Analogously to the [topic](#CreatetheCertificate/LicenseRequest), you can create a CA certificate request based exactly on the same data that was used for the initial certification process.  
+Analogously to the [topic](#LicenseRequest), you can create a CA certificate request based exactly on the same data that was used for the initial certification process.  
 
 ![configurationrecreationcertificate](./files/config_recreationcertificate.png)  
 
@@ -498,7 +497,7 @@ After you have configured and adjusted all the settings, please confirm them wit
 
 The button “Reset” resets all settings on the SSMS to the default values of the SSMS.  
 
-## Modules (#Modules)
+## Modules
 
 The module view displays the available modules. Both the management and the services nodes contain a kernel module. Additionally, you can install other modules on the management node. Every desired module should be installed on the management node. The SSMS components (Management with GUI and Services) and the kernel module represent the basis of the system, but you can extend its functionalities by installing additional modules. The delivered system contains the modules Kernel, App Security Management Module (ASM), Signature Verification Module (SVM), as well as the modules, SecOVID and Password Authentication (PAM).
 
@@ -641,7 +640,7 @@ Either you adjust the settings and the options in the configuration utility or y
 
 Click on **Save** to save the settings.  
 
-## Deploy (#Deploy)
+## Deploy
 
 “Deploy” means installing the previously defined modules and node types in the Tomcat. Before you click on **Deploy**, be sure that the SSMS is stopped if it has been started previously.
 
@@ -651,7 +650,7 @@ If the deployment process was successful, you receive the following message and 
 
 ![configurationdeployment1](./files/config_deployment1.png)  
 
-You can then access the SSMS graphical interface, provided that you defined a URL and imported the required [certificates](#certificates) in the browser.
+You can then access the SSMS graphical interface, provided that you defined a URL and imported the required [certificates](#Certificates) in the browser.
 
 After the deploy process the access permissions are stored in the ssms_configuration_util.log file.
 
