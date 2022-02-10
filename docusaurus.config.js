@@ -15,7 +15,6 @@ const config = {
   favicon: 'img/favicon.svg',
   organizationName: 'KOBIL', // Usually your GitHub org/user name.
   projectName: 'KOBIL mID Solutions', // Usually your repo name.
-
   presets: [
     [
       'classic',
@@ -23,8 +22,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          //editUrl: 'https://github.com/kobildeveloper/mid-server',
         },
         blog: {
           showReadingTime: true,
@@ -38,7 +35,27 @@ const config = {
       }),
     ],
   ],
-
+/* plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        indexDocs: true,
+        indexDocSidebarParentCategories: 0,
+        indexBlog: true,
+        indexPages: false,
+        style: undefined,
+        lunr: {
+            tokenizerSeparator: /[\s\-]+/,
+            b: 0.75,
+            k1: 1.2,
+            titleBoost: 5,
+            contentBoost: 1,
+            parentCategoriesBoost: 2,
+      }
+    }
+    ]
+  ],
+  */
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -57,12 +74,24 @@ const config = {
           },
         ],
       },
-      algolia: {
+
+
+    /* algolia: {
         // Public API key: it is safe to commit it
-        apiKey: '7740d07f6d36df294fea2aa6584211d7',
+        apiKey: '96440888ab5870fd4f0587db05468243',
         indexName: 'kobil-ssms',
-        appId: 'UH8M0E9EEO'
+        appId: '5XMQ2C4NAT'
       },
+      */
+      algoliasearchNetlify:
+      {
+    appId: '5XMQ2C4NAT',
+    apiKey: '96440888ab5870fd4f0587db05468243',
+    siteId: 'e1a12213-e46b-4768-ad8f-237eaf256b48',
+    branch: 'master-main',
+    selector: 'div#search',
+  },
+
 
       footer: {
         style: 'dark',
