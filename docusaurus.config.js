@@ -57,7 +57,7 @@ const config = {
             contentBoost: 1,
             parentCategoriesBoost: 2,
       },
-    ],
+    ]
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
