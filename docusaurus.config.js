@@ -22,8 +22,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          //editUrl: 'https://github.com/kobildeveloper/mid-server',
         },
         blog: {
           showReadingTime: true,
@@ -42,10 +40,10 @@ const config = {
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         indexDocs: true,
-        indexDocSidebarParentCategories: 3,
+        indexDocSidebarParentCategories: 1,
         indexBlog: true,
         indexPages: false,
-        style: undefined,
+        style: lightCodeTheme,
         lunr: {
             tokenizerSeparator: /[\s\-]+/,
             b: 0.75,
