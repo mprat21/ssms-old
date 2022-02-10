@@ -178,7 +178,7 @@ Additionally you must change the files KOBIL SSMS Configuration Utility.lax and 
 
 In case you use JBDC OCI, enter the following URL:Jdbc:oracle:oci:@Service_Name  
 
-:warning: **Please note that all the settings described in this [topic](#OracleDatabasewithuseofanOracleClient) are deleted in case you update the SSMS. Therefore, you must repeat all the above steps**  
+:warning: **Please note that all the settings described in this [topic](#oracle-database-with-use-of-an-oracle-client) are deleted in case you update the SSMS. Therefore, you must repeat all the above steps**  
 
 ### SSMS database connection pool settings  
 
@@ -357,7 +357,7 @@ In case you change the super administrator permissions in the SSMS GUI and you d
 
 ### Certificates Required to Start the SSMS  
 
-You require three certificates to start and access the graphical interface of the SSMS via the browser: the SSMS Administrator SSL client certificate (also referred to as the super administrator certificate), which you created in this [topic](#TheSSMSSuperAdministratorCertificate), and both the two issuer certificates which you can download to integrate them into the super administrator browser:  
+You require three certificates to start and access the graphical interface of the SSMS via the browser: the SSMS Administrator SSL client certificate (also referred to as the super administrator certificate), which you created in this [topic](#the-ssms-super-administrator-certificate), and both the two issuer certificates which you can download to integrate them into the super administrator browser:  
 
 ![configurationissuercertificate](./files/config_issuercertificate.png)  
 
@@ -367,7 +367,7 @@ It is possible to update both the Root CA and your SSMS-CA certificates. This be
 
 ### Recreation of CA Request  
 
-Analogously to the [topic](#LicenseRequest), you can create a CA certificate request based exactly on the same data that was used for the initial certification process.  
+Analogously to the [topic](#create-the-certificate--license-request), you can create a CA certificate request based exactly on the same data that was used for the initial certification process.  
 
 ![configurationrecreationcertificate](./files/config_recreationcertificate.png)  
 
@@ -656,7 +656,7 @@ After the deploy process the access permissions are stored in the ssms_configura
 
 ### Advanced configuration possibilities for connections Deploy  
 
-The connections (connectors) that make the SSMS reachable from the outside, are usually defined in the [Configuration Utility](#Modules) and activated for the SSMS during the [deploy process](#Deploy).
+The connections (connectors) that make the SSMS reachable from the outside, are usually defined in the [Configuration Utility](#modules) and activated for the SSMS during the [deploy process](#deploy).
 
 In the deploy process a Template is read **(SSMS HOME/configutil/server.xml.template)** where the defined values in the Configuration Utility are inserted. Afterwards the file “server.xml” required for the integrated Tomcat is created and stored.
 
