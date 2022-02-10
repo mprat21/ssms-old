@@ -35,7 +35,7 @@ const config = {
       }),
     ],
   ],
-  plugins: [
+/**  plugins: [
     [
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
@@ -55,6 +55,7 @@ const config = {
     }
     ]
   ],
+  */
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -74,13 +75,13 @@ const config = {
         ],
       },
 
-    /*algolia: {
+    algolia: {
         // Public API key: it is safe to commit it
         apiKey: '612e68bffb146f20f67d12e339e1243b',
         indexName: 'kobil-ssms',
         appId: 'QDORBREG9G'
       },
-*/
+
       footer: {
         style: 'dark',
         links: [
