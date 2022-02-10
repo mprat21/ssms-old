@@ -19,7 +19,7 @@ If you install many management and services nodes in a cluster, you must run the
 
     /opt/KOBIL/SSMS  
 
-After starting the configuration utility, open the browser and go to the following URL: https://localhost:9000/  
+After starting the configuration utility, open the browser and go to the following URL: https://localhost:9000/
 
 The port depends on the installation settings, so, if you did not change it during the installation, it remains 9000.  
 
