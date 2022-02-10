@@ -76,13 +76,19 @@ const config = {
       },
 
 
-    /* algolia: {
+     algolia: {
         // Public API key: it is safe to commit it
         apiKey: '96440888ab5870fd4f0587db05468243',
         indexName: 'kobil-ssms',
-        appId: '5XMQ2C4NAT'
+        appId: '5XMQ2C4NAT',
+        branch: 'master-main',
+        siteId: 'e1a12213-e46b-4768-ad8f-237eaf256b48',
+
       },
-      */
+
+
+
+      /*
       algoliasearchNetlify:
       {
     appId: '5XMQ2C4NAT',
@@ -91,6 +97,7 @@ const config = {
     branch: 'master-main',
     selector: 'div#search',
   },
+  */
 
 
       footer: {
