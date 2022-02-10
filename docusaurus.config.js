@@ -59,9 +59,9 @@ const config = {
       },
       algolia: {
         // Public API key: it is safe to commit it
-        apiKey: '7740d07f6d36df294fea2aa6584211d7',
+        apiKey: '612e68bffb146f20f67d12e339e1243b',
         indexName: 'kobil-ssms',
-        appId: 'UH8M0E9EEO'
+        appId: 'QDORBREG9G'
       },
 
       footer: {
