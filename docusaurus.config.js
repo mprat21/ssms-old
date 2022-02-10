@@ -35,7 +35,7 @@ const config = {
       }),
     ],
   ],
-/**  plugins: [
+/* plugins: [
     [
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
@@ -74,13 +74,26 @@ const config = {
           },
         ],
       },
-
-    algolia: {
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js">
+      </script>
+      <script type="text/javascript">
+        algoliasearchNetlify({
+          appId: '5XMQ2C4NAT',
+          apiKey: '96440888ab5870fd4f0587db05468243',
+          siteId: 'e1a12213-e46b-4768-ad8f-237eaf256b48',
+          branch: 'master-main',
+          selector: 'div#search',
+        });
+      </script>
+    /* algolia: {
         // Public API key: it is safe to commit it
         apiKey: '96440888ab5870fd4f0587db05468243',
         indexName: 'kobil-ssms',
         appId: '5XMQ2C4NAT'
       },
+      */
 
       footer: {
         style: 'dark',
