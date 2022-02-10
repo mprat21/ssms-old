@@ -652,7 +652,7 @@ If the deployment process was successful, you receive the following message and 
 
 You can then access the SSMS graphical interface, provided that you defined a URL and imported the required [certificates](##certificates) in the browser.
 
-After the deploy process the access permissions are stored in the ssms_configuration_util.log file.  ([path]())
+After the deploy process the access permissions are stored in the ssms_configuration_util.log file.
 
 ### Advanced configuration possibilities for connections Deploy  
 
