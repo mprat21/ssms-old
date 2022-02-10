@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.svg',
   organizationName: 'KOBIL', // Usually your GitHub org/user name.
   projectName: 'KOBIL mID Solutions', // Usually your repo name.
-  //plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
 
   presets: [
     [
