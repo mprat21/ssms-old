@@ -178,7 +178,7 @@ Additionally you must change the files KOBIL SSMS Configuration Utility.lax and 
 
 In case you use JBDC OCI, enter the following URL:Jdbc:oracle:oci:@Service_Name  
 
-:warning: **Please note that all the settings described in chapter 3.4.3 are deleted in case you update the SSMS. Therefore, you must repeat all the above steps**  
+:warning: **Please note that all the settings described in this [topic](###OracleDatabasewithuseofanOracleClient) are deleted in case you update the SSMS. Therefore, you must repeat all the above steps**  
 
 ### SSMS database connection pool settings  
 
@@ -337,7 +337,7 @@ The super administrator needs an SSMS Administrator SSL Client Certificate (supe
 
 ![configurationadmincertificate1](./files/config_admincertificate1.png)  
 
-Enter the common name, the organization, the country code (DE, FR, GB, US, etc.) and the email address under which the super administrator can be reached. You are also required to enter the password assigned to the CA key (see CA key password) for the certificate request in step 3.6.1  
+Enter the common name, the organization, the country code (DE, FR, GB, US, etc.) and the email address under which the super administrator can be reached. You are also required to enter the password assigned to the CA key (see CA key password) for the certificate request in this [step](###TestInstallation)  
 
 :warning: **During the generation of the super administrator certificate, you have the option to save the password of the superadministrator (keystore password) as well as that of the truststore in the configuration file portalLib.xml, contained in the directory \<SSMS_HOME\>. To do so, check the box “Save Password”. Find more information about this file in the integration manual**
 
@@ -357,7 +357,7 @@ In case you change the super administrator permissions in the SSMS GUI and you d
 
 ### Certificates Required to Start the SSMS  
 
-You require three certificates to start and access the graphical interface of the SSMS via the browser: the SSMS Administrator SSL client certificate (also referred to as the super administrator certificate), which you created in Chapter 3.6.4, and both the two issuer certificates which you can download to integrate them into the super administrator browser:  
+You require three certificates to start and access the graphical interface of the SSMS via the browser: the SSMS Administrator SSL client certificate (also referred to as the super administrator certificate), which you created in this [topic](###TheSSMSSuperAdministratorCertificate), and both the two issuer certificates which you can download to integrate them into the super administrator browser:  
 
 ![configurationissuercertificate](./files/config_issuercertificate.png)  
 
@@ -367,7 +367,7 @@ It is possible to update both the Root CA and your SSMS-CA certificates. This be
 
 ### Recreation of CA Request  
 
-Analogously to chapter 3.6.2, you can create a CA certificate request based exactly on the same data that was used for the initial certification process.  
+Analogously to the [topic](###CreatetheCertificate/LicenseRequest), you can create a CA certificate request based exactly on the same data that was used for the initial certification process.  
 
 ![configurationrecreationcertificate](./files/config_recreationcertificate.png)  
 
@@ -375,7 +375,7 @@ In the upcoming dialog the CA passphrase must be provided for signing the reques
 
 ![configurationrecreationcertificate1](./files/config_recreationcertificte1.png)  
 
-KOBIL will issue a new CA certificate based on the received request and send it back to you. The integration of the renewed certificate is described in chapter 3.6.7.  
+KOBIL will issue a new CA certificate based on the received request and send it back to you. The integration of the renewed certificate is described.  
 * Replace CA certificates  
 
 For recertification of renewal of the Root CA or SSMS-CA certificate use cases, you can replace existing certificates in your SSMS database.  
@@ -396,7 +396,7 @@ You can set up the nodes and configure the various SSMS connections in this view
 * Services  
 * External services  
 
-You must adjust the preconfigured connections according to your SSMS installation or to the already installed services. Default values are those defined in Figure 45.  
+You must adjust the preconfigured connections according to your SSMS installation or to the already installed services. Default values are those defined in the following figure.  
 
 ![configurationconnection](./files/config_connection.png)  
 
@@ -404,7 +404,7 @@ You must adjust the preconfigured connections according to your SSMS installatio
 
 First, you must define the node name (Node ID), which is the unique name under which the node can be reached. You must also define its node type: Management (MGT), Services (SVC) or both.  
 
-Afterwards, you are required to define external and internal SSMS domain names or IP addresses in IPv4 format, under which the SSMS will later be accessed by the respective services. Follow the instructions on the SSMS structure in chapter 1.3.3 and in table 4. Depending on the node type, the SSMS DNS names are used as follows:  
+Afterwards, you are required to define external and internal SSMS domain names or IP addresses in IPv4 format, under which the SSMS will later be accessed by the respective services. Follow the instructions on the SSMS structure and Depending on the node type, the SSMS DNS names are used as follows:  
 
 |**Node type**|**SSMS DNS name/ IP**|**Use**|
 |:-----------:|:-------------------:|:-----:|
@@ -650,13 +650,13 @@ If the deployment process was successful, you receive the following message and 
 
 ![configurationdeployment1](./files/config_deployment1.png)  
 
-You can then access the SSMS graphical interface, provided that you defined a URL and imported the required certificates (see Chapter 3.6) in the browser.
+You can then access the SSMS graphical interface, provided that you defined a URL and imported the required [certificates](##certificates) in the browser.
 
-After the deploy process the access permissions are stored in the ssms_configuration_util.log file.
+After the deploy process the access permissions are stored in the ssms_configuration_util.log file.  ([path]())
 
 ### Advanced configuration possibilities for connections Deploy  
 
-The connections (connectors) that make the SSMS reachable from the outside, are usually defined in the Configuration Utility and activated for the SSMS during the deploy process.
+The connections (connectors) that make the SSMS reachable from the outside, are usually defined in the [Configuration Utility](##Modules) and activated for the SSMS during the [deploy process](##Deploy).
 
 In the deploy process a Template is read **(SSMS HOME/configutil/server.xml.template)** where the defined values in the Configuration Utility are inserted. Afterwards the file “server.xml” required for the integrated Tomcat is created and stored.
 
