@@ -139,6 +139,7 @@ The information in the view is explained in the following table:
 
 ###	Group Properties
 
+|:----|:----|
 |Property-ID|Identification number of the property|
 |User-ID|The group ID whom the property is about|
 |Property Name|The given property name|
@@ -149,9 +150,8 @@ The following figure shows the Device Properties view, which manages the propert
 ![group-prop](./files-asm/group-prop.png)
 
 The following attributes are part of the Device Properties view:
-
+|:----|:----|
 |Device-ID     |The identification number of the device internally assigned by the SSMS|
-|--------------|-----------------------------------------------------------------------|
 |Serial Number |Serial number of the device                                            |
 |User-ID       |The user assigned to the device                                        |
 |Property Name |The given property name                                                |
