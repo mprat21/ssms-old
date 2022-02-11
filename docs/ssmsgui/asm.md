@@ -55,28 +55,16 @@ Go to this view via the menu option “App Security Management” → “Devices
 
 The table of this view informs you about the status of all registered devices and their users as well as other attributes. The following is a detailed description:
 
-|Select|Checkbox for selection| |
-|:----|:----|:----|
-|Device-ID|The device identification number internally assigned by the SSMS| |
-|User-ID|The user assigned to the device| |
-|Device|The device type („VIRTUAL_DEVICE“ for iOS, Android and Windows or „MIDENTITY_MINI“, „MIDENTITY_AIR“ and „MIDENTITY_AIR_PLUS“)| |
-| |  ![1](./files-asm/1.png) Virtual device:  iOS and Android (Smartphone Apps)|
-| |  ![2](./files-asm/2.png) Virtual device: Windows and Mac OS (PC Browser)|
-| |  ![3](./files-asm/3.png) Hardware: mIDentity mini|
-| |  ![4](./files-asm/4.png) Hardware: mIDentity Air (currently not supported), Air+, signPod and signDot|
-|Serial Number|The serial number of the certificate belonging to the device| |
-|App Name|The name assigned to the app| |
-|App Version|The version number of the app| |
-|Device Version|The version number of the used device| |
-|Risks|The following risks are displayed in case the user changed his smartphone (for example jailbreaking on iOS) or his app. You will find more detailed information in the separated risk documentation.| |
-| |JBreak| |
-| |Manipulation| |
-| |MaliciousApp| |
-| |Uid| |
-| |CodeInjection| |
-| |RunAsRoot| |
-| |MemoryProtection| |
-| |Emulator| |
+|Select|Checkbox for selection|
+|:----|:----|
+|Device-ID|The device identification number internally assigned by the SSMS|
+|User-ID|The user assigned to the device|
+|Device|The device type (**VIRTUAL_DEVICE** or iOS, Android and Windows or **MIDENTITY_MIN**, **MIDENTITY_AIR** and **MIDENTITY_AIR_PLUS**) <br/> ![1](./files-asm/1.png) Virtual device:  iOS and Android (Smartphone Apps) <br/> ![2](./files-asm/2.png) Virtual device: Windows and Mac OS (PC Browser) <br/> ![3](./files-asm/3.png) Hardware: mIDentity mini <br/> ![4](./files-asm/4.png) Hardware: mIDentity Air (currently not supported), Air+, signPod and signDot|
+|Serial Number|The serial number of the certificate belonging to the device|
+|App Name|The name assigned to the app|
+|App Version|The version number of the app|
+|Device Version|The version number of the used device|
+|Risks|The following risks are displayed in case the user changed his smartphone (for example jailbreaking on iOS) or his app. You will find more detailed information in the separated risk documentation. <br/> - JBreak <br/> - Manipulation <br/> - MaliciousApp <br/> - Uid <br/> - CodeInjection <br/> - RunAsRoot <br/> - MemoryProtection <br/> - Emulator|
 |OS Type|Platform of the device where the app runs (for example ANDROID_ARM, ANDROID_x86, Android_ARMv7a, Android_ARMv8a, MAC_OS, WINDOWS, WindowsPhone_ARMV7, WindowsPhone_Emu, iOS_ARM64, iOS_ARMv7, iOS_ARMv7s, signDot, signPod).| |
 |OS Version|The operating system version of the device where the app runs.| |
 | |For example, Android 4.4 or iOS 8.0| |
