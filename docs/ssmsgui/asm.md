@@ -59,7 +59,7 @@ The table of this view informs you about the status of all registered devices an
 |:----|:----|
 |Device-ID|The device identification number internally assigned by the SSMS|
 |User-ID|The user assigned to the device|
-|Device|The device type (**VIRTUAL_DEVICE** or iOS, Android and Windows or **MIDENTITY_MIN**, **MIDENTITY_AIR** and **MIDENTITY_AIR_PLUS**) <br/> ![1](./files-asm/1.png) Virtual device:  iOS and Android (Smartphone Apps) <br/> ![2](./files-asm/2.png) Virtual device: Windows and Mac OS (PC Browser) <br/> ![3](./files-asm/3.png) Hardware: mIDentity mini <br/> ![4](./files-asm/4.png) Hardware: mIDentity Air (currently not supported), Air+, signPod and signDot|
+|Device|The device type (**VIRTUAL_DEVICE** or iOS, Android and Windows or **MIDENTITY_MIN**, **MIDENTITY_AIR** and **MIDENTITY_AIR_PLUS**) <br/> ![1](./files-asm/1.png)   Virtual device:  iOS and Android (Smartphone Apps) <br/> ![2](./files-asm/2.png) Virtual device: Windows and Mac OS (PC Browser) <br/> ![3](./files-asm/3.png) Hardware: mIDentity mini <br/> ![4](./files-asm/4.png)   Hardware: mIDentity Air (currently not supported), Air+, signPod and signDot|
 |Serial Number|The serial number of the certificate belonging to the device|
 |App Name|The name assigned to the app|
 |App Version|The version number of the app|
@@ -72,10 +72,6 @@ The table of this view informs you about the status of all registered devices an
 |Status| ![5](./files-asm/5.png) Active, a user is logged into the SSMS with his device <br/>![6](./files-asm/6.png) The device is not logged into the SSMS and is inactive| |
 |Last Login|Date when the user last logged into the SSMS| |
 |Node|The SSMS node (node name) to which the device is connected or was last connected| |
-|Locked|No icon The certificate assigned to the device is unlocked|
-| | ![6](./files-asm/6.png) The certificate assigned to the device is locked.|
-| | ![7](./files-asm/7.png) When you move the mouse over the icon, you receive additional information about the lock reason|
-| | ![8](./files-asm/8.png) The user of the device is locked|
+|Locked|No icon The certificate assigned to the device is unlocked <br/> ![6](./files-asm/6.png)  The certificate assigned to the device is locked. <br/> ![7](./files-asm/7.png) When you move the mouse over the icon, you receive additional information about the lock reason <br/> ![8](./files-asm/8.png) The user of the device is locked|
 |Actions| ![9](./files-asm/9.png) Show user certificate details|
 | | ![10](./files-asm/10.png) Show device properties|
-                                                         |
