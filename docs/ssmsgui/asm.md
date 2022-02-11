@@ -11,7 +11,7 @@ This manual is aimed at the administrators who install, configure and use the KO
 This manual only describes specifically how to use the App Security Management Module (ASM). Requirement for the use of this module is the installation of the main module (Kernel) and of the SVM module, which can be simultaneously installed via the “Configuration Utility”. Please find more information about the Configuration Utility in the installation manual of the KOBIL SSMS.
 For information about the other modules and documents for the administration of the SSMS, contact KOBIL support.
 
-**Version dependent validity of the manual**
+### Version dependent validity of the manual
 As you can add the various modules to the KOBIL SSMS independently from each other, different versions of the single modules exist. To ensure compatibility of the versions, note the overview of the version compatibilities in the manual for the Kernel module.
 
 ## App Security Management Module
