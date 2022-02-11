@@ -3,10 +3,10 @@ sidebar_position: 2
 ---
 # ASM
 
-##Introduction
+## Introduction
 This manual instructs you on how to manage the App Security Management Module (ASM) on the KOBIL Smart Security Management Server (SSMS). With the App Security Management module (ASM), you can manage the apps, their users and the corresponding devices (for example smartphone or mIDentity mini). Along with these management functions of the ASM, the SOAP functions provided by the service node can for example be integrated into a web portal to verify devices and users already registered on the system. In addition, note that you must install the SVM module to be able to use ASM. With SVM you can assign certificates to the user or to the device and enforce the authentication of signed data.
 
-##General information
+## General Information
 This manual is aimed at the administrators who install, configure and use the KOBIL Smart Security Management Server. The document is also intended for those who use the App Security Technology and manage the apps.
 This manual only describes specifically how to use the App Security Management Module (ASM). Requirement for the use of this module is the installation of the main module (Kernel) and of the SVM module, which can be simultaneously installed via the “Configuration Utility”. Please find more information about the Configuration Utility in the installation manual of the KOBIL SSMS.
 For information about the other modules and documents for the administration of the SSMS, contact KOBIL support.
@@ -14,7 +14,7 @@ For information about the other modules and documents for the administration of 
 **Version dependent validity of the manual**
 As you can add the various modules to the KOBIL SSMS independently from each other, different versions of the single modules exist. To ensure compatibility of the versions, note the overview of the version compatibilities in the manual for the Kernel module.
 
-##App Security Management Module
+## App Security Management Module
 Please click the menu item “App Security Management” to reach the view and functions to manage devices and users. More precisely, find the following menus:
 -	Devices
 - Properties
