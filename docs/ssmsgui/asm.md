@@ -125,6 +125,8 @@ The following figure shows the Device Properties view, which manages the propert
 
 The following attributes are part of the Device Properties view:
 
+|Attributes|Description|
+|:----|:----|
 |Device-ID|The identification number of the device internally assigned by the SSMS|
 |Serial Number|Serial number of the deviceUser-ID|The user assigned to the deviceProperty Name|The given property nameProperty Value|The value assigned to the property name|
 |Actions|Shows the device linked to the property|
@@ -138,7 +140,8 @@ The user properties are available in the following view:
 ![user-prop](./files-asm/user-prop.png)
 
 The information in the view is explained in the following table:
-
+|Attributes|Description|
+|:----|:----|
 |Property-ID|Identification number of the property|
 |User-ID|The user ID whom the property is about|
 |Property Name|The given property name|
