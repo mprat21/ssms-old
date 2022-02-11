@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
 ---
-# Network Architecture with IDP
+# Network Architecture
 
-## Network Overview
+## Network Overview with IDP
 
 ![Network-Architecture](Overview-Network-v2.png)
 
