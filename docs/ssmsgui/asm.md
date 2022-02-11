@@ -140,6 +140,7 @@ The user properties are available in the following view:
 ![user-prop](./files-asm/user-prop.png)
 
 The information in the view is explained in the following table:
+
 |Attributes|Description|
 |:----|:----|
 |Property-ID|Identification number of the property|
