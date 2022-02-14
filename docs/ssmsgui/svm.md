@@ -270,17 +270,17 @@ Two SOAP interfaces, one for the issuer and one for the user certificates, are o
 
 The URL for the management SOAP interface of the issuer certificates is:  
 
->https://\<FQHN  oder IP-Adresse>:8443/<ssms-gui>/soap/mgt/svm/IssuerCertificateManagementWs  
+>https://\<FQHN  oder IP-Adresse\>:8443/<ssms-gui\>/soap/mgt/svm/IssuerCertificateManagementWs  
 
 The URL for the management SOAP interface of the user certificates is:  
 
->https:// \<FQHN oder IP-Adresse>:8443/ssms-gui/soap/mgt/svm/UserCertificateManagementWs
+>https:// \<FQHN oder IP-Adresse\>:8443/ssms-gui/soap/mgt/svm/UserCertificateManagementWs
 
 The third SOAP interface is created on the Services node (ServicesWs). This interface is used for integration in the applications that carry out signature verifications.
 
 The URL for the services SOAP interface is:  
 
->https:// \<FQHN oder IP-Adresse>:8445/ssms-services/soap/svc/svm/SvmServicesWs  
+>https:// \<FQHN oder IP-Adresse\>:8445/ssms-services/soap/svc/svm/SvmServicesWs  
 
 The management SOAP interfaces are used to integrate the management tasks concerning the different signatures into the systems of the IT environment. To use these interfaces the command line tool Certificate Manager is delivered. It works for the management of the issuer certificates as well as of the user certificates (please find more information in 1.6.1).  
 
