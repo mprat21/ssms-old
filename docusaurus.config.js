@@ -35,12 +35,12 @@ const config = {
       }),
     ],
   ],
-/* plugins: [
+ plugins: [
     [
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         indexDocs: true,
-        indexDocSidebarParentCategories: 0,
+        indexDocSidebarParentCategories: 5,
         indexBlog: true,
         indexPages: false,
         style: undefined,
@@ -55,7 +55,8 @@ const config = {
     }
     ]
   ],
-  */
+
+//  themes: ['@docusaurus/theme-search-algolia'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -76,13 +77,14 @@ const config = {
       },
 
 
-    /* algolia: {
+            /*
+     algolia: {
         // Public API key: it is safe to commit it
         apiKey: '96440888ab5870fd4f0587db05468243',
         indexName: 'kobil-ssms',
-        appId: '5XMQ2C4NAT'
+        appId: '5XMQ2C4NAT',
       },
-      */
+
       algoliasearchNetlify:
       {
     appId: '5XMQ2C4NAT',
@@ -91,6 +93,7 @@ const config = {
     branch: 'master-main',
     selector: 'div#search',
   },
+  */
 
 
       footer: {
