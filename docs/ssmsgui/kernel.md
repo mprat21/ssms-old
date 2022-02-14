@@ -5,7 +5,7 @@ sidebar_position: 1
 
 After logging in the master tenant, try switching tenant in top right, by clicking on Login as. You will see the newly created tenant present and you can select the same from drop down list and once done click Switch to Tenant.
 
-![kernelmastertenant](./kernel-files/kernel_mastertenant.png)  
+![kernelmastertenant](./kernel/kernel-files/kernel_mastertenant.png)  
 
 •	Once you are switched to the newly created tenant, please create new operator and new portal user credentials for this tenant. These operator credentials and portal user credentials will be shared with partners for making SOAP calls to MGT and SVC modules respectively.  
 
@@ -848,7 +848,7 @@ After importing the templates from an external file, click “Save” to confirm
 
 In the area “Export”, you can store templates saved on the server in an external file, by clicking “Download”.  
 
-![kernelexport](./kernel-files/kernel_export.png)  
+![kernelexport](.//kernel/kernel-files/kernel_export.png)  
 
 ## Licenses of third-party Software  
 
