@@ -868,14 +868,14 @@ One SOAP interface is on the management node (ManagementWs).
 
 The URL is  
 
-https:// <FQHN oder IP-Adresse>:8443/ssms gui/soap/mgt/kernel/KernelManagementWs  
+https:// <FQHN oder IP-Adresse\>:8443/ssms gui/soap/mgt/kernel/KernelManagementWs  
 
 The Management SOAP interface is used to integrate the management tasks concerning the users with the systems of the IT environment.  
 
 The second SOAP interface is on the services node (ServicesWs). This interface is used for the integration into applications.  
 
 The URL is:   
-https:// <FQHN oder IP-Adresse>:8445/ssms-services/soap/svc/kernel/KernelServicesWs  
+https:// <FQHN oder IP-Adresse\>:8445/ssms-services/soap/svc/kernel/KernelServicesWs  
 
 Use these interfaces only within a secured environment. As, via the SOAP interfaces, sensitive information like configuration changes and validity verification of passwords are carried out, it is important for security reasons that these interfaces are accessed in a computing center separated and secured from the internet.   
 
