@@ -49,11 +49,11 @@ In a list of entries, you can search or filter specific entries. You can type yo
 You can search or filter entries according to specific attributes, whose values can be set in the search field. Afterwards, you start the search by clicking on the magnifier symbol   next to the search field.
 The values can include the following wildcards (placeholders).  
 
-|    <br\>?   or _    |    <br\>Question   mark or underscore for exactly one character.               |
+|    <br\>\?   or \_    |    <br\>Question   mark or underscore for exactly one character.               |
 |--------------------|-------------------------------------------------------------------------------|
-|    <br\>*   or %    |    <br\>Asterisk   or percentage sign for any number of signs.                 |
+|    <br\> \*   or  \%    |    <br\>Asterisk   or percentage sign for any number of signs.                 |
 |    <br\>\          |    <br\>Backslash   as escape symbol                                           |
-|    <br\>(  )        |    <br\>Please   do not use for search square brackets, only round brackets    |  
+|    <br\> \(  \)        |    <br\>Please   do not use for search square brackets, only round brackets    |  
 
 Note that, particularly in the advanced search, you can use the wildcards only in alphanumerical text searches; (the database type of the target field must be: VARCHAR, CHAR, Text, etc.) moreover, they only work with the "equal" and “not equal” operators. (Depending on database types, wildcards can be used with "not equal" type of search and not only with "equal" and can also be used with "not equal" type of search and not only with "equal".  
 
