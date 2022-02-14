@@ -270,7 +270,7 @@ Two SOAP interfaces, one for the issuer and one for the user certificates, are o
 
 The URL for the management SOAP interface of the issuer certificates is:  
 
->https://\<FQHN  oder IP-Adresse>:8443/<ssms-gui>/soap/mgt/svm/IssuerCertificateManagementWs  
+>https://\<FQHN  oder IP-Adresse>:8443/<ssms-gui\>/soap/mgt/svm/IssuerCertificateManagementWs  
 
 The URL for the management SOAP interface of the user certificates is:  
 
