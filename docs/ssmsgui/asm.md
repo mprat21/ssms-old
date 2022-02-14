@@ -378,12 +378,7 @@ In this view, you can find information about the version number of all registere
 | Registered                  | Information whether the app version has been registered or not  |
 | Integrity checked           | Information whether the integrity of the registered app is verified or not. It applies to all the users of the app                                                            |
 | Locked                      | Information whether the app or the firmware is locked or not                |
-| Actions                     |  ![edit-version](./module-files/files-asm/edit-version.png)  Edit version <br/>
-
-![delete-version](./module-files/files-asm/delete-version.png)  Delete version <br/>
-
-![delete-checksum](./module-files/files-asm/delete-checksum.png) Deletes the checksum of the version from the database. If you click the icon, this version cannot be used until it is registered again |
-
+| Actions                     |  ![edit-version](./module-files/files-asm/edit-version.png)  Edit version <br/> ![delete-version](./module-files/files-asm/delete-version.png)  Delete version <br/> ![delete-checksum](./module-files/files-asm/delete-checksum.png) Deletes the checksum of the version from the database. If you click the icon, this version cannot be used until it is registered again |
 
 ####	Add App Version
 You can add a new app version into the database by clicking the top left button “Add Version”. Adding an app version requires the client type as well as the app version number and the registration user to be provided. If you do not enter these data, the version cannot be added to the SSMS.
@@ -394,12 +389,7 @@ The required information must match the information of the developed app and of 
 
 The administrator must follow a specific format when entering the app version. The version format is specified in the following table:
 
-| **Format**                                                  | **Value field**                                                          |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Major.Minor.Build <br/>
-(MajorVersion.MinorVersion.BuildVersion) | Major is from 0 to 255 <br/>
-Minor is from 0 to 255 <br/>
-Build is from 0 to 65535 |
+| **Format**  | **Value field**|| ----------------------------------------------------------- | ------------------------------------------------------------------------ || Major.Minor.Build <br/> (MajorVersion.MinorVersion.BuildVersion) | Major is from 0 to 255 <br/> Minor is from 0 to 255 <br/> Build is from 0 to 65535 |
 
 The App Name is limited to 32 bytes and is case-sensitive.
 
@@ -461,28 +451,7 @@ The input information in order to be able to download the app configuration bund
 You can find an explanation of the parameters in the following table:
 
 
-| Web-Portal Secure URL: | The input in this field is optional and only necessary when you use the hardened web browser of the AST (Trusted Web View) in your app. <br/>
-
-Enter the URL of your web portal that can be reached by the apps here. <br/>
-
-If this address can be reached via HTTPS, the SSMS tries to connect to the URL to automatically load the public certificate chain of the secure connection and to store it in the file “trusted\_certs.pem”. <br/>
-
-If the SSMS cannot reach the given HTTPS address, for example because of firewall restrictions, leave this field empty and create the file “trusted\_certs.pem” manually. For information, contact the administrator of the web portal. <br/>
-
-Note the information about the creation of the file „app\_config.xml“ given below:|
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ASM URL                | Enter the URL of the SSMS “External Services” here. The input field is by default filled with the configured values that are defined during the installation of the SSMS with the help of the SSMS Configuration Utility e.g.:
-http://your-host-name:port/ssms-services/asm/rest/device <br/> your-host name  -  FQHN via which the apps access the SSMS “External Services” <br/>  port  - Port to which the devices connect to the SSMS External Services. This value is omitted for the standard http-port 80.  <br/> ssms-services  -  Name of the “SSMS Services Web Context”, as defined in the SSMS <br/> /asm/rest/device - Internal ASM path for the AST communication service <br/> Please note that you must enter the URL that is reachable by the apps. In case you use a load balancer or a reverse proxy in front of the SSMS, the URL can differ.  |
-| Secure ASM URL:        | Enter here the URL of the SSMS “Secure External Services”. The input field is by default filled with the configured values that are defined during the installation of the SSMS with the help of the SSMS Configuration Utility e.g.: https://your-host-name:port/ssms-services/asm/rest/device <br/>   your-host name  - FQHN via which the apps access the SSMS “Secure External Services“   <br/> port -  Port to which the devices connect to the SSMS External Services. This value is omitted for the standard https-port 443.    <br/> ssms-services - Name of the “SSMS Services Web Context”, as defined in the SSMS configuration utility   <br/>  /asm/rest/device    - Internal ASM path for the AST communication service
-
-Please note that you must enter the URL that is reachable by the apps. In case you use a load balancer or a reverse proxy in front of the SSMS, the URL can differ. <br/>
-
-The SSMS tries to connect to this URL and to load the public certificate chain of the secure connection and to store it in the file sdk\_config.xml. <br/>
-
-In case the SSMS cannot reach the HTTPS address e.g. because of Firewall restrictions, please create a certificate file from the corresponding certificates (in PEM format) and load them via the input field Trust Store in order to make them available for the SSMS. <br/>
-
-**Attention:** When the Windows or Mac App is used the appropriate certificate chains must be added for each download URL of Windows/Mac version in the Version overview. For this case please create a Certificate file which contains the certificate chains for Secure ASM URL and the certificate chains for Download-URL as well. Please load this files over „Trust Store“. |
-| Trust-Store            | Optional certificate file in PEM format, see description “Secure ASM URL” |    
+| Web-Portal Secure URL:| The input in this field is optional and only necessary when you use the hardened web browser of the AST (Trusted Web View) in your app. <br/> Enter the URL of your web portal that can be reached by the apps here. <br/>If this address can be reached via HTTPS, the SSMS tries to connect to the URL to automatically load the public certificate chain of the secure connection and to store it in the file “trusted\_certs.pem”. <br/> If the SSMS cannot reach the given HTTPS address, for example because of firewall restrictions, leave this field empty and create the file “trusted\_certs.pem” manually. For information, contact the administrator of the web portal. <br/> Note the information about the creation of the file „app\_config.xml“ given below:|| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ || ASM URL                | Enter the URL of the SSMS “External Services” here. The input field is by default filled with the configured values that are defined during the installation of the SSMS with the help of the SSMS Configuration Utility e.g.: http://your-host-name:port/ssms-services/asm/rest/device <br/> your-host name  -  FQHN via which the apps access the SSMS “External Services” <br/>  port  - Port to which the devices connect to the SSMS External Services. This value is omitted for the standard http-port 80.  <br/> ssms-services  -  Name of the “SSMS Services Web Context”, as defined in the SSMS <br/> /asm/rest/device - Internal ASM path for the AST communication service <br/> Please note that you must enter the URL that is reachable by the apps. In case you use a load balancer or a reverse proxy in front of the SSMS, the URL can differ. || Secure ASM URL:| Enter here the URL of the SSMS “Secure External Services”. The input field is by default filled with the configured values that are defined during the installation of the SSMS with the help of the SSMS Configuration Utility e.g.: https://your-host-name:port/ssms-services/asm/rest/device <br/> your-host name  - FQHN via which the apps access the SSMS “Secure External Services“   <br/> port -  Port to which the devices connect to the SSMS External Services. This value is omitted for the standard https-port 443.<br/> ssms-services - Name of the “SSMS Services Web Context”, as defined in the SSMS configuration utility <br/> /asm/rest/device - Internal ASM path for the AST communication service. Please note that you must enter the URL that is reachable by the apps. In case you use a load balancer or a reverse proxy in front of the SSMS, the URL can differ. <br/> The SSMS tries to connect to this URL and to load the public certificate chain of the secure connection and to store it in the file sdk\_config.xml. <br/> In case the SSMS cannot reach the HTTPS address e.g. because of Firewall restrictions, please create a certificate file from the corresponding certificates (in PEM format) and load them via the input field Trust Store in order to make them available for the SSMS. <br/> **Attention:** When the Windows or Mac App is used the appropriate certificate chains must be added for each download URL of Windows/Mac version in the Version overview. For this case please create a Certificate file which contains the certificate chains for Secure ASM URL and the certificate chains for Download-URL as well. Please load this files over „Trust Store“.|| Trust-Store | Optional certificate file in PEM format, see description “Secure ASM URL” |    
 
 The button “Show certificates” gives you an overview of the certificates of the app bundle. The list contains the necessary certificates, their issuers, their scope and their serial number.
 
@@ -558,10 +527,8 @@ If an app is configured to receive push notifications, you must configure the se
 | Huawei Secret-Key                                                                       | A unique secret key issued by Huawei for each app. This secret key is used for server-side PUSH development.                                                                                                                                                                                                     |
 | APNS-Certificate                                                                        | The file name of the APNS certificate for your iOS app as received from the APNS (Apple Push Notification Service)                                                                                                                                                                                               |
 | Valid until                                                                             | Period of validity                                                                                                                                                                                                                                                                                               |
-| Comment                                                                                 | Additional information about the push notification                                                                                                                                                                                                                                                               |
-| Actions                                                                                 | ![delcon](./module-files/files-asm/delcon.png)  Delete configuration <br/>
-![5-4](./module-files/files-asm/5-4.png) | Edit the configuration  <br/>
-![apnscert](./module-files/files-asm/apnscert.png) | Display certificate details of APNS-Certificate       |
+| Comment                                                                                 | Additional information about the push notification     
+| Actions                                                                                 | ![delcon](./module-files/files-asm/delcon.png)  Delete configuration <br/> ![5-4](./module-files/files-asm/5-4.png) | Edit the configuration  <br/> ![apnscert](./module-files/files-asm/apnscert.png) | Display certificate details of APNS-Certificate       |
 
 
 ####	Add Push Notification
@@ -614,10 +581,7 @@ The mass reactivation feature helps to handle such issues with less effort for H
 | ClientType                                                                                | The according client type.                                                               |
 | Max App Version                                                                           | The according maximum app version.                                                       |
 | Active                                                                                    | ![6](./module-files/files-asm/6.png) - This configuration is deactivated <br/>  ![5](./module-files/files-asm/5.png) - This configuration is activated                                                        |
-| Actions                                                                                   |  ![deac-sel-con](./module-files/files-asm/deac-sel-con.png) - Deactivate the selected configuration <br/>
-  ![act-sel-con](./module-files/files-asm/act-sel-con.png)  - Activate the selected configuration <br/>
-  ![5-4](./module-files/files-asm/5-4.png)  - Edit the selected  configuration.   <br/>  
-  ![5-5](./module-files/files-asm/5-5.png)  - Delete the selected configuration.  |
+| Actions                                                                                   |  ![deac-sel-con](./module-files/files-asm/deac-sel-con.png) - Deactivate the selected configuration <br/> ![act-sel-con](./module-files/files-asm/act-sel-con.png)  - Activate the selected configuration <br/> ![5-4](./module-files/files-asm/5-4.png)  - Edit the selected  configuration.  <br/> ![5-5](./module-files/files-asm/5-5.png)  - Delete the selected configuration.  |
 
 
 ####	Add Mass-Reactivation Configuration
@@ -689,12 +653,9 @@ The following table explains the attributes in the view **Policies**:
 | Validity            | The time how long a created token would be valid (JWT claim exp).                                                                                                                                                             |
 | Issuer              | Name of the token’s issuer (usually “SSMS”). This will become part of the token’s subject (JWT claim sub).                                                                                                                    |
 | Signer              | Name of the token’s signer |
-| Signature Algorithm | The cryptographic algorithm used for signing the token:
-
--   HS256 means HMAC with SHA-256
--   RS256 means RSA with SHA-256                                                                                                   |
-| Creation Date       | The time when the token was created (JWT claim iat).                                                                                                                                                                          |
-| Update Date         | The time of the last change to this policy.                                                                                                                                                                                   |
+| Signature Algorithm | The cryptographic algorithm used for signing the token:- - HS256 means HMAC with SHA-256 -   RS256 means RSA with SHA-256    |
+| Creation Date       | The time when the token was created (JWT claim iat).        |
+| Update Date         | The time of the last change to this policy.                 |
 | Active              | If a policy is deactivated, no tokens will be issued on behalf of that policy.                                                                                                                                                |
 | Actions             | Activate, deactivate, edit, remove the policy.                                                                                                                                                                                |
 
@@ -737,11 +698,7 @@ The following table explains the attributes in the view “Signers”:
 | Name                      | Each signer must have a unique name.                                                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | User-ID                   | Name of the user, who owns this service.                                                                                                                                        |
-| Signature Algorithm       | The cryptographic algorithm used for signing the token:
-
--   HS256 means HMAC with SHA-256
--   RS256 means RSA with SHA-256                                                     |
-| Orphaned                  | An orphaned signer is not referenced by any policy. Only such signers can be removed.                                                                                           |
+| Signature Algorithm       | The cryptographic algorithm used for signing the token: -   HS256 means HMAC with SHA-256 - RS256 means RSA with SHA-256                                                     | | Orphaned                  | An orphaned signer is not referenced by any policy. Only such signers can be removed.                                                                                           |
 | Certificate Serial Number | (optional) In case of an asymmetric signature algorithm (e.g. RS256), a certificate is created and bound to the user named by User-ID. This is the certificate’s serial number. |
 | Creation Date             | The time when the signer was created.                                                                                                                                           |
 | Update Date               | The time of the last change to this signer.                                                                                                                                     |
@@ -898,9 +855,7 @@ SSL-encrypted. This option can be a security leak in case the non-encrypted port
 | Report Filter                                  | Sets a filter for reports which must be ignored. Format:
 
 '(ACTION,STATUS)|(ACTION,STATUS),...'. E.g. '(DEVICE\_LOGIN,OK)|(LOGIN,OK). If the size of the report buffer is set to 0, this option is ignored.                                                                                                                                                                                                  |
-| Urls Address Book Servers                      | Comma-separated list (maximum 2 entries!) Of URLs to address book servers.
-
-For example, 'http://server:1234/rest/v1/'                                                                                                                                                                                                                                                                                       |
+| Urls Address Book Servers                      | Comma-separated list (maximum 2 entries!) Of URLs to address book servers. For example, 'http://server:1234/rest/v1/'   |
 | Address Book Eco Identifier                    | The Eco Identifier is part of the URL of an address book servers and is required to access certain methods of the Address Book server. If nothing is defined, the node ID of the SSMS server is used.                                                                                                                                                                                                        |
 | Address Book Timeout Connect                   | Period in seconds, how long the SSMS waits until a connection to the address book server can be established. 0 means unlimited.                                                                                                                                                                                                                                                                              |
 | Address Book Timeout Read                      | Period in seconds, how long the SSMS waits for a response from the address book server. 0 means unlimited.                                                                                                                                                                                                                                                                                                   |
