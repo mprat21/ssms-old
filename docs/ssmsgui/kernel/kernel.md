@@ -22,9 +22,9 @@ The operator requires a certificate, which must be imported into the browser (fi
 
 You can access the Management System via the home page (see Figure 3) with the following URL:
 
-**https://\<Servername>/ssms-gui/faces/**  
+**https:<Servername\>/ssms-gui/faces/**  
 
-where \<Servername> is your host name.  
+where <Servername\> is your host name.  
 
 As mentioned above, the roles define the authorizations of the operators. Find information about the functions of the different roles in the tables contained in every module-specific manual.  
 
