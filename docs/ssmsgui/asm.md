@@ -341,6 +341,6 @@ The PIN set in this way must be sent with the activation data to the user. To re
 ####	Remove user PIN
 
 If you selected the option **Use Same PIN For All Devices** in the ASM Advanced Settings, you can remove the PIN of a user.
-To remove the PIN, click the icon ![5-11](./asm/asm/files-asm/5-11.png) in the row of the desired user.
+To remove the PIN, click the icon ![5-11](./asm/files-asm/5-11.png) in the row of the desired user.
 
 :warning: **Note that a user is not able any longer to log in to all his apps if the user PIN was removed!**
