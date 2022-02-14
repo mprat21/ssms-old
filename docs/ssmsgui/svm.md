@@ -298,7 +298,7 @@ The use of the Management SOAP interfaces is controlled by roles, which define t
 
 Please find a detailed description of the functions and of the error messages in the javadoc contained in the installation (javadoc). You can find it in form of an html file in English in the following directory:  
 
-\<SSMS_INSTALL>\modules\svm\doc\mgt_soap_api. The following methods are part of the IssuerCertificateManagementWs class:  
+\<SSMS_INSTALL\>\modules\svm\doc\mgt_soap_api. The following methods are part of the IssuerCertificateManagementWs class:  
 
 |**Permission**|**Methods**|
 |:--|:--|
@@ -312,7 +312,7 @@ The method getCertificates of the IssuerCertificateManagementWs contains differe
 
 To call this method with the command line tool, use:  
 
->Linux/Solaris: 	./certificate-manager.sh getIssuerCertificates “\<filter>”  <br/> Windows: 	certificate-manager.cmd getIssuerCertificates “\<filter>”  
+>Linux/Solaris: 	./certificate-manager.sh getIssuerCertificates “\<filter\>”  <br/> Windows: 	certificate-manager.cmd getIssuerCertificates “\<filter\>”  
 
 Instead of \<filter\> use the following search filters in quotation marks:  
 
@@ -442,7 +442,7 @@ The method allows to set the filters auditAction, auditSubject, operatorRoleId. 
 ## SvmServicesWs  
 
 For a detailed description of the functions and error messages refer to the java documentation (java doc) in English in html format. This is available in the following directory:  
->\<SSMS_INSTALL>\modules\svm\doc\svc_soap_api. The following functions belong to this interface:  
+>\<SSMS_INSTALL\>\modules\svm\doc\svc_soap_api. The following functions belong to this interface:  
 
 |    <br/>Name                             |    <br/>Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -475,9 +475,9 @@ In addition, you must copy the files **iaik_jce-3.16.jar** (subdirectory jre/lib
 Required configuration parameters of the external application:  
 
 For the configuration of the external application, you must configure the keys and the certificates for the secure communication with the SSMS. More precisely, you must enter the path to these files in the config file of the application (in the subdirectory /config).  
-To authenticate and authorize the external application against the SSMS, you need a key and a certificate, which must be assigned to the role “Administrator” or “SuperAdmin” and must be a p12 file. Either use the certificate and key “SuperAdmin” generated during the SSMS installation and added to the directory \<SSMS_HOME>/certs or generate another certificate via the graphical interface of the SSMS (find more information in the Kernel manual, chapter “Role Management View”, paragraphs “Create a role” and “Download certificate”). You also need the password of the key.  
+To authenticate and authorize the external application against the SSMS, you need a key and a certificate, which must be assigned to the role “Administrator” or “SuperAdmin” and must be a p12 file. Either use the certificate and key “SuperAdmin” generated during the SSMS installation and added to the directory \<SSMS_HOME\>/certs or generate another certificate via the graphical interface of the SSMS (find more information in the Kernel manual, chapter “Role Management View”, paragraphs “Create a role” and “Download certificate”). You also need the password of the key.  
 
-To verify the authenticity of the SSMS, you need the CA certificate belonging to the SSMS installation. This CA certificate must be available as a truststore in JCEKS format with the file extension “jks”. The trustore is used to verify the issuers of the SSL certificates of the server. The truststore is generated during the SSMS installation and added to the directory \<SSMS_HOME>/certs and can be used directly. Default password for protecting the integrity of this truststore is 123456. This password can be changed later.  
+To verify the authenticity of the SSMS, you need the CA certificate belonging to the SSMS installation. This CA certificate must be available as a truststore in JCEKS format with the file extension “jks”. The trustore is used to verify the issuers of the SSL certificates of the server. The truststore is generated during the SSMS installation and added to the directory \<SSMS_HOME\>/certs and can be used directly. Default password for protecting the integrity of this truststore is 123456. This password can be changed later.  
 
 Note that the password currently valid must also be entered into the Tomcat (server.xml). If you change it, you must change it in all the relevant configuration files.  
 
@@ -492,13 +492,13 @@ The following parameters must be entered into the properties file:
 
 Information for all Linux users:  
 
-You may need to change the permissions to run the files of the external application (for example chmod 755 ./issuer-certificate-manager.sh). For security reasons, the rights of the lib directory must be adjusted after decompressing the application archive file. More precisely, all other users and the group must have read permissions (z. B. chmod 644 ./svm-apps-\<version>/lib/).  
+You may need to change the permissions to run the files of the external application (for example chmod 755 ./issuer-certificate-manager.sh). For security reasons, the rights of the lib directory must be adjusted after decompressing the application archive file. More precisely, all other users and the group must have read permissions (z. B. chmod 644 ./svm-apps-\<version\>/lib/).  
 
 ## Certificate Manager  
 
 With the Certificate Manager, you can manage the certificates and the users of the Signature Verification Module. Follow these paths to reach the application in the installation directory:
-* Windows: 	C:\Program Files\KOBIL\SSMS\modules\svm\utils\svm-apps-\<version>\<release>
-* Linux/Solaris: 	/opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version>\<release>  
+* Windows: 	C:\Program Files\KOBIL\SSMS\modules\svm\utils\svm-apps-\<version\>\<release\>
+* Linux/Solaris: 	/opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version\>\<release\>  
 
 ## Scope of the application  
 
@@ -527,7 +527,7 @@ This application offers different certificate management functions to manage the
 
 Run the Certificate Manager script (for example on Windows certificate-manager.cmd or on Linux/Solaris certificate-manager.sh) with the right parameters.  
 
-./certificate-manager.sh \<command> \<command parameter1> [command parameter n]   
+./certificate-manager.sh \<command\> \<command parameter1\> [command parameter n]   
 (Example 1: ./certificate-manager.sh removeIssuerCertificate “CN=mIDentity“ 123456)   
 (Example 2: ./certificate-manager.sh assignUserCertificate “CN=Issuer DN “ 456123 testuser01)  
 
@@ -545,21 +545,21 @@ In the configuration of the log file, be sure that you enter the correct path an
 
 ## Available management functions  
 
-|addIssuerCertificate “\<path to the certificate file>”|Adds an issuer certificate to the database.|
+|addIssuerCertificate “\<path to the certificate file\>”|Adds an issuer certificate to the database.|
 |:--|:--|
-|removeIssuerCertificate “\<issuerDN>” \<serial number>|Removes an issuer certificate from the database.|
-|lockIssuerCertificate “\<issuerDN>” \<serial number>|Locks an issuer certificate.|
-|unlockIssuerCertificate “\<issuerDN>” \<serial number>|Unlocks an issuer certificate.|
-|getIssuerCertificates “\<filter>”|Returns all issuer certificates that match the selected filter (the description of the filter is in chapters 1.5.2 and 1.5.4)|
-|addUserCertificate  “\<path to the certificate file>”|Adds a user certificate to the database.|
-|removeUserCertificate “\<issuerDN>” \<serial number>|Removes a user certificate from the database.|
-|assignUserCertificate  “\<issuerDN>” \<serial number> \<userID>|Assigns a user certificate to a user.|
-|unassignUserCertificate “\<issuerDN>” \<serial number>|Unassigns a user certificate from a user.|
-|lockUserCertificate “\<issuerDN>” \<serial number> “\<lock reason>”|Locks a user certificate in the database.|
-|unlockUserCertificate “\<issuerDN>” \<serial number>|Unlocks a user certificate in the database.|
-|getUserCertificatesInfo “\<filter>”|Returns all user certificates that match the selected filter (the description of the filter is in chapters 1.5.2 and 1.5.4)|
-|getUserCertificate  „\<issuerDN>“ \<serial number>|Returns the user certificate that matches the filter.|
-|getUserByIssuerAndSerial “\<issuerDN>” \<serial number>|Returns the user name that match the filter.|
-|getUserByDEREncodedCertificate “\<path to the certificate file>”|Returns the user name that matches the filter.|
-|addUser “\<userID>“|Adds a user to the database.|
-|removeUser “\<userID>“|Removes an already added user from the database.|
+|removeIssuerCertificate “\<issuerDN\>” \<serial number\>|Removes an issuer certificate from the database.|
+|lockIssuerCertificate “\<issuerDN\>” \<serial number\>|Locks an issuer certificate.|
+|unlockIssuerCertificate “\<issuerDN\>” \<serial number\>|Unlocks an issuer certificate.|
+|getIssuerCertificates “\<filter\>”|Returns all issuer certificates that match the selected filter (the description of the filter is in chapters 1.5.2 and 1.5.4)|
+|addUserCertificate  “\<path to the certificate file\>”|Adds a user certificate to the database.|
+|removeUserCertificate “\<issuerDN\>” \<serial number\>|Removes a user certificate from the database.|
+|assignUserCertificate  “\<issuerDN\>” \<serial number\> \<userID\>|Assigns a user certificate to a user.|
+|unassignUserCertificate “\<issuerDN\>” \<serial number\>|Unassigns a user certificate from a user.|
+|lockUserCertificate “\<issuerDN\>” \<serial number\> “\<lock reason\>”|Locks a user certificate in the database.|
+|unlockUserCertificate “\<issuerDN\>” \<serial number\>|Unlocks a user certificate in the database.|
+|getUserCertificatesInfo “\<filter\>”|Returns all user certificates that match the selected filter (the description of the filter is in chapters 1.5.2 and 1.5.4)|
+|getUserCertificate  „\<issuerDN\>“ \<serial number\>|Returns the user certificate that matches the filter.|
+|getUserByIssuerAndSerial “\<issuerDN\>” \<serial number\>|Returns the user name that match the filter.|
+|getUserByDEREncodedCertificate “\<path to the certificate file\>”|Returns the user name that matches the filter.|
+|addUser “\<userID\>“|Adds a user to the database.|
+|removeUser “\<userID\>“|Removes an already added user from the database.|
