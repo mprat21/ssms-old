@@ -5,7 +5,7 @@ sidebar_position: 1
 
 After logging in the master tenant, try switching tenant in top right, by clicking on Login as. You will see the newly created tenant present and you can select the same from drop down list and once done click Switch to Tenant.
 
-![kernelmastertenant](./module-files/files-kernel/kernel_mastertenant.png)  
+![kernelmastertenant](./kernel/kernel-files/kernel_mastertenant.png)  
 
 •	Once you are switched to the newly created tenant, please create new operator and new portal user credentials for this tenant. These operator credentials and portal user credentials will be shared with partners for making SOAP calls to MGT and SVC modules respectively.  
 
@@ -30,7 +30,7 @@ As mentioned above, the roles define the authorizations of the operators. Find i
 
 After logging into the SSMS, every operator is notified about which role has been assigned to his account. The role allows or limits the functions and views available to him on the SSMS.  
 
-![navigationmenu](./module-files/files-kernel/kernel_navigationmenu.png)
+![navigationmenu](./kernel/kernel-files/kernel_navigationmenu.png)
 
 The home page leads the user to the different module views of the SSMS. The available modules are displayed in the navigation menu at the top of the page. If you click on any module, its submenu is then shown a level deeper in the navigation menu.  
 
@@ -38,7 +38,7 @@ The home page leads the user to the different module views of the SSMS. The avai
 
 In some views, the data are displayed as lists, as shown in Figure. Check or uncheck the boxes on the left of the data to select or unselect entries. In order to select all entries, check the box “all”, as shown by the red marking in the following Figure.  
 
-![kernelusers](./module-files/files-kernel/kernel_users.png)  
+![kernelusers](./kernel/kernel-files/kernel_users.png)  
 
 ## Search  
 
@@ -49,23 +49,23 @@ In a list of entries, you can search or filter specific entries. You can type yo
 You can search or filter entries according to specific attributes, whose values can be set in the search field. Afterwards, you start the search by clicking on the magnifier symbol   next to the search field.
 The values can include the following wildcards (placeholders).  
 
-|    <br\>\?   or \_    |    <br\>Question   mark or underscore for exactly one character.               |
+|    <br/>?   or _    |    <br/> Question   mark or underscore for exactly one character.               |
 |--------------------|-------------------------------------------------------------------------------|
-|    <br\> \*   or  \%    |    <br\>Asterisk   or percentage sign for any number of signs.                 |
-|    <br\>\          |    <br\>Backslash   as escape symbol                                           |
-|    <br\> \(  \)        |    <br\>Please   do not use for search square brackets, only round brackets    |  
+|    <br/> *   or  %    |    <br/>Asterisk   or percentage sign for any number of signs.                 |
+|    <br/>  \          |    <br/>Backslash   as escape symbol                                           |
+|    <br/> (  )        |    <br/>Please   do not use for search square brackets, only round brackets    |  
 
 Note that, particularly in the advanced search, you can use the wildcards only in alphanumerical text searches; (the database type of the target field must be: VARCHAR, CHAR, Text, etc.) moreover, they only work with the "equal" and “not equal” operators. (Depending on database types, wildcards can be used with "not equal" type of search and not only with "equal" and can also be used with "not equal" type of search and not only with "equal".  
 
 ##	Reset Search  
 
-By clicking on the other magnifier symbol, you can delete a search result and return to the standard display.  
+By clicking on the other magnifier symbol ![kernelsymbolmagnifier](./module-files/files-kernel/kernelsymbol_magnifier.png), you can delete a search result and return to the standard display.  
 
 ##  2.6.3	Advanced Search  
 
 With the advanced search, you can combine a selection of attributes in different search queries. These attributes allow you to specify complex search queries. Attributes and conditions can be added or removed with the symbols + or - (see Figure).  
 
-![kerneladvancedsearch](./module-files/files-kernel/kernel_advancedsearch.png)  
+![kerneladvancedsearch](./kernel/kernel-files/kernel_advancedsearch.png)  
 
 You can define each attribute with the conditions "equal", "not equal", "greater" and "lesser". If you formulate several search queries, you can select whether all criteria must match or whether only one must match (see Figure).  
 
@@ -96,7 +96,7 @@ This search query consists therefore of 4 criteria:
 
 The buttons are placed above and below the table and offer the same functionalities twice. With the buttons, you can carry out an action for one or many users or devices. To carry out an action, check the boxes on the left of the ID entries, corresponding to the users or to the devices and click the button of the action. In addition, you can carry out the action for all users, checking “all” on the bottom- or on the top-left.  
 
-![kernelbuttons](./module-files/files-kernel/kernel_buttons.png)  
+![kernelbuttons](./kernel/kernel-files/kernel_buttons.png)  
 
 With these buttons you can carry out actions for a single user or for a group (Add User cannot be a group action), while with the actions icons on the right, you can only carry out actions for a single user or device.  
 
@@ -104,7 +104,7 @@ With these buttons you can carry out actions for a single user or for a group (A
 
 As mentioned above, with the action icons on the right of each row, you can only carry out actions for a single object. In contrast to the buttons, you can click the icon directly in the particular row to carry out the action and you do not need to select the user or the device beforehand (see previous chapter).  
 
-![kernelactionicons](./module-files/files-kernel/kernel_actionicons.png)  
+![kernelactionicons](./kernel/kernel-files/kernel_actionicons.png)  
 
 ## Smart Security Management Server GUI Views  
 
@@ -127,7 +127,7 @@ The information view informs you in detail about the system configuration. As sh
 * information  
 * Database information  
 
-![kernelinformationview](./module-files/files-kernel/kernel_informationview.png)  
+![kernelinformationview](./kernel/kernel-files/kernel_informationview.png)  
 
 The following table explains the descriptions contained in the two areas.  
 
@@ -141,11 +141,11 @@ The following table explains the descriptions contained in the two areas.
 |    <br/>Modules          |    <br/>Name       |    <br/>The   exact module description.                                                                                                 |
 |                         |    <br/>Version    |    <br/>Version   number of the module.                                                                                                 |
 |                         |    <br/>Status     |    <br/>Current   status of the module.                                                                                                 |
-|    Actions                     |    <br/>icon     |    <br/>By clicking on the icon the detailed system properties are displayed                                                                                                 |  
+|    Actions                     |    <br/>![kernelsymbolinfo](./module-files/files-kernel/kernelsymbol_info.png)     |    <br/>By clicking on the icon the detailed system properties are displayed|  
 
 Detailed module properties are displayed as follows:  
 
-![kernelmoduleinfo](./module-files/files-kernel/kernel_moduleinfo.png)  
+![kernelmoduleinfo](./kernel/kernel-files/kernel_moduleinfo.png)  
 
 Module information  
 
@@ -194,7 +194,7 @@ Via a diagnostic feature in the information view, you can receive additional inf
 
 Every time that you create a diagnostic file, you receive information about the time in which the last diagnostic file was created.  
 
-![kerneldiagnostic](./module-files/files-kernel/kernel_diagnostic.png)  
+![kerneldiagnostic](./kernel/kernel-files/kernel_diagnostic.png)  
 
 After receiving successful confirmation of the creation of a diagnostic file, you can download and unzip it.
 The following information is generated:  
@@ -223,7 +223,7 @@ In the Operator Management view, you can create certificates for all the operato
 
 After the installation, the certificate for the role Super Administrator is listed in the table. This certificate allows producing other certificates assigned to operators.  
 
-![kerneloperatormanagement](./module-files/files-kernel/kernel_operatormanagement.png)  
+![kerneloperatormanagement](./kernel/kernel-files/kernel_operatormanagement.png)  
 
 The table with the certificates contains the following information.  
 
@@ -239,6 +239,12 @@ The table with the certificates contains the following information.
 |    <br/>Last Login                   |    <br/>When   an operator logs in to SSMS, login time is stored and displayed here.                                                                                                                                                                                                                                                                                    |
 |    <br/>Failed login attempts        |    <br/>Number   of failed login attempts since last successful login. The counter will be   only increased if the login fails due to an error that is in the technical   scope of SSMS, i.e. operator is blocked, or operator has no role assigned.   Errors during SSL connection establishment are not counted. Maximum possible   value: 32767. Default value: 0    |  
 
+|Actions|![kernelsymboloperator](./module-files/files-kernel/kernelsymbol_operator.png)|Change operator data. By means of this function, you can change the role of the operator and the password of the certificate. |
+|--|--|:--|
+||![kernelsymboldownloadcert](./module-files/files-kernel/kernelsymbol_downloadcert.png)|Download user’s certificate.|
+||![kernelsymbolrenewcert](./module-files/files-kernel/kernelsymbol_renewcert.png)|Renew the certificate.|
+||![kernelsymboldisplaycert](./module-files/files-kernel/kernelsymbol_displaycert.png)|Display certificate details. |
+
 
 In addition to the actions in the table, you can also manage the operators by means of the buttons above the table. In particular, you can remove, lock or unlock the operators by selecting one or multiple operators in the left-most column and by clicking the action button.  
 
@@ -246,7 +252,7 @@ In addition to the actions in the table, you can also manage the operators by me
 
 In order to produce certificates assigned to operators click “Add Operator” on the top left of the page. In the window that pops up, you enter the operator name, his e-mail and the role assigned to the operator. In addition, you must generate a password for the certificate and enter your CA (Certificate Authority) password (see Figure).  
 
-![kerneladdoperator](./module-files/files-kernel/kernel_addoperator.png)  
+![kerneladdoperator](./kernel/kernel-files/kernel_addoperator.png)  
 
 The certificate is generated and has the status “Produced”. Via the action button, you can download the certificate and transfer it to the operator.  
 
@@ -264,7 +270,7 @@ By clicking on the button „Create Server SSL Certificate“, you have the poss
 
 A dialog will pop up where you can upload the certificate signing request, initiate the certificate creation, and download your created certificate.  
 
-![kernelsslcertificatecreation](./module-files/files-kernel/kernel_sslcertificatecreation.png)  
+![kernelsslcertificatecreation](./kernel/kernel-files/kernel_sslcertificatecreation.png)  
 
 Certificates are issued by the SSMS CA using the signing algorithm "SHA256-RSA". The certificate request must be uploaded as a PKCS#10-file within the dialog from the local directory. From the request file, the name of the applicant (field subject) and the public key (field subjectPublicKey) are used as input for the certificate creation. The name of the applicant is also taken as the value for the X.509 "Subject Alternative Name" extension of type "DNS Name" or "IP Address" accordingly chosen to the syntax of that name. The supported encoding formats of the PKCS#10-file are DER, PEM and Base64.  
 
@@ -272,7 +278,7 @@ Certificates are issued by the SSMS CA using the signing algorithm "SHA256-RSA".
 
 The Role Management view lists the system roles available directly after the SSMS installation and the roles that you add by yourself.  
 
-![kernelrolemanagement](./module-files/files-kernel/kernel_rolemanagement.png)  
+![kernelrolemanagement](./kernel/kernel-files/kernel_rolemanagement.png)  
 
 The roles table contains the following information:  
 
@@ -281,8 +287,10 @@ The roles table contains the following information:
 |Name|Role name.|
 |Access To All Users|Defines whether the role has access :heavy_check_mark: or :x: not   to all users.|
 |Active|Defines whether the role is active :heavy_check_mark: or not :x:.|
-|System Role|Defines whether the role is a system role :heavy_check_mark: or not :x:. |  
-|Actions|Modify role. You can carry out this action only for non-system roles.|  
+|System Role|Defines whether the role is a system role :heavy_check_mark: or not :x:. |
+
+|Actions|![kernelsymbolmodifyrole](./module-files/files-kernel/kernelsymbol_modifyrole.png)|Modify role. You can carry out this action only for non-system roles.|
+|--|--|--|  
 
 In addition to the action in the table, you can also manage roles by means of the buttons above the table.  
 
@@ -290,7 +298,7 @@ In addition to the action in the table, you can also manage roles by means of th
 
 In particular, you can add other roles than the roles assigned by the system by clicking the button “Add Role”. In the window that pops up, you can enter a name for the new role, define whether the role has access to all users and select the already existing role that has similar permissions to the new role.  
 
-![kerneladdrole](./module-files/files-kernel/kernel_addrole.png)  
+![kerneladdrole](./kernel/kernel-files/kernel_addrole.png)  
 
 The newly created role can be assigned to an operator as described in chapter 3.2.1.  
 
@@ -300,19 +308,19 @@ In addition, you can remove already added roles by selecting one or multiple rol
 
 ## Activate and deactivate Roles  
 
-When you add a role, it is automatically active, so you need the option “Activate Roles” only in case you deactivated a role beforehand. You can deactivate roles by selecting one or multiple roles in the most-left column and by clicking the button “Deactivate Roles”. Please note that you are not allowed to deactivate the role assigned to you or to another operator.  
+When you add a role, it is automatically active, so you need the option “Activate Roles” only in case you deactivated a role beforehand. You can deactivate roles by selecting one or multiple roles in the most-left column and by clicking the button “Deactivate Roles”. Please note that you are **not** allowed to deactivate the role assigned to you or to another operator.  
 
 ## Modify Role  
 
-You can modify the role by clicking . In particular, you can change the role name and the permission to access all users.  
+You can modify the role by clicking ![kernelsymbolmodifyrole](./module-files/files-kernel/kernelsymbol_modifyrole.png) . In particular, you can change the role name and the permission to access all users.  
 
-![kernelmodifyrole](./module-files/files-kernel/kernel_modifyrole.png)  
+![kernelmodifyrole](./kernel/kernel-files/kernel_modifyrole.png)  
 
 ## Role-Permissions  
 
 You can view the system roles and the roles that you created in the view “Role Management” with their permissions in the view “Role-Permissions”.  
 
-![kernelrolepermissions](./module-files/files-kernel/kernel_rolepermissions.png)  
+![kernelrolepermissions](./kernel/kernel-files/kernel_rolepermissions.png)  
 
 In this view, you can change both the permissions of the system role and of the roles you created. You can select “All Modules” from the dropdown list on the top or select a module in order to show only the permissions of that module. To change the permissions, check or uncheck the boxes relating to the role and the permissions.  
 
@@ -324,7 +332,7 @@ Roles and permissions are also needed for the management of the SOAP interface. 
 
 The Kernel Users view shows all the users of the SSMS in tabular form.  
 
-![kernelusersview](./module-files/files-kernel/kernel_usersview.png)  
+![kernelusersview](./kernel/kernel-files/kernel_usersview.png)  
 
 The following table lists the information contained in the view.  
 
@@ -332,15 +340,17 @@ The following table lists the information contained in the view.
 |------------------------------|----------------------------------------------------------------------------------------------------------------|
 |    <br/>User-ID[Internal]     |    <br/>User   unique name (visible only on SSMS).                                                              |
 |    <br/>User-ID               |    <br/>User   unique name.                                                                                     |
-|    <br/>Authorized Role(s)    |    <br/>The   roles which can manage the user. Please note that the system roles have   access to all users.    |
-|Actions|Show modules of the user.  |  
-|Actions|Action for changing the user. In particular, the user ID (given by the user) can be changed.|  
+|    <br/>Authorized Role(s)    |    <br/>The   roles which can manage the user. Please note that the system roles have   access to all users.    |  
+
+|Actions|![kernelsymbolshowmodules](./module-files/files-kernel/kernelsymbol_showmodules.png)|Show modules of the user.  |
+|--|||  
+|Actions||Action for changing the user. In particular, the user ID (given by the user) can be changed.|  
 
 ## Add User  
 
 You can a user to the Kernel module by clicking on the button “Add User” and entering the unique username.  
 
-![kerneladduser](./module-files/files-kernel/kernel_adduser.png)  
+![kerneladduser](./kernel/kernel-files/kernel_adduser.png)  
 
 Please note that the maximal size of the user ID is 64 bytes, which does not always correspond to 64 characters. In case of UTF-8:  
 
@@ -358,7 +368,7 @@ You can remove one or multiple users by making one or multiple selections on the
 
 You can decide which role or roles have the permission to one or multiple users by making one or multiple selections on the left-most column and clicking the button “Role Access Authorization”. A window pops up where the User-ID is shown and where you can select which role or roles have access to that user. The name of the role shows up in the column Authorized Role(s).  
 
-![kernelroleaccessauth](./module-files/files-kernel/kernel_roleaccessauth.png)  
+![kernelroleaccessauth](./kernel/kernel-files/kernel_roleaccessauth.png)  
 
 Please press “OK” in order to save your changes.  
 
@@ -370,7 +380,7 @@ The function of the Portal-Services is to manage the portals that communicate wi
 
 If you use many portals, check the option “Authentication is required”. Only afterwards, you can then configure a portal with an ID, a password and additional comments.  
 
-![kernelportalservices](./module-files/files-kernel/kernel_portalservices.png)  
+![kernelportalservices](./kernel/kernel-files/kernel_portalservices.png)  
 
 ## Add Portal-Server  
 
@@ -397,7 +407,7 @@ The KOBIL SSMS has a license system for the entire product portfolio. The licens
 
 The license upload into the system is reserved to the role of the super administrator.  
 
-![kernellicensemanagementview](./module-files/files-kernel/kernel_licensemanagementview.png)  
+![kernellicensemanagementview](./kernel/kernel-files/kernel_licensemanagementview.png)  
 
 Along with the expiration date of the license, some modules have additional restrictions. For example, the module SOM has a maximum number of tokens that can be assigned. When the number is reached, the operator receives the error message that no tokens can be added. To make full use of the license, you can delete unused tokens from the database and add others until you reach the limit defined by the license.  
 
@@ -411,13 +421,13 @@ You can download the certificate via the button „Download“. This certificate
 
 You can change the SSMS CA certificate password via the button „Change Password“. Please enter the old as well as the new password into the input field and confirm via the button “OK”.  
 
-![kernelcapasswordchange](./module-files/files-kernel/kernel_capasswordchange.png)  
+![kernelcapasswordchange](./kernel/kernel-files/kernel_capasswordchange.png)  
 
 ## Audit View  
 
 In the Audit view all administrative actions that an operator successfully completed on the SSMS via GUI or SOAP are recorded. The actions recorded and shown in this view concern all SSMS modules.  
 
-![kernelauditview](./module-files/files-kernel/kernel_auditview.png)  
+![kernelauditview](./kernel/kernel-files/kernel_auditview.png)  
 
 The following table gives information is available about the management actions:  
 
@@ -430,7 +440,7 @@ The following table gives information is available about the management actions:
 |    <br/>Details about Changes    |    <br/>Detailed   information about the action.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |    <br/>Operator                 |    <br/>Name   of the operator, who carried out the action.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |    <br/>Operator role            |    <br/>Role   of the operator.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|    <br/>IP-Address               |    <br/>SSMS   checks first the following headers in given priority:<br/>   <br/>Request   Headers with Priorities   1) X-Forwarded-For<br/>   2) Proxy-Client-IP<br/>   3) WL-Proxy-Client-IP<br/>   4) HTTP_X_FORWARDED_FOR<br/>   5) HTTP_X_FORWARDED<br/>   6) HTTP_X_CLUSTER_CLIENT_IP<br/>   7) HTTP_CLIENT_IP<br/>   8) HTTP_FORWARDED_FOR<br/>   9) HTTP_FORWARDED<br/>   10) HTTP_VIA<br/>   11) REMOTE_ADDR<br/>   <br/>If any of the header has IP-Address   assigned, it takes the value of the header and store it.    |  
+|    <br/>IP-Address               |    <br/>SSMS   checks first the following headers in given priority:<br/>   <br/>**Request   Headers with Priorities** <br/>   1) X-Forwarded-For<br/>   2) Proxy-Client-IP<br/>   3) WL-Proxy-Client-IP<br/>   4) HTTP_X_FORWARDED_FOR<br/>   5) HTTP_X_FORWARDED<br/>   6) HTTP_X_CLUSTER_CLIENT_IP<br/>   7) HTTP_CLIENT_IP<br/>   8) HTTP_FORWARDED_FOR<br/>   9) HTTP_FORWARDED<br/>   10) HTTP_VIA<br/>   11) REMOTE_ADDR<br/>   <br/>If any of the header has IP-Address   assigned, it takes the value of the header and store it.    |  
 
 You can search for specific actions filtering the results according to the information in the table above. You can search for example by object-ID, module name etc. Please find additional information about the search in chapter 2.6.  
 
@@ -438,7 +448,7 @@ You can search for specific actions filtering the results according to the infor
 
 The monitoring view offers the SSMS operator an overview about important server information. The information is displayed for one node, MGT or SVC, or for both nodes. You can decide which node to show in the monitoring by choosing one or both in the drop-down list on the top left of the GUI. In addition, you can choose to show the results of a specific time period: unlimited, but also of the last day, week, month or year.  
 
-![kernelmonitoringview](./module-files/files-kernel/kernel_monitoringview.png)  
+![kernelmonitoringview](./kernel/kernel-files/kernel_monitoringview.png)  
 
 The following table lists the information showed in the view:  
 
@@ -600,7 +610,7 @@ Following IAM settings can be adjusted:
 ## Help for locked up SSMS by misconfigured IAM  
 
 This section shall give you information what needs to be done, if SSMS is configured to use the IAM feature and:
-* 	IAM settings have been misconfigured
+* IAM settings have been misconfigured
 * IAM does not respond due to network problems or IAM malfunctions
 * unexpected login-preventing situations  
 
@@ -621,7 +631,7 @@ The components of a template in a payment transaction are the following and incl
 *	wildcards (transaction items)
 In the Text Resources view, you can add templates for different languages. In addition, you can change or delete already saved templates.  
 
-![kerneltextresourcesview](./module-files/files-kernel/kernel_textresourcesview.png)  
+![kerneltextresourcesview](./kernel/kernel-files/kernel_textresourcesview.png)  
 
 The list in the Text Resources view informs about the key, its value, its state and the actions that can be carried out with it.  
 
@@ -629,19 +639,21 @@ The list in the Text Resources view informs about the key, its value, its state 
 |------------------|----------------------------------------------------------------------------------------------------------------------|
 |    <br/>Key       |    <br/>The   language-dependent key for which the template is valid                                                  |
 |    <br/>Value     |    <br/>The   value of the key. The value defines the information message generated on the   device or on the app     |  
-|State|Status notification about the template (is generated by the system) <br/> :heavy_plus_sign: key added before saving the changes or refreshing the page. <br/> :x: key deleted before saving the changes or refreshing the page.|
-|Actions|The icon is displayed when an entry has been added but has not been permanently saved yet|
-|Actions|This action deletes a template|
-|Actions|A template not saved yet can be reset with this option.|  
+|State|Status notification about the template (is generated by the system)   <br/> :heavy_plus_sign: key added before saving the changes or refreshing the page.   <br/> :x: key deleted before saving the changes or refreshing the page.|  
+
+|Actions|:heavy_plus_sign:|The icon is displayed when an entry has been added but has not been permanently saved yet|
+|--|--|:--|
+|Actions|:x:|This action deletes a template|
+|Actions||A template not saved yet can be reset with this option.|  
 
 ## Template Description  
 
 Templates allow re-using information with content, which varies only in part. More precisely, during the web services method calls, the template stored in the text resources is referenced and the variable content is written in an ItemList and passed. A template contains text and formatted elements (items). An item consists of the following elements.
-1. Start sequence	{
-2. Item name 		(var/res/pre/suf)
-3. Separator 		-
-4. Contents		content of the template
-5. End sequence	}  
+1. Start sequence	                 {
+2. Item name 	      	(var/res/pre/suf)
+3. Separator 		        -
+4. Contents		        content of the template
+5. End sequence             	}  
 
 |    <br/>Item name    |    <br/>Description                                                                                                                                                                                                                                                                                                                     |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -775,7 +787,7 @@ You can add languages by clicking the button “Add language”. Default value i
 
 After clicking the button “Add language”, this window opens where you can choose the language from the drop-menu and click “Add”.  
 
-![kerneladdlanguage](./module-files/files-kernel/kernel_addlanguage.png)  
+![kerneladdlanguage](./kernel/kernel-files/kernel_addlanguage.png)  
 
 To save the languages, you must “Save” your settings in the text resources view.  
 
@@ -783,7 +795,7 @@ To save the languages, you must “Save” your settings in the text resources v
 
 To delete a previously added language, you can select the language and click “Delete Language”.  
 
-![kernellanguage](./module-files/files-kernel/kernel_language.png)  
+![kernellanguage](./kernel/kernel-files/kernel_language.png)  
 
 A dialog box pops up, in which you must confirm the deletion of the language.  
 
@@ -795,7 +807,7 @@ Click the button “Add Key” to add language-specific entries for the language
 
 The following is the window for adding a new key:  
 
-![kerneladdnewkey](./module-files/files-kernel/kernel_addnewkey.png)  
+![kerneladdnewkey](./kernel/kernel-files/kernel_addnewkey.png)  
 
 **Example:**  
 
@@ -814,15 +826,15 @@ More precisely, carry out the following steps:
 
 1.	Select the language or use Default  
 
-![kerneldeletekeylanguage](./module-files/files-kernel/kernel_deletekeylanguage.png)  
+![kerneldeletekeylanguage](./kernel/kernel-files/kernel_deletekeylanguage.png)  
 
 2.	Check box of the key  
 
-![kerneldeletekeykey](./module-files/files-kernel/kernel_deletekeykey.png)  
+![kerneldeletekeykey](./kernel/kernel-files/kernel_deletekeykey.png)  
 
 3.	Delete the key  
 
-![kerneldeletekeycarryout](./module-files/files-kernel/kernel_deletekeycarryout.png)  
+![kerneldeletekeycarryout](./kernel/kernel-files/kernel_deletekeycarryout.png)  
 
 4.	Save  
 
@@ -838,7 +850,7 @@ With the buttons “Revert” and “Revert all”, you can reset the changes th
 
 In the area “Import“, you can simultaneously import many templates saved in a file.  
 
-![kernelimport](./module-files/files-kernel/kernel_import.png)  
+![kernelimport](./kernel/kernel-files/kernel_import.png)  
 
 After importing the templates from an external file, click “Save” to confirm the changes on the server.  
 
@@ -848,7 +860,7 @@ After importing the templates from an external file, click “Save” to confirm
 
 In the area “Export”, you can store templates saved on the server in an external file, by clicking “Download”.  
 
-![kernelexport](./module-files/files-kernel/kernel_export.png)  
+![kernelexport](./kernel/kernel-files/kernel_export.png)  
 
 ## Licenses of third-party Software  
 
@@ -866,16 +878,15 @@ The documentation is divided into management and services; consequently, into tw
 
 One SOAP interface is on the management node (ManagementWs).  
 
-The URL is  
-
-https:// <FQHN oder IP-Adresse\>:8443/ssms gui/soap/mgt/kernel/KernelManagementWs  
+The URL is:    
+>https:// <FQHN oder IP-Adresse\>:8443/ssms gui/soap/mgt/kernel/KernelManagementWs  
 
 The Management SOAP interface is used to integrate the management tasks concerning the users with the systems of the IT environment.  
 
 The second SOAP interface is on the services node (ServicesWs). This interface is used for the integration into applications.  
 
 The URL is:   
-https:// <FQHN oder IP-Adresse\>:8445/ssms-services/soap/svc/kernel/KernelServicesWs  
+>https:// <FQHN oder IP-Adresse\>:8445/ssms-services/soap/svc/kernel/KernelServicesWs  
 
 Use these interfaces only within a secured environment. As, via the SOAP interfaces, sensitive information like configuration changes and validity verification of passwords are carried out, it is important for security reasons that these interfaces are accessed in a computing center separated and secured from the internet.   
 
@@ -925,8 +936,7 @@ Default role Ids
 |    <br/>HELPDESK       |    <br/>3    |
 |    <br/>REVIEWER       |    <br/>4    |  
 
-**Action Ids**:
-KERNEL  
+**Action Ids**: <br/> KERNEL  
 
 |    <br/>SSMSADD                     |    <br/>1     |
 |------------------------------------|--------------|
@@ -951,8 +961,7 @@ KERNEL
 |    <br/>SSMSLOGOUT_SOAP          |    <br/>20    |
 |    <br/>SSMSLOGIN_SOAP_FAILED    |    <br/>21    |  
 
-**Subject Ids:**  
-KERNEL  
+**Subject Ids:** <br/> KERNEL  
 
 |    <br/>SSMSADVANCEDSETTINGS    |    <br/>1     |
 |--------------------------------|--------------|
