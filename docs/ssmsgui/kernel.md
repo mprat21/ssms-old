@@ -848,7 +848,7 @@ After importing the templates from an external file, click “Save” to confirm
 
 In the area “Export”, you can store templates saved on the server in an external file, by clicking “Download”.  
 
-![kernelexport](.//kernel/kernel/kernel-files/kernel_export.png)  
+![kernelexport](./kernel/kernel-files/kernel_export.png)  
 
 ## Licenses of third-party Software  
 
