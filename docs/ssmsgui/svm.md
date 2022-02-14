@@ -57,11 +57,11 @@ Go to this view by clicking the menu item “Signature Verification” and then 
 
 In this view, you can find information about the status of all registered issuer certificates, as well as other attributes:  
 
-|    <br>Select                       |    <br>Checkbox for selection                          |
+|    <br\>Select                       |    <br\>Checkbox for selection                          |
 |-------------------------------------|--------------------------------------------------------|
-|    <br>SubjectDN                    |    <br>The   certificate’s owner Distinguished Name    |
-|    <br>IssuerDN                     |    <br>The certificate’s issuer Distinguished Name     |
-|    <br>Certificate serial number    |    <br>Serial number of the certificate                |  
+|    <br\>SubjectDN                    |    <br\>The   certificate’s owner Distinguished Name    |
+|    <br\>IssuerDN                     |    <br\>The certificate’s issuer Distinguished Name     |
+|    <br\>Certificate serial number    |    <br\>Serial number of the certificate                |  
 
 |Validity||Icon that shows the validity of the certificate. For precise information on the validity period, open the certificate detail information clicking the corresponding actions icon|
 |:--|--|:--|
@@ -121,12 +121,12 @@ Go to this view by clicking the menu item “Signature Verification” and then 
 
 In this view, find information about the status of all registered user certificates, as well as other attributes:  
 
-|    <br>Select                       |    <br>Checkbox for selection                               |
+|    <br\>Select                       |    <br\>Checkbox for selection                               |
 |-------------------------------------|-------------------------------------------------------------|
-|    <br>SubjectDN                    |    <br>The   certificate’s owner Distinguished Name         |
-|    <br>IssuerDN                     |    <br>The certificate’s issuer Distinguished Name          |
-|    <br>Certificate serial number    |    <br>Serial number of the certificate                     |
-|    <br>User ID                      |    <br>The user name whom the certificate is assigned to    |
+|    <br\>SubjectDN                    |    <br\>The   certificate’s owner Distinguished Name         |
+|    <br\>IssuerDN                     |    <br\>The certificate’s issuer Distinguished Name          |
+|    <br\>Certificate serial number    |    <br\>Serial number of the certificate                     |
+|    <br\>User ID                      |    <br\>The user name whom the certificate is assigned to    |
 
 |Validity||Icon that shows the validity of the certificate. For precise information on the validity period, open the certificate detail information clicking the corresponding actions icon.|
 |:--|--|:--|
@@ -156,12 +156,12 @@ The content of the file can for example be formatted as follows:
 
 **certificate, issuerDN, certificateSerialNumber, locked, user**  
 
-|    <br>Certificate                |    <br>base64 encoded certificate<br>   <br>(mandatory when the certificates are imported,   optional when they are managed).                                                             |
+|    <br\>Certificate                |    <br\>base64 encoded certificate<br\>   <br\>(mandatory when the certificates are imported,   optional when they are managed).                                                             |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    <br>issuerDN                   |    <br>DN of the issuer certificate. This value must be set   in quotation marks, as it includes commas. <br>   <br>(optional if the certificate is available, otherwise   mandatory).    |
-|    <br>certificateSerialNumber    |    <br>Certificate serial number.                                                                                                                                                         |
-|    <br>locked                     |    <br>Integer that indicates the status of the certificate   (1 is for locked, 0 for unlocked). Default value for imported certificates is   unlocked.                                   |
-|    <br>user                       |    <br>Name of the user whom the certificate is assigned   to. The string is empty when the certificate is unassigned (optional, for   imported certificates default value is empty)      |  
+|    <br\>issuerDN                   |    <br\>DN of the issuer certificate. This value must be set   in quotation marks, as it includes commas. <br\>   <br\>(optional if the certificate is available, otherwise   mandatory).    |
+|    <br\>certificateSerialNumber    |    <br\>Certificate serial number.                                                                                                                                                         |
+|    <br\>locked                     |    <br\>Integer that indicates the status of the certificate   (1 is for locked, 0 for unlocked). Default value for imported certificates is   unlocked.                                   |
+|    <br\>user                       |    <br\>Name of the user whom the certificate is assigned   to. The string is empty when the certificate is unassigned (optional, for   imported certificates default value is empty)      |  
 
 **NOTE**: : Do not write any comments in the file, but only information for the import.  
 
@@ -427,30 +427,30 @@ Remember to set the quotation marks and the brackets.
 
 The method allows to set the filters auditAction, auditSubject, operatorRoleId. These filters are Integer-values. Further information for this method can be found in Kernel administration manual.  
 
-|    <br>SVM            |                |
+|    <br\>SVM            |                |
 |-----------------------|----------------|
-|    <br>SVMADD         |    <br>5001    |
-|    <br>SVMASSIGN      |    <br>5002    |
-|    <br>SVMEXPORT      |    <br>5003    |
-|    <br>SVMLOCK        |    <br>5004    |
-|    <br>SVMMODIFY      |    <br>5005    |
-|    <br>SVMREMOVE      |    <br>5006    |
-|    <br>SVMUNASSIGN    |    <br>5007    |
-|    <br>SVMUNLOCK      |    <br>5008    |
-|    <br>SVMDISCARD     |    <br>5009    |  
+|    <br\>SVMADD         |    <br\>5001    |
+|    <br\>SVMASSIGN      |    <br\>5002    |
+|    <br\>SVMEXPORT      |    <br\>5003    |
+|    <br\>SVMLOCK        |    <br\>5004    |
+|    <br\>SVMMODIFY      |    <br\>5005    |
+|    <br\>SVMREMOVE      |    <br\>5006    |
+|    <br\>SVMUNASSIGN    |    <br\>5007    |
+|    <br\>SVMUNLOCK      |    <br\>5008    |
+|    <br\>SVMDISCARD     |    <br\>5009    |  
 
 ## SvmServicesWs  
 
 For a detailed description of the functions and error messages refer to the java documentation (java doc) in English in html format. This is available in the following directory:  
 >\<SSMS_INSTALL>\modules\svm\doc\svc_soap_api. The following functions belong to this interface:  
 
-|    <br>Name                             |    <br>Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|    <br\>Name                             |    <br\>Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    <br>**verifyUser**                       |    <br>The method verifies the signature   of an attached or of a separate PKCS#7 document with optional validity check   for an unknown user. The user certificate must be in the form of PKCS#7   signed data.<br>   <br>It returns date and time of the   verification.<br>   <br>Note that if the value of the   parameter “timeOfVerification” has not   been set, the current time of the system will be used. If the value for   “data” has not been set, no PKCS#7 document will be used.    |
-|    <br>**verifyKnownUser**                  |    <br>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for a known user.   The user certificate must not be in the form of PKCS#7  signed data, but it must be available in   the database.<br>   <br>It returns date and time of the   verification.                                                                                                                                                                                |
-|    <br>**verifyUserForTrustAnchor**         |    <br>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for an unknown user.   Additional parameter is a list of valid root certificate names. The user   certificate must be in the form of pkcs7 signed data.<br>   <br>It returns date and time of the   verification.<br>   <br>Note that the input parameter “validRootCANames” is a list   of RFC2253 formatted Root CA names.                                                  |
-|    <br>**verifyKnownUserForTrustAnchor**    |    <br>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for a known user. Additional parameter is a list of valid root certificate   names. The user certificate must not be in the form of pkcs7 signed data, but   it must be available in the database.<br>   <br>It returns date and time of the   verification.<br>   <br>Note that the input parameter “validRootCANames“ is list of RFC2253 formatted Root CA names.           |
-|    <br>**getCertificates**                  |    <br>The method returns the user   certificates that are linked to the given userId in DER encoded form. |  
+|    <br\>**verifyUser**                       |    <br\>The method verifies the signature   of an attached or of a separate PKCS#7 document with optional validity check   for an unknown user. The user certificate must be in the form of PKCS#7   signed data.<br\>   <br\>It returns date and time of the   verification.<br\>   <br\>Note that if the value of the   parameter “timeOfVerification” has not   been set, the current time of the system will be used. If the value for   “data” has not been set, no PKCS#7 document will be used.    |
+|    <br\>**verifyKnownUser**                  |    <br\>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for a known user.   The user certificate must not be in the form of PKCS#7  signed data, but it must be available in   the database.<br\>   <br\>It returns date and time of the   verification.                                                                                                                                                                                |
+|    <br\>**verifyUserForTrustAnchor**         |    <br\>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for an unknown user.   Additional parameter is a list of valid root certificate names. The user   certificate must be in the form of pkcs7 signed data.<br\>   <br\>It returns date and time of the   verification.<br\>   <br\>Note that the input parameter “validRootCANames” is a list   of RFC2253 formatted Root CA names.                                                  |
+|    <br\>**verifyKnownUserForTrustAnchor**    |    <br\>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for a known user. Additional parameter is a list of valid root certificate   names. The user certificate must not be in the form of pkcs7 signed data, but   it must be available in the database.<br\>   <br\>It returns date and time of the   verification.<br\>   <br\>Note that the input parameter “validRootCANames“ is list of RFC2253 formatted Root CA names.           |
+|    <br\>**getCertificates**                  |    <br\>The method returns the user   certificates that are linked to the given userId in DER encoded form. |  
 
 ## External Signature Verification application  
 
