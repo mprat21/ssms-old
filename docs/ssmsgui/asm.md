@@ -435,7 +435,7 @@ In case you add an app for test purposes and do not deliver it to customers, you
 
 **Note**: If the Client Type of the app is Windows or MacOS, you must provide an Upload Installer, which is the setup file of the application. If the Client Type of the App is Android or iOS, you can enter the App Identifier
 with which the app is identified in the app store.
-If the installer setup file size is bigger than the maximum accepted the available capacity can be increased by changing <install-ssms>/configutil/webapps/mgt/WEB-INF/web.xml. For more information, please go to Installation manual in chapter “Additional Tomcat Adjustments”.
+If the installer setup file size is bigger than the maximum accepted the available capacity can be increased by changing <install-ssms\>/configutil/webapps/mgt/WEB-INF/web.xml. For more information, please go to Installation manual in chapter “Additional Tomcat Adjustments”.
 
 
 #### Submit an app (iOS) to the App Store
@@ -953,6 +953,6 @@ Please find a description of the Text Resources in the Kernel section.
 
 ###	 Queuing
 
-Transactions sent by the Portal can receive transaction IDs in order to be identified by the SSMS. Transaction IDs allow the portal to send multiple transactions and messages to a device at once. The queuing function is governed by license. This function is only possible when in ASM Transaction Queue Length has the  value > 1. We can check that in Kernel-> License management view. Accordingly, so many parallel transactions and messages can be sent by the portal to a user. 
+Transactions sent by the Portal can receive transaction IDs in order to be identified by the SSMS. Transaction IDs allow the portal to send multiple transactions and messages to a device at once. The queuing function is governed by license. This function is only possible when in ASM Transaction Queue Length has the  value > 1. We can check that in Kernel-> License management view. Accordingly, so many parallel transactions and messages can be sent by the portal to a user.
 
 As soon as the user starts one of his devices, he receives the transactions as they are sent by the portal and in this order, he can confirm them. In case the user’s devices are offline, the push notification is sent to all the devices.
