@@ -367,8 +367,7 @@ In this view, you can find information about the version number of all registere
 
 | Software Type               | App or Firmware                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client Type                 | Client type of the app or of the firmware, in other words, on which operating system the version runs: <br/>
-
+| Client Type                 | Client type of the app or of the firmware, in other words, on which operating system the version runs:
 - ANDROID\_ARM
 - ANDROID\_x86
 - Android\_ARMv7a
