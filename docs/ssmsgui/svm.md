@@ -57,11 +57,11 @@ Go to this view by clicking the menu item “Signature Verification” and then 
 
 In this view, you can find information about the status of all registered issuer certificates, as well as other attributes:  
 
-|    <br\>Select                       |    <br\>Checkbox for selection                          |
+|    <br/>Select                       |    <br/>Checkbox for selection                          |
 |-------------------------------------|--------------------------------------------------------|
-|    <br\>SubjectDN                    |    <br\>The   certificate’s owner Distinguished Name    |
-|    <br\>IssuerDN                     |    <br\>The certificate’s issuer Distinguished Name     |
-|    <br\>Certificate serial number    |    <br\>Serial number of the certificate                |  
+|    <br/>SubjectDN                    |    <br/>The   certificate’s owner Distinguished Name    |
+|    <br/>IssuerDN                     |    <br/>The certificate’s issuer Distinguished Name     |
+|    <br/>Certificate serial number    |    <br/>Serial number of the certificate                |  
 
 |Validity||Icon that shows the validity of the certificate. For precise information on the validity period, open the certificate detail information clicking the corresponding actions icon|
 |:--|--|:--|
@@ -121,12 +121,12 @@ Go to this view by clicking the menu item “Signature Verification” and then 
 
 In this view, find information about the status of all registered user certificates, as well as other attributes:  
 
-|    <br\>Select                       |    <br\>Checkbox for selection                               |
+|    <br/>Select                       |    <br/>Checkbox for selection                               |
 |-------------------------------------|-------------------------------------------------------------|
-|    <br\>SubjectDN                    |    <br\>The   certificate’s owner Distinguished Name         |
-|    <br\>IssuerDN                     |    <br\>The certificate’s issuer Distinguished Name          |
-|    <br\>Certificate serial number    |    <br\>Serial number of the certificate                     |
-|    <br\>User ID                      |    <br\>The user name whom the certificate is assigned to    |
+|    <br/>SubjectDN                    |    <br/>The   certificate’s owner Distinguished Name         |
+|    <br/>IssuerDN                     |    <br/>The certificate’s issuer Distinguished Name          |
+|    <br/>Certificate serial number    |    <br/>Serial number of the certificate                     |
+|    <br/>User ID                      |    <br/>The user name whom the certificate is assigned to    |
 
 |Validity||Icon that shows the validity of the certificate. For precise information on the validity period, open the certificate detail information clicking the corresponding actions icon.|
 |:--|--|:--|
@@ -156,12 +156,12 @@ The content of the file can for example be formatted as follows:
 
 **certificate, issuerDN, certificateSerialNumber, locked, user**  
 
-|    <br\>Certificate                |    <br\>base64 encoded certificate<br\>   <br\>(mandatory when the certificates are imported,   optional when they are managed).                                                             |
+|    <br/>Certificate                |    <br/>base64 encoded certificate<br/>   <br/>(mandatory when the certificates are imported,   optional when they are managed).                                                             |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    <br\>issuerDN                   |    <br\>DN of the issuer certificate. This value must be set   in quotation marks, as it includes commas. <br\>   <br\>(optional if the certificate is available, otherwise   mandatory).    |
-|    <br\>certificateSerialNumber    |    <br\>Certificate serial number.                                                                                                                                                         |
-|    <br\>locked                     |    <br\>Integer that indicates the status of the certificate   (1 is for locked, 0 for unlocked). Default value for imported certificates is   unlocked.                                   |
-|    <br\>user                       |    <br\>Name of the user whom the certificate is assigned   to. The string is empty when the certificate is unassigned (optional, for   imported certificates default value is empty)      |  
+|    <br/>issuerDN                   |    <br/>DN of the issuer certificate. This value must be set   in quotation marks, as it includes commas. <br/>   <br/>(optional if the certificate is available, otherwise   mandatory).    |
+|    <br/>certificateSerialNumber    |    <br/>Certificate serial number.                                                                                                                                                         |
+|    <br/>locked                     |    <br/>Integer that indicates the status of the certificate   (1 is for locked, 0 for unlocked). Default value for imported certificates is   unlocked.                                   |
+|    <br/>user                       |    <br/>Name of the user whom the certificate is assigned   to. The string is empty when the certificate is unassigned (optional, for   imported certificates default value is empty)      |  
 
 **NOTE**: : Do not write any comments in the file, but only information for the import.  
 
@@ -270,17 +270,17 @@ Two SOAP interfaces, one for the issuer and one for the user certificates, are o
 
 The URL for the management SOAP interface of the issuer certificates is:  
 
->https://\<FQHN  oder IP-Adresse>:8443/<ssms-gui\>/soap/mgt/svm/IssuerCertificateManagementWs  
+>https://\<FQHN  oder IP-Adresse\>:8443/<ssms-gui\>/soap/mgt/svm/IssuerCertificateManagementWs  
 
 The URL for the management SOAP interface of the user certificates is:  
 
->https:// \<FQHN oder IP-Adresse>:8443/ssms-gui/soap/mgt/svm/UserCertificateManagementWs
+>https:// \<FQHN oder IP-Adresse\>:8443/ssms-gui/soap/mgt/svm/UserCertificateManagementWs
 
 The third SOAP interface is created on the Services node (ServicesWs). This interface is used for integration in the applications that carry out signature verifications.
 
 The URL for the services SOAP interface is:  
 
->https:// \<FQHN oder IP-Adresse>:8445/ssms-services/soap/svc/svm/SvmServicesWs  
+>https:// \<FQHN oder IP-Adresse\>:8445/ssms-services/soap/svc/svm/SvmServicesWs  
 
 The management SOAP interfaces are used to integrate the management tasks concerning the different signatures into the systems of the IT environment. To use these interfaces the command line tool Certificate Manager is delivered. It works for the management of the issuer certificates as well as of the user certificates (please find more information in 1.6.1).  
 
@@ -298,7 +298,7 @@ The use of the Management SOAP interfaces is controlled by roles, which define t
 
 Please find a detailed description of the functions and of the error messages in the javadoc contained in the installation (javadoc). You can find it in form of an html file in English in the following directory:  
 
-\<SSMS_INSTALL>\modules\svm\doc\mgt_soap_api. The following methods are part of the IssuerCertificateManagementWs class:  
+\<SSMS_INSTALL\>\modules\svm\doc\mgt_soap_api. The following methods are part of the IssuerCertificateManagementWs class:  
 
 |**Permission**|**Methods**|
 |:--|:--|
@@ -312,7 +312,7 @@ The method getCertificates of the IssuerCertificateManagementWs contains differe
 
 To call this method with the command line tool, use:  
 
->Linux/Solaris: 	./certificate-manager.sh getIssuerCertificates “\<filter>”  <br/> Windows: 	certificate-manager.cmd getIssuerCertificates “\<filter>”  
+>Linux/Solaris: 	./certificate-manager.sh getIssuerCertificates “\<filter\>”  <br/> Windows: 	certificate-manager.cmd getIssuerCertificates “\<filter\>”  
 
 Instead of \<filter\> use the following search filters in quotation marks:  
 
@@ -361,7 +361,7 @@ Remember to set the quotation marks and the brackets.
 
 Find a detailed description of the functions and of the error messages in the java documentation (javadoc) contained in the installation. You can find it in form of an html file in English in the following directory:  
 
->\<SSMS_INSTALL>\modules\svm\doc\mgt_soap_api. The following methods are part of the UserCertificateManagementWs class:  
+>\<SSMS_INSTALL\>\modules\svm\doc\mgt_soap_api. The following methods are part of the UserCertificateManagementWs class:  
 
 |**Permission**|**Methods**|  
 |:--|:--|
@@ -427,30 +427,30 @@ Remember to set the quotation marks and the brackets.
 
 The method allows to set the filters auditAction, auditSubject, operatorRoleId. These filters are Integer-values. Further information for this method can be found in Kernel administration manual.  
 
-|    <br\>SVM            |                |
+|    <br/>SVM            |                |
 |-----------------------|----------------|
-|    <br\>SVMADD         |    <br\>5001    |
-|    <br\>SVMASSIGN      |    <br\>5002    |
-|    <br\>SVMEXPORT      |    <br\>5003    |
-|    <br\>SVMLOCK        |    <br\>5004    |
-|    <br\>SVMMODIFY      |    <br\>5005    |
-|    <br\>SVMREMOVE      |    <br\>5006    |
-|    <br\>SVMUNASSIGN    |    <br\>5007    |
-|    <br\>SVMUNLOCK      |    <br\>5008    |
-|    <br\>SVMDISCARD     |    <br\>5009    |  
+|    <br/>SVMADD         |    <br/>5001    |
+|    <br/>SVMASSIGN      |    <br/>5002    |
+|    <br/>SVMEXPORT      |    <br/>5003    |
+|    <br/>SVMLOCK        |    <br/>5004    |
+|    <br/>SVMMODIFY      |    <br/>5005    |
+|    <br/>SVMREMOVE      |    <br/>5006    |
+|    <br/>SVMUNASSIGN    |    <br/>5007    |
+|    <br/>SVMUNLOCK      |    <br/>5008    |
+|    <br/>SVMDISCARD     |    <br/>5009    |  
 
 ## SvmServicesWs  
 
 For a detailed description of the functions and error messages refer to the java documentation (java doc) in English in html format. This is available in the following directory:  
->\<SSMS_INSTALL>\modules\svm\doc\svc_soap_api. The following functions belong to this interface:  
+>\<SSMS_INSTALL\>\modules\svm\doc\svc_soap_api. The following functions belong to this interface:  
 
-|    <br\>Name                             |    <br\>Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|    <br/>Name                             |    <br/>Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    <br\>**verifyUser**                       |    <br\>The method verifies the signature   of an attached or of a separate PKCS#7 document with optional validity check   for an unknown user. The user certificate must be in the form of PKCS#7   signed data.<br\>   <br\>It returns date and time of the   verification.<br\>   <br\>Note that if the value of the   parameter “timeOfVerification” has not   been set, the current time of the system will be used. If the value for   “data” has not been set, no PKCS#7 document will be used.    |
-|    <br\>**verifyKnownUser**                  |    <br\>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for a known user.   The user certificate must not be in the form of PKCS#7  signed data, but it must be available in   the database.<br\>   <br\>It returns date and time of the   verification.                                                                                                                                                                                |
-|    <br\>**verifyUserForTrustAnchor**         |    <br\>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for an unknown user.   Additional parameter is a list of valid root certificate names. The user   certificate must be in the form of pkcs7 signed data.<br\>   <br\>It returns date and time of the   verification.<br\>   <br\>Note that the input parameter “validRootCANames” is a list   of RFC2253 formatted Root CA names.                                                  |
-|    <br\>**verifyKnownUserForTrustAnchor**    |    <br\>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for a known user. Additional parameter is a list of valid root certificate   names. The user certificate must not be in the form of pkcs7 signed data, but   it must be available in the database.<br\>   <br\>It returns date and time of the   verification.<br\>   <br\>Note that the input parameter “validRootCANames“ is list of RFC2253 formatted Root CA names.           |
-|    <br\>**getCertificates**                  |    <br\>The method returns the user   certificates that are linked to the given userId in DER encoded form. |  
+|    <br/>**verifyUser**                       |    <br/>The method verifies the signature   of an attached or of a separate PKCS#7 document with optional validity check   for an unknown user. The user certificate must be in the form of PKCS#7   signed data.<br/>   <br/>It returns date and time of the   verification.<br/>   <br/>Note that if the value of the   parameter “timeOfVerification” has not   been set, the current time of the system will be used. If the value for   “data” has not been set, no PKCS#7 document will be used.    |
+|    <br/>**verifyKnownUser**                  |    <br/>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for a known user.   The user certificate must not be in the form of PKCS#7  signed data, but it must be available in   the database.<br/>   <br/>It returns date and time of the   verification.                                                                                                                                                                                |
+|    <br/>**verifyUserForTrustAnchor**         |    <br/>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for an unknown user.   Additional parameter is a list of valid root certificate names. The user   certificate must be in the form of pkcs7 signed data.<br/>   <br/>It returns date and time of the   verification.<br/>   <br/>Note that the input parameter “validRootCANames” is a list   of RFC2253 formatted Root CA names.                                                  |
+|    <br/>**verifyKnownUserForTrustAnchor**    |    <br/>The method verifies the signature   of an attached or of a separate pkcs7 document with optional validity check for a known user. Additional parameter is a list of valid root certificate   names. The user certificate must not be in the form of pkcs7 signed data, but   it must be available in the database.<br/>   <br/>It returns date and time of the   verification.<br/>   <br/>Note that the input parameter “validRootCANames“ is list of RFC2253 formatted Root CA names.           |
+|    <br/>**getCertificates**                  |    <br/>The method returns the user   certificates that are linked to the given userId in DER encoded form. |  
 
 ## External Signature Verification application  
 
@@ -462,7 +462,7 @@ In order to successfully use the external application, a valid license for the m
 
 **Important**: In the properties files, **no backslashes "\\"** should be used in the directory paths:  
 
->For example: C:/Program Files/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version>/ on Windows and /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version>/ on Linux and Solaris.  
+>For example: C:/Program Files/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version\>/ on Windows and /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version\>/ on Linux and Solaris.  
 
 Note that to use the external application on a client, the Java Crypthography Extension (JCE) must be additionally installed.  
 
@@ -475,9 +475,9 @@ In addition, you must copy the files **iaik_jce-3.16.jar** (subdirectory jre/lib
 Required configuration parameters of the external application:  
 
 For the configuration of the external application, you must configure the keys and the certificates for the secure communication with the SSMS. More precisely, you must enter the path to these files in the config file of the application (in the subdirectory /config).  
-To authenticate and authorize the external application against the SSMS, you need a key and a certificate, which must be assigned to the role “Administrator” or “SuperAdmin” and must be a p12 file. Either use the certificate and key “SuperAdmin” generated during the SSMS installation and added to the directory \<SSMS_HOME>/certs or generate another certificate via the graphical interface of the SSMS (find more information in the Kernel manual, chapter “Role Management View”, paragraphs “Create a role” and “Download certificate”). You also need the password of the key.  
+To authenticate and authorize the external application against the SSMS, you need a key and a certificate, which must be assigned to the role “Administrator” or “SuperAdmin” and must be a p12 file. Either use the certificate and key “SuperAdmin” generated during the SSMS installation and added to the directory \<SSMS_HOME\>/certs or generate another certificate via the graphical interface of the SSMS (find more information in the Kernel manual, chapter “Role Management View”, paragraphs “Create a role” and “Download certificate”). You also need the password of the key.  
 
-To verify the authenticity of the SSMS, you need the CA certificate belonging to the SSMS installation. This CA certificate must be available as a truststore in JCEKS format with the file extension “jks”. The trustore is used to verify the issuers of the SSL certificates of the server. The truststore is generated during the SSMS installation and added to the directory \<SSMS_HOME>/certs and can be used directly. Default password for protecting the integrity of this truststore is 123456. This password can be changed later.  
+To verify the authenticity of the SSMS, you need the CA certificate belonging to the SSMS installation. This CA certificate must be available as a truststore in JCEKS format with the file extension “jks”. The trustore is used to verify the issuers of the SSL certificates of the server. The truststore is generated during the SSMS installation and added to the directory \<SSMS_HOME\>/certs and can be used directly. Default password for protecting the integrity of this truststore is 123456. This password can be changed later.  
 
 Note that the password currently valid must also be entered into the Tomcat (server.xml). If you change it, you must change it in all the relevant configuration files.  
 
@@ -492,13 +492,13 @@ The following parameters must be entered into the properties file:
 
 Information for all Linux users:  
 
-You may need to change the permissions to run the files of the external application (for example chmod 755 ./issuer-certificate-manager.sh). For security reasons, the rights of the lib directory must be adjusted after decompressing the application archive file. More precisely, all other users and the group must have read permissions (z. B. chmod 644 ./svm-apps-\<version>/lib/).  
+You may need to change the permissions to run the files of the external application (for example chmod 755 ./issuer-certificate-manager.sh). For security reasons, the rights of the lib directory must be adjusted after decompressing the application archive file. More precisely, all other users and the group must have read permissions (z. B. chmod 644 ./svm-apps-\<version\>/lib/).  
 
 ## Certificate Manager  
 
 With the Certificate Manager, you can manage the certificates and the users of the Signature Verification Module. Follow these paths to reach the application in the installation directory:
-* Windows: 	C:\Program Files\KOBIL\SSMS\modules\svm\utils\svm-apps-\<version>\<release>
-* Linux/Solaris: 	/opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version>\<release>  
+* Windows: 	C:\Program Files\KOBIL\SSMS\modules\svm\utils\svm-apps-\<version\>\<release\>
+* Linux/Solaris: 	/opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version\>\<release\>  
 
 ## Scope of the application  
 
@@ -527,7 +527,7 @@ This application offers different certificate management functions to manage the
 
 Run the Certificate Manager script (for example on Windows certificate-manager.cmd or on Linux/Solaris certificate-manager.sh) with the right parameters.  
 
-./certificate-manager.sh \<command> \<command parameter1> [command parameter n]   
+./certificate-manager.sh \<command\> \<command parameter1\> [command parameter n]   
 (Example 1: ./certificate-manager.sh removeIssuerCertificate “CN=mIDentity“ 123456)   
 (Example 2: ./certificate-manager.sh assignUserCertificate “CN=Issuer DN “ 456123 testuser01)  
 
@@ -545,21 +545,21 @@ In the configuration of the log file, be sure that you enter the correct path an
 
 ## Available management functions  
 
-|addIssuerCertificate “\<path to the certificate file>”|Adds an issuer certificate to the database.|
+|addIssuerCertificate “\<path to the certificate file\>”|Adds an issuer certificate to the database.|
 |:--|:--|
-|removeIssuerCertificate “\<issuerDN>” \<serial number>|Removes an issuer certificate from the database.|
-|lockIssuerCertificate “\<issuerDN>” \<serial number>|Locks an issuer certificate.|
-|unlockIssuerCertificate “\<issuerDN>” \<serial number>|Unlocks an issuer certificate.|
-|getIssuerCertificates “\<filter>”|Returns all issuer certificates that match the selected filter (the description of the filter is in chapters 1.5.2 and 1.5.4)|
-|addUserCertificate  “\<path to the certificate file>”|Adds a user certificate to the database.|
-|removeUserCertificate “\<issuerDN>” \<serial number>|Removes a user certificate from the database.|
-|assignUserCertificate  “\<issuerDN>” \<serial number> \<userID>|Assigns a user certificate to a user.|
-|unassignUserCertificate “\<issuerDN>” \<serial number>|Unassigns a user certificate from a user.|
-|lockUserCertificate “\<issuerDN>” \<serial number> “\<lock reason>”|Locks a user certificate in the database.|
-|unlockUserCertificate “\<issuerDN>” \<serial number>|Unlocks a user certificate in the database.|
-|getUserCertificatesInfo “\<filter>”|Returns all user certificates that match the selected filter (the description of the filter is in chapters 1.5.2 and 1.5.4)|
-|getUserCertificate  „\<issuerDN>“ \<serial number>|Returns the user certificate that matches the filter.|
-|getUserByIssuerAndSerial “\<issuerDN>” \<serial number>|Returns the user name that match the filter.|
-|getUserByDEREncodedCertificate “\<path to the certificate file>”|Returns the user name that matches the filter.|
-|addUser “\<userID>“|Adds a user to the database.|
-|removeUser “\<userID>“|Removes an already added user from the database.|
+|removeIssuerCertificate “\<issuerDN\>” \<serial number\>|Removes an issuer certificate from the database.|
+|lockIssuerCertificate “\<issuerDN\>” \<serial number\>|Locks an issuer certificate.|
+|unlockIssuerCertificate “\<issuerDN\>” \<serial number\>|Unlocks an issuer certificate.|
+|getIssuerCertificates “\<filter\>”|Returns all issuer certificates that match the selected filter (the description of the filter is in chapters 1.5.2 and 1.5.4)|
+|addUserCertificate  “\<path to the certificate file\>”|Adds a user certificate to the database.|
+|removeUserCertificate “\<issuerDN\>” \<serial number\>|Removes a user certificate from the database.|
+|assignUserCertificate  “\<issuerDN\>” \<serial number\> \<userID\>|Assigns a user certificate to a user.|
+|unassignUserCertificate “\<issuerDN\>” \<serial number\>|Unassigns a user certificate from a user.|
+|lockUserCertificate “\<issuerDN\>” \<serial number\> “\<lock reason\>”|Locks a user certificate in the database.|
+|unlockUserCertificate “\<issuerDN\>” \<serial number\>|Unlocks a user certificate in the database.|
+|getUserCertificatesInfo “\<filter\>”|Returns all user certificates that match the selected filter (the description of the filter is in chapters 1.5.2 and 1.5.4)|
+|getUserCertificate  „\<issuerDN\>“ \<serial number\>|Returns the user certificate that matches the filter.|
+|getUserByIssuerAndSerial “\<issuerDN\>” \<serial number\>|Returns the user name that match the filter.|
+|getUserByDEREncodedCertificate “\<path to the certificate file\>”|Returns the user name that matches the filter.|
+|addUser “\<userID\>“|Adds a user to the database.|
+|removeUser “\<userID\>“|Removes an already added user from the database.|
