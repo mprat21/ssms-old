@@ -361,7 +361,7 @@ Remember to set the quotation marks and the brackets.
 
 Find a detailed description of the functions and of the error messages in the java documentation (javadoc) contained in the installation. You can find it in form of an html file in English in the following directory:  
 
->\<SSMS_INSTALL\>\modules\svm\doc\mgt_soap_api. The following methods are part of the UserCertificateManagementWs class:  
+>\<SSMS_INSTALL>\modules\svm\doc\mgt_soap_api. The following methods are part of the UserCertificateManagementWs class:  
 
 |**Permission**|**Methods**|  
 |:--|:--|
@@ -376,8 +376,8 @@ The method getCertificatesInfo of the UserCertificateManagementWs class includes
 
 The general call of this method is:  
 
->Linux/Solaris:	./certificate-manager.sh getUserCertificatesInfo “<filter>” <br/>  
->Windows: 	certificate-manager.cmd getUserCertificatesInfo “<filter>”  
+>Linux/Solaris:	./certificate-manager.sh getUserCertificatesInfo “\<filter\>” <br/>  
+>Windows: 	certificate-manager.cmd getUserCertificatesInfo “\<filter\>”  
 
 For <filter>, use the following parameters in brackets and quotation marks:  
 
@@ -462,7 +462,7 @@ In order to successfully use the external application, a valid license for the m
 
 **Important**: In the properties files, **no backslashes "\\"** should be used in the directory paths:  
 
->For example: C:/Program Files/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version\>/ on Windows and /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version\>/ on Linux and Solaris.  
+>For example: C:/Program Files/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version>/ on Windows and /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version>/ on Linux and Solaris.  
 
 Note that to use the external application on a client, the Java Crypthography Extension (JCE) must be additionally installed.  
 
