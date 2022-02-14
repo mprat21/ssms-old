@@ -365,27 +365,10 @@ For displaying only unlocked versions, the checkbox beside the version filter ca
 
 In this view, you can find information about the version number of all registered apps as well as their status and other attributes.
 
-| Software Type               | App or Firmware                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client Type                 | Client type of the app or of the firmware, in other words, on which operating system the version runs:
-- ANDROID\_ARM
-- ANDROID\_x86
-- Android\_ARMv7a
-- Android\_ARMv8a
-- iOS\_ASMv7s
-- iOS\_ARM64
-- iOS\_ARMv7
-- WindowsPhone\_ARMv7
-- WindowsPhone\_Emu
-- MAC\_OS
-- Windows
-- signPod
-- signDot |
-| Device Type                 | Device type of the firmware: <br/>
-
-- MIDENTITY\_MINI
-- MIDENTITY\_AIR (currently not supported)
-- MIDENTITY\_AIR\_PLUS|
+| Software Type               | App or Firmware |
+| --------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Client Type | Client type of the app or of the firmware, in other words, on which operating system the version runs: <br/> - ANDROID\_ARM <br/> - ANDROID\_x86 <br/> - Android\_ARMv7a <br/> - Android\_ARMv8a <br/> - iOS\_ASMv7s <br/> - iOS\_ARM64 <br/> - iOS\_ARMv7 <br/> - WindowsPhone\_ARMv7 <br/> - WindowsPhone\_Emu <br/> - MAC\_OS <br/> - Windows <br/> - signPod <br/> - signDot <br/> |
+| Device Type                 | Device type of the firmware: <br/> - MIDENTITY\_MINI <br/> - MIDENTITY\_AIR (currently not supported) <br/> - MIDENTITY\_AIR\_PLUS |
 | App Name                    | The name of the app    |
 | Version                     | The version number of the app or of the firmware |
 | SDK Version                 | The SDK version of the app   |
