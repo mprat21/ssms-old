@@ -484,13 +484,13 @@ Note that the password currently valid must also be entered into the Tomcat (ser
 The following parameters must be entered into the properties file:  
 
 \### key file of the operator (PKCS#12)  
-    >soap.SSL.KeyStoreFile = /path to the certificate/ssms-superadmin.p12 oder admin.p12  
+>soap.SSL.KeyStoreFile = /path to the certificate/ssms-superadmin.p12 oder admin.p12  
 
 \### trust store file containing the ssms servers root and ca certificate (java key store)
-    >soap.SSL.TrustStoreFile = /path to the certificate/truststore.jks  
+>soap.SSL.TrustStoreFile = /path to the certificate/truststore.jks  
 
 \### pass phrase to access the trust store  
-    >soap.SSL.TrustStorePassPhrase = 123456  
+>soap.SSL.TrustStorePassPhrase = 123456  
 
 **Information for all Linux users**
 
