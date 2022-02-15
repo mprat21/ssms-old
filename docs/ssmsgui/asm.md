@@ -39,7 +39,7 @@ The installation and configuration of the ASM Portal Demo is described in a sepa
 
 ### Role Management in the App Security Management module
 
-A role must be assigned to each operator of the system. The division into different roles defines the authorizations of every single operator. Please find information on how to create roles and assign them permissions manual for the Kernel module. Please find the roles and authorizations to use the Management SOAP interface in the description of the single methods in chapter 10.4. The services SOAP interface is secured via SSL server authentication and does not require any other authentication of a user.
+A role must be assigned to each operator of the system. The division into different roles defines the authorizations of every single operator. Please find information on how to create roles and assign them permissions manual for the Kernel module. Please find the roles and authorizations to use the Management SOAP interface in the description of the single methods in [soap-interfaces](#soap-interfaces). The services SOAP interface is secured via SSL server authentication and does not require any other authentication of a user.
 
 ###	Create ASM CA certificates
 
@@ -103,7 +103,7 @@ The deletion can also fail. The failure is indicated in the status column on the
 
 ###	Search devices
 
-With this function, you can search for devices and users. More precisely, you can search for or filter specific entries. Enter the desired value into the input field and click the magnifier icon. Please find additional information about the search options in the administrator manual for the Kernel module in the chapter “Search”.
+With this function, you can search for devices and users. More precisely, you can search for or filter specific entries. Enter the desired value into the input field and click the magnifier icon. Please find additional information about the search options in the administrator manual for the Kernel module in the chapter **“Search”**.
 
 
 ## Properties view
@@ -115,7 +115,7 @@ The Properties view is subdivided into three sub-views:
 -	Group Properties
 
 In addition to the default properties of an AST device, user or group, customer-specific parameters can also be set and read over the AST SDK or the ASM SOAP interface e.g. an optional device name. The view Properties displays these parameters in an overview.
-Please find more information about methods for setting and reading properties in the AST SDK manual or in the information about the SOAP methods in **chapter 10.4**.
+Please find more information about methods for setting and reading properties in the AST SDK manual or in the information about the SOAP methods in [soap-interfaces](#soap-interfaces).
 
 ###	Device Properties
 
@@ -176,7 +176,7 @@ The following attributes are part of the Device Properties view:
 
 ##	Groups view
 
-In the Groups view, different user groups can be created and managed. This helps assign the version updates of devices (virtual and hardware devices) to certain groups of users **(see chapter 6.5)**. A user can be part of only one group or of no group. In addition, users can be automatically assigned to an AUTO_GROUP when they are not part of a specific group.
+In the Groups view, different user groups can be created and managed. This helps assign the version updates of devices (virtual and hardware devices) to certain groups of users [assign-version-update](#assign-version-update). A user can be part of only one group or of no group. In addition, users can be automatically assigned to an AUTO_GROUP when they are not part of a specific group.
 The group which the user belongs to is listed in the column labeled **Group Name** in the Users view.
 In the next chapters, the functions of the group management are described. These functions can be managed via the Web GUI and the SOAP interface.
 
@@ -273,7 +273,7 @@ In the dialog box that pops up, you are prompted to confirm your action.
 ###	Add Activation Number
 
 An activation number is a one-time password, which you can set for a user in the way described below. A user can have one or multiple activation numbers depending on the number of the devices he uses.
-The user needs the activation number during the registration process, which he must perform the first time he uses his app on his device. After successful registration, the activation number is deleted, and the device is assigned to the user. To verify the registration, check whether any devices are assigned to the user in the Devices view **(chapter 1.2)**, after reloading the page.
+The user needs the activation number during the registration process, which he must perform the first time he uses his app on his device. After successful registration, the activation number is deleted, and the device is assigned to the user. To verify the registration, check whether any devices are assigned to the user in the Devices view [create-asm-ca-certificates](#create-asm-ca-certificates), after reloading the page.
 
 ![set-act-num](./module-files/files-asm/set-act-num.png)
 
@@ -407,7 +407,7 @@ In case you add an app for test purposes and do not deliver it to customers, you
 
 **Note**: If the Client Type of the app is Windows or MacOS, you must provide an Upload Installer, which is the setup file of the application. If the Client Type of the App is Android or iOS, you can enter the App Identifier
 with which the app is identified in the app store.
-If the installer setup file size is bigger than the maximum accepted the available capacity can be increased by changing <install-ssms\>/configutil/webapps/mgt/WEB-INF/web.xml. For more information, please go to Installation manual in chapter “Additional Tomcat Adjustments”.
+If the installer setup file size is bigger than the maximum accepted the available capacity can be increased by changing <install-ssms\>/configutil/webapps/mgt/WEB-INF/web.xml. For more information, please go to Installation manual in chapter -**“Additional Tomcat Adjustments”**.
 
 
 #### Submit an app (iOS) to the App Store
