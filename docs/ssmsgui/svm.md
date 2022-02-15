@@ -462,7 +462,7 @@ In order to successfully use the external application, a valid license for the m
 
 **Important**: In the properties files, **no backslashes "\\"** should be used in the directory paths:  
 
->For example: C:/Program Files/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version>/ on Windows and /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version>/ on Linux and Solaris.  
+>For example: C:/Program Files/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version\> on Windows and /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version\> on Linux and Solaris.  
 
 Note that to use the external application on a client, the Java Crypthography Extension (JCE) must be additionally installed.  
 
