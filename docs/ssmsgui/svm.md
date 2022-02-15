@@ -505,7 +505,7 @@ With the Certificate Manager, you can manage the certificates and the users of t
 
 * Linux/Solaris: 	
 
-      /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-<version\><release\>  
+      /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-\<version\>\<release\>  
 
 #### Scope of the application  
 
