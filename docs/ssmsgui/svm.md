@@ -501,11 +501,11 @@ You may need to change the permissions to run the files of the external applicat
 With the Certificate Manager, you can manage the certificates and the users of the Signature Verification Module. Follow these paths to reach the application in the installation directory:
 * Windows: 	
 
-      C:\Program Files\KOBIL\SSMS\modules\svm\utils\svm-apps-&lt;version&gt;&lt;release&gt;
+      C:\Program Files\KOBIL\SSMS\modules\svm\utils\svm-apps-<version\>\<release>;
 
 * Linux/Solaris: 	
 
-      /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-&lt;version&gt;&lt;release&gt;
+      /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-<version\>\<release>;
 
 #### Scope of the application  
 
