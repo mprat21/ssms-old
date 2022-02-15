@@ -912,13 +912,14 @@ format.
 The documentation is divided into management and services; consequently, into two different directories:
 One SOAP interface is on the management node (AsmManagementWs).
 
-The URL with the standard installation is: https://<FQHN  or IP-address>:8443/ssms-gui/soap/mgt/asm/AsmManagementWs
+The URL with the standard installation is:
+>https://<FQHN  or IP-address\>:8443/ssms-gui/soap/mgt/asm/AsmManagementWs
+
 The Management SOAP interface is used to integrate the management tasks concerning the different devices and users with the systems of the IT environment.
 
 The second SOAP interface is on the services node (AsmServicesWs). This interface is used for the integration into applications that communicate and interact with the devices.
 
 The URL with the standard installation is:
-
 >https://<FQHN or IP-address\>:8445/ssms-services/soap/svc/asm/AsmServicesWs
 
 Use these interfaces only within a secured environment. As, via the SOAP interfaces, sensitive information like configuration changes and validity verification of devices and users are carried out, it is important for security reasons that these interfaces are accessed in an environment isolated from the internet.
@@ -1197,5 +1198,5 @@ The server verifies whether a session with the device for this OTP is active as 
 #### The AstPortalLib
 
      <SSMS_INSTALL>\modules\asm\libraries\java\lib-portal-ast
-     
+
 Find additional information, descriptions and configuration details of the AstPortalLib (deprecated) in the integration manual.
