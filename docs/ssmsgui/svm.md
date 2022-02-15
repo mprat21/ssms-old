@@ -64,11 +64,9 @@ In this view, you can find information about the status of all registered issuer
 |    <br/>SubjectDN                    |    <br/>The   certificate’s owner Distinguished Name    |
 |    <br/>IssuerDN                     |    <br/>The certificate’s issuer Distinguished Name     |
 |    <br/>Certificate serial number    |    <br/>Serial number of the certificate                |  
-|Validity||Icon that shows the validity of the certificate. For precise information on the validity period, open the certificate detail information clicking the corresponding actions icon|
-|:--|--|:--|
-|Locked||“true” means: the certificate is locked|
-|Locked||“false” means: the certificate is unlocked|
-|Actions||Opens the detail information of the certificate|  
+|Validity| ![validity](./module-files/files-svm/validity.PNG) Icon that shows the validity of the certificate. For precise information on the validity period, open the certificate detail information clicking the corresponding actions icon|
+|Locked|![locked](./module-files/files-svm/locked.PNG) “true” means: the certificate is locked <br/> ![unlocked](./module-files/files-svm/unlocked.PNG) “false” means: the certificate is unlocked|
+|Actions| ![displaycert](./module-files/files-svm/displaycert.PNG) Opens the detail information of the certificate|  
 
 #### Import issuer certificate  
 
