@@ -64,7 +64,6 @@ In this view, you can find information about the status of all registered issuer
 |    <br/>SubjectDN                    |    <br/>The   certificate’s owner Distinguished Name    |
 |    <br/>IssuerDN                     |    <br/>The certificate’s issuer Distinguished Name     |
 |    <br/>Certificate serial number    |    <br/>Serial number of the certificate                |  
-
 |Validity||Icon that shows the validity of the certificate. For precise information on the validity period, open the certificate detail information clicking the corresponding actions icon|
 |:--|--|:--|
 |Locked||“true” means: the certificate is locked|
@@ -150,7 +149,7 @@ As mentioned above, you import the user certificates or manage already imported 
 
 The content of the file can for example be formatted as follows:  
 
-    **certificate, issuerDN, certificateSerialNumber, locked, user**  
+    certificate, issuerDN, certificateSerialNumber, locked, user
 
 |    <br/>Certificate                |    <br/>base64 encoded certificate<br/>   <br/>(mandatory when the certificates are imported,   optional when they are managed).                                                             |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -159,7 +158,7 @@ The content of the file can for example be formatted as follows:
 |    <br/>locked                     |    <br/>Integer that indicates the status of the certificate   (1 is for locked, 0 for unlocked). Default value for imported certificates is   unlocked.                                   |
 |    <br/>user                       |    <br/>Name of the user whom the certificate is assigned   to. The string is empty when the certificate is unassigned (optional, for   imported certificates default value is empty)      |  
 
-**NOTE**: : Do not write any comments in the file, but only information for the import.  
+**NOTE**: Do not write any comments in the file, but only information for the import.  
 
 :warning: For the CSV import, the file must be UTF-8 encoded without BOM, because this could lead to display problems. Alternatively, use the ANSI character set on Windows.  
 
@@ -177,7 +176,7 @@ Until you unlock the certificate, signed data of the user cannot be verified and
 
 ##### Unlock user certificate  
 
-You unlock a user certificate and activate the authorization of the certificate again by selecting the certificate and clicking the button “Unlock certificate”. The SSMS can now authenticate the signed data of the user with that certificate.  
+You unlock a user certificate and activate the authorization of the certificate again by selecting the certificate and clicking the button **“Unlock certificate”**. The SSMS can now authenticate the signed data of the user with that certificate.  
 
 #### Remove user certificate  
 
@@ -185,11 +184,11 @@ You remove a user certificate from the system by selecting the certificate and b
 
 #### Unassign user certificate  
 
-You unassign a certificate from a user by selecting the certificate and by clicking the button ”Unassign certificate”. The user and the certificate continue to exist.  
+You unassign a certificate from a user by selecting the certificate and by clicking the button **"Unassign certificate”**. The user and the certificate continue to exist.  
 
 #### Assign certificate to user  
 
-You also can assign a certificate to a user with no assigned certificate yet by clicking the symbol . A window pops up where you can enter a user name, search for it and confirm it by clicking the name in the name list that appears. Confirm your choice by clicking “Assign”.  
+You also can assign a certificate to a user with no assigned certificate yet by clicking the symbol . A window pops up where you can enter a user name, search for it and confirm it by clicking the name in the name list that appears. Confirm your choice by clicking **“Assign”**.  
 
 ![svmassigncert](./module-files/files-svm/svm_assigncert.png)  
 
@@ -271,18 +270,15 @@ The documentation is divided into management and services; consequently, into tw
 Two SOAP interfaces, one for the issuer and one for the user certificates, are on the management node.  
 
 The URL for the management SOAP interface of the issuer certificates is:  
-
-     https://<FQHN  oder IP-Adresse\>:8443/<ssms-gui\>/soap/mgt/svm/IssuerCertificateManagementWs  
+>https://<FQHN  oder IP-Adresse>:8443/<ssms-gui>/soap/mgt/svm/IssuerCertificateManagementWs  
 
 The URL for the management SOAP interface of the user certificates is:  
-
-     https:// <FQHN oder IP-Adresse\>:8443/ssms-gui/soap/mgt/svm/UserCertificateManagementWs
+>https:// <FQHN oder IP-Adresse>:8443/ssms-gui/soap/mgt/svm/UserCertificateManagementWs
 
 The third SOAP interface is created on the Services node (ServicesWs). This interface is used for integration in the applications that carry out signature verifications.
 
 The URL for the services SOAP interface is:  
-
-     https:// <FQHN oder IP-Adresse\>:8445/ssms-services/soap/svc/svm/SvmServicesWs  
+>https:// <FQHN oder IP-Adresse>:8445/ssms-services/soap/svc/svm/SvmServicesWs  
 
 The management SOAP interfaces are used to integrate the management tasks concerning the different signatures into the systems of the IT environment. To use these interfaces the command line tool Certificate Manager is delivered. It works for the management of the issuer certificates as well as of the user certificates (please find more information in  [certificate-manager](#certificate-manager)).  
 
@@ -316,11 +312,11 @@ To call this method with the command line tool, use:
 
 **Linux/Solaris**
 
-     ./certificate-manager.sh getIssuerCertificates “<filter\>”  
+     ./certificate-manager.sh getIssuerCertificates “<filter>”  
 
 **Windows**
 
-     certificate-manager.cmd getIssuerCertificates “<filter\>”  
+     certificate-manager.cmd getIssuerCertificates “<filter>”  
 
 Instead of <filter\> use the following search filters in quotation marks:  
 
@@ -360,14 +356,13 @@ Filter the results searching for information about locked issuer certificates wi
 
 For example: ./certificate-manager.sh getIssuerCertificates “(locked=true)”  
 
-**Note**:  
-In search filters, you can use equal (=), not equal (!=), lesser than (<) or greater than (>). Remember to set the quotation marks and the brackets.  
+**Note**: In search filters, you can use equal (=), not equal (!=), lesser than (<) or greater than (>). Remember to set the quotation marks and the brackets.  
 
 #### UserCertificateManagementWs  
 
 Find a detailed description of the functions and of the error messages in the java documentation (javadoc) contained in the installation. You can find it in form of an html file in English in the following directory:  
 
-     ><SSMS_INSTALL>\modules\svm\doc\mgt_soap_api.
+     <SSMS_INSTALL>\modules\svm\doc\mgt_soap_api
 
 The following methods are part of the UserCertificateManagementWs class:  
 
@@ -386,49 +381,43 @@ The general call of this method is:
 
 **Linux/Solaris**
 
-	./certificate-manager.sh getUserCertificatesInfo “<filter\>”  
+	./certificate-manager.sh getUserCertificatesInfo “<filter>”  
 
 **Windows**
 
-   certificate-manager.cmd getUserCertificatesInfo “<filter\>”  
+   certificate-manager.cmd getUserCertificatesInfo “<filter>”  
 
 For <filter\>, use the following parameters in brackets and quotation marks:  
 
 ##### certSN  
 
 Filter the result searching for the certificate serial number with the data type String:  
-
-  >For example: ./certificate-manager.sh getUserCertificatesInfo “(certSN=123456)”  
+>For example: ./certificate-manager.sh getUserCertificatesInfo “(certSN=123456)”  
 
 ##### subjectDN  
 
 Filter the result searching for the Subject Distinguished Name with the data type String:  
-
-  >For example: ./certificate-manager.sh getUserCertificatesInfo “(subjectDN=CN=mIDentity)”  
+>For example: ./certificate-manager.sh getUserCertificatesInfo “(subjectDN=CN=mIDentity)”  
 
 ##### issuerDN  
 
 Filter the result searching for the Issuer Distinguished Name with the data type String:  
-
-  >For example: ./certificate-manager.sh getUserCertificatesInfo “(issuerDN=CN=mIDentity)”  
+>For example: ./certificate-manager.sh getUserCertificatesInfo “(issuerDN=CN=mIDentity)”  
 
 ##### notAfter  
 
 Filter the result searching for the date until which the certificates are valid with the data type Date:  
-
-  >For example: ./certificate-manager.sh getUserCertificatesInfo “(notAfter=2021-11-20 16:18:21)”  
+>For example: ./certificate-manager.sh getUserCertificatesInfo “(notAfter=2021-11-20 16:18:21)”  
 
 ##### notBefore  
 
 Filter the result searching for the date after which the certificates are valid with the data type Date.  
-
-  >For example: ./certificate-manager.sh getUserCertificatesInfo “(notBefore=2011-11-01 16:18:21)”  
+>For example: ./certificate-manager.sh getUserCertificatesInfo “(notBefore=2011-11-01 16:18:21)”  
 
 ##### locked  
 
 Filter the results searching for information about locked issuer certificates with the data type Boolean. Set the value to true or false correspondingly.  
-
-  >For example: ./certificate-manager.sh getUserCertificatesInfo “(locked=true)”  
+>For example: ./certificate-manager.sh getUserCertificatesInfo “(locked=true)”  
 
 **Note**:  
 
@@ -454,8 +443,9 @@ The method allows to set the filters auditAction, auditSubject, operatorRoleId. 
 #### SvmServicesWs  
 
 For a detailed description of the functions and error messages refer to the java documentation (java doc) in English in html format. This is available in the following directory:  
+><SSMS_INSTALL>\modules\svm\doc\svc_soap_api.
 
-    ><SSMS_INSTALL\>\modules\svm\doc\svc_soap_api. The following functions belong to this interface:  
+The following functions belong to this interface:  
 
 |    <br/>Name                             |    <br/>Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -474,8 +464,7 @@ This chapter describes the installation, configuration and use of this external 
 In order to successfully use the external application, a valid license for the module must be available on the server.  
 
 **Important**: In the properties files, **no backslashes "\\"** should be used in the directory paths:  
-
-    >For example: C:/Program Files/KOBIL/SSMS/modules/svm/utils/svm-apps-<version\> on Windows and /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-<version\> on Linux and Solaris.  
+>For example: C:/Program Files/KOBIL/SSMS/modules/svm/utils/svm-apps-<version> on Windows and /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-<version> on Linux and Solaris.  
 
 Note that to use the external application on a client, the Java Crypthography Extension (JCE) must be additionally installed.  
 
@@ -512,8 +501,13 @@ You may need to change the permissions to run the files of the external applicat
 ### Certificate Manager  
 
 With the Certificate Manager, you can manage the certificates and the users of the Signature Verification Module. Follow these paths to reach the application in the installation directory:
-* Windows: 	C:\Program Files\KOBIL\SSMS\modules\svm\utils\svm-apps-<version\><release\>
-* Linux/Solaris: 	/opt/KOBIL/SSMS/modules/svm/utils/svm-apps-<version\><release\>  
+* Windows: 	
+
+      C:\Program Files\KOBIL\SSMS\modules\svm\utils\svm-apps-<version\><release\>
+
+* Linux/Solaris: 	
+
+      /opt/KOBIL/SSMS/modules/svm/utils/svm-apps-<version\><release\>  
 
 #### Scope of the application  
 
