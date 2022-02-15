@@ -895,3 +895,307 @@ Please find a description of the Text Resources in the Kernel section.
 Transactions sent by the Portal can receive transaction IDs in order to be identified by the SSMS. Transaction IDs allow the portal to send multiple transactions and messages to a device at once. The queuing function is governed by license. This function is only possible when in ASM Transaction Queue Length has the  value > 1. We can check that in Kernel-> License management view. Accordingly, so many parallel transactions and messages can be sent by the portal to a user.
 
 As soon as the user starts one of his devices, he receives the transactions as they are sent by the portal and in this order, he can confirm them. In case the user’s devices are offline, the push notification is sent to all the devices.
+
+### SOAP interfaces
+
+Two SOAP interfaces are included in the installation of the App Security Management Module. Please find a
+detailed description of the SOAP interfaces and of their functions in the Java documentation (java doc) in HTML
+format.
+-	Windows 	
+
+     C:\Program Files\KOBIL\SSMS\modules\asm\doc
+
+-	Linux/Solaris
+
+   	 /opt/KOBIL/SSMS/modules/asm/doc
+
+The documentation is divided into management and services; consequently, into two different directories:
+One SOAP interface is on the management node (AsmManagementWs).
+
+The URL with the standard installation is: https://<FQHN  or IP-address>:8443/ssms-gui/soap/mgt/asm/AsmManagementWs
+The Management SOAP interface is used to integrate the management tasks concerning the different devices and users with the systems of the IT environment.
+
+The second SOAP interface is on the services node (AsmServicesWs). This interface is used for the integration into applications that communicate and interact with the devices.
+
+The URL with the standard installation is:
+
+>https://<FQHN or IP-address\>:8445/ssms-services/soap/svc/asm/AsmServicesWs
+
+Use these interfaces only within a secured environment. As, via the SOAP interfaces, sensitive information like configuration changes and validity verification of devices and users are carried out, it is important for security reasons that these interfaces are accessed in an environment isolated from the internet.
+
+**Roles and permissions**
+
+The use of the Management SOAP interfaces is controlled by roles, which define the permissions of every operator. The table below describes the AsmManagementWs SOAP methods and informs you about which operator of SSMS has the permission to run different methods. The Services SOAP interface is authenticated by SSL and does not need any other authentication of the operator. For the Management SOAP interface, the roles or the operators are Super Administrator, Administrator, Help desk and Reviewer.
+
+#### AsmManagementWs
+
+Be aware that deprecated methods are not mentioned in the handbook but still be present at the javadoc!
+Please find a detailed description of the functions and of the error messages in the java documentation contained in the installation (javadoc). You can find it in form of a html file in English in the following directory:
+
+     <SSMS_INSTALL>\modules\asm\doc\mgt_soap_api
+
+The following methods are part of this interface:
+
+| **Permission**                                                                                                                                                                                                                                                                               | **Methods**                                                                                                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ASM\_USER\_MODIFY**                                                                                                                                                                                                                                                                        | **lockUser**                                                                                                                                                                                                                              |
+| The method locks a user in the database.
+
+It returns true if the user has been successfully locked in the database, false if the user was already locked.                                                                                                                                    |
+| **unlockUser**                                                                                                                                                                                                                                                                               |
+| The method unlocks a user in the database.
+
+It returns true if the user has been successfully unlocked in the database, false if the user was already unlocked.                                                                                                                              |
+| **setPin**                                                                                                                                                                                                                                                                                   |
+| The method replaces the old PIN with a new PIN or creates a new PIN if no PIN was set so far.
+
+The method is only available if the setting "Use Same Pin For All Devices" is activated in the Advanced-Settings.                                                                             |
+| **resetPin**                                                                                                                                                                                                                                                                                 |
+| The method generates a new PIN for a user, saves the PIN in the database and returns the new PIN. The PIN has the minimum length configured in the ASM Advanced Settings.
+
+The method is only available if the setting "Use Same Pin For All Devices" is activated in the Advanced-Settings. |
+|                                                                                                                                                                                                                                                                                              | **removePin**                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                              | The method removes the current PIN of a user.
+
+The method is only available if the setting "Use Same Pin For All Devices" is activated in the Advanced-Settings.                                                                          |
+| **SSMS\_USER\_MANAGE**                                                                                                                                                                                                                                                                       | **addUser**                                                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                              | The method adds a new user to the database.                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                              | **removeUser**                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                              | The method deletes a user from the SSMS database.                                                                                                                                                                                         |
+| **ASM\_USER\_VIEW**                                                                                                                                                                                                                                                                          | **getUserInfo**                                                                                                                                                                                                                           |
+| The method returns an object containing user information related to the given userID.                                                                                                                                                                                                        |
+| **getUsers**                                                                                                                                                                                                                                                                                 |
+| The method returns a list of all userIDs that are matching to the given filter.                                                                                                                                                                                                              |
+| **ASM\_USER\_ACTIVATION\_CODE\_VIEW**                                                                                                                                                                                                                                                        | **getActivationCodes**                                                                                                                                                                                                                    |
+|                                                                                                                                                                                                                                                                                              | The method returns a list of all activation numbers of a user identified by his userID.                                                                                                                                                   |
+| **ASM\_USER\_ACTIVATION\_CODE\_MODIFY**                                                                                                                                                                                                                                                      | **createActivationCodeEx**                                                                                                                                                                                                                |
+| The method adds a new activation number to the database. It returns an object with the activation number data.                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                              | **removeAllActivationCodes**                                                                                                                                                                                                              |
+| The method removes all activation numbers of the user identified by his userID.
+
+It returns the number of the deleted activation numbers.                                                                                                                                                    |
+| **removeActivationCode**                                                                                                                                                                                                                                                                     |
+| The method removes an activation number from the database.
+
+It returns true if the activation number has been successfully removed, false if the activation number did not exist.                                                                                                            |
+| **ASM\_DEVICE\_VIEW**                                                                                                                                                                                                                                                                        | **getDevicesForUser**                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                              | The method returns a list of all devices assigned to the given userID. It returns an empty list if no device could be found.                                                                                                              |
+|                                                                                                                                                                                                                                                                                              | **getDeviceMgtInfo**                                                                                                                                                                                                                      |
+| The method returns an object containing device information given the deviceId.                                                                                                                                                                                                               |
+| **SVM\_USER\_CERTIFICATE\_VIEW**                                                                                                                                                                                                                                                             | **getCertificate**                                                                                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                              | The method returns the matching certificate given the issuerDN of the certificate and its serial number.                                                                                                                                  |
+|                                                                                                                                                                                                                                                                                              | **getCertificateByDeviceId**                                                                                                                                                                                                              |
+| The method returns the matching certificate given the deviceID.                                                                                                                                                                                                                              |
+| **ASM\_USER\_CERT\_CREATE**                                                                                                                                                                                                                                                                  | **createUserCertificate**                                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                              | This method creates an X.509 user certificate based on the given certificate profile and provided certificate signing request (CSR).                                                                                                      |
+| **ASM\_DEVICE\_MODIFY**                                                                                                                                                                                                                                                                      | **lockDevice**                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                              | The method locks a device in the database with the given lock reason (the lock reason must be one of the currently configured ones).
+
+It returns true if the device has been successfully locked, false if the device was already locked. |
+|                                                                                                                                                                                                                                                                                              | **unlockDevice**                                                                                                                                                                                                                          |
+| The method unlocks a device in the database.
+
+It returns true if the device has been successfully unlocked, false if the device was already unlocked.                                                                                                                                        |
+| **lockDeviceByDeviceId**                                                                                                                                                                                                                                                                     |
+| The method locks a device given the deviceID and the lock reason. The lock reason must be one of the currently configured ones.
+
+It returns true if the device has been successfully locked, false if the device was already locked.                                                         |
+| **unlockDeviceByDeviceId**                                                                                                                                                                                                                                                                   |
+| The method unlocks a device given the deviceID.
+
+It returns true if the device has been successfully unlocked, false if the device was already unlocked.                                                                                                                                     |
+| **copyPin**                                                                                                                                                                                                                                                                                  |
+| Copy the password from one virtual device to a list of virtual devices. These target devices must be assigned to the same user as the source device.                                                                                                                                         |
+| **ASM\_DEVICE\_MANAGE**                                                                                                                                                                                                                                                                      | **removeDeviceEx**                                                                                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                              | Removes a device from the database based on the device ID or the certificate. It returns true if the device was removed and false if the device does not exist.                                                                           |
+| **ASM\_STATISTICS\_MANAGE**                                                                                                                                                                                                                                                                  | **getStatistic**                                                                                                                                                                                                                          |
+| The method returns the selected statistics as a CSV string.                                                                                                                                                                                                                                  |
+| **ASM\_REPORTING\_VIEW**                                                                                                                                                                                                                                                                     | **getReportingItems**                                                                                                                                                                                                                     |
+| The method retrieves reporting records from ASM on the base of a filter containing the following information:
+
+· timestamp
+
+· user ID
+
+· device ID
+
+· action
+
+· status
+
+· details
+
+· operator                                                                                                |
+| **ASM\_APP\_BUNDLE**                                                                                                                                                                                                                                                                         | **createAppBundle**                                                                                                                                                                                                                       |
+| The method creates an app configuration bundle in a zip file. The file contains the sdk\_config.xml in order to let the app communicate with ASM.                                                                                                                                            |
+| **ASM\_APP\_VERSIONS\_MANAGE**                                                                                                                                                                                                                                                               | **addVersion**                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                              | The method adds an app or firmware version to the database.                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                              | **removeVersion**                                                                                                                                                                                                                         |
+| The method removes an app or firmware version from the database.                                                                                                                                                                                                                             |
+| **editVersion**                                                                                                                                                                                                                                                                              |
+| The method updates an existing app or firmware version.                                                                                                                                                                                                                                      |
+| **removeVersionChecksum**                                                                                                                                                                                                                                                                    |
+| The method removes the checksum of the app or of the firmware version on the basis of the given parameter.                                                                                                                                                                                   |
+| **ASM\_VERSION\_UPDATE\_MANAGE**                                                                                                                                                                                                                                                             | **assignVersionUpdate**                                                                                                                                                                                                                   |
+|                                                                                                                                                                                                                                                                                              | The method assigns a version update for a specific version or for all older versions.                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                              | **unassignVersionUpdate**                                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                              | The method unassigns a version update for a specific version or for all older versions.                                                                                                                                                   |
+|                                                                                                                                                                                                                                                                                              | **editVersionUpdate**                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                              | The method modifies the date on which the update becomes obligatory.                                                                                                                                                                      |
+| **SSMS\_GROUP\_VIEW**                                                                                                                                                                                                                                                                        | **getGroups**                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                              | The method returns a list of all group names in the database that are matching to the filter.                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                              | **getUserGroup**                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                              | The method retrieves the group name to which the given user is assigned to.                                                                                                                                                               |
+| **SSMS\_GROUP\_MANAGE**                                                                                                                                                                                                                                                                      | **addGroup**                                                                                                                                                                                                                              |
+|                                                                                                                                                                                                                                                                                              | The method adds a group with the given name to SSMS.                                                                                                                                                                                      |
+|                                                                                                                                                                                                                                                                                              | **modifyGroup**                                                                                                                                                                                                                           |
+|                                                                                                                                                                                                                                                                                              | The method modifies group name and "auto group" flag of the given group.                                                                                                                                                                  |
+|                                                                                                                                                                                                                                                                                              | **removeGroup**                                                                                                                                                                                                                           |
+|                                                                                                                                                                                                                                                                                              | The method removes the group with the given name from SSMS.                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                              | **assignGroupToUser**                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                              | The method assigns a user to a group.                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                              | **unassignGroupFromUser**                                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                              | The method unassigns a user from a group.                                                                                                                                                                                                 |
+| **ASM\_TOKEN\_SIGNERS\_MANAGE**                                                                                                                                                                                                                                                              | **addSigner**                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                              | The method adds a new token signer in SSMS.                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                              | **editSigner**                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                              | The method edits an existing token signer in SSMS.                                                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                              | **removeSigner**                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                              | The method removes the token signer with the given name.                                                                                                                                                                                  |
+| **ASM\_TOKEN\_POLICIES\_MANAGE**                                                                                                                                                                                                                                                             | **addPolicy**                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                              | The method adds a new token policy in SSMS.                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                              | **editPolicy**                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                              | The method edits existing token policy in SSMS.                                                                                                                                                                                           |
+|                                                                                                                                                                                                                                                                                              | **removePolicy**                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                              | The method removes a token policy with the given name.                                                                                                                                                                                    |
+| **ASM\_TOKEN\_SIGNERS\_VIEW**                                                                                                                                                                                                                                                                | **getSignerCertificate**                                                                                                                                                                                                                  |
+|                                                                                                                                                                                                                                                                                              | The method returns a certificate (DER encoded) for the given name of the signer.                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                              | **getSigner**                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                              | The method returns existing token signer for the given name of the signer.                                                                                                                                                                |
+| **ASM\_TOKEN\_POLICIES\_VIEW**                                                                                                                                                                                                                                                               | **getPolicy**                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                              | The method returns existing token policy for the given policy name.                                                                                                                                                                       |
+
+
+#### Lock reasons configure
+
+In addition to the standard lock reasons you can define further lock reasons. Depending on the language the following files must be edited:
+
+usercertificate-lock-reasons-config.properties
+usercertificate-lock-reasons-config_de.properties
+usercertificate-lock-reasons-config_en.properties
+
+please refer to the folder:
+
+     <SSMS_INSTALL>\modules\svm\resources\lockReasonsBundle
+
+The files included default lock reasons, which must be not changed or deleted:
+
+\# System Defined Lock Reasons
+\# This lock reasons are used by system and administrator is not allowed to change
+   retry.limit=too many failed attempts
+   pin.invalid=PIN entered wrong
+   manual=manual blocking
+
+Further lock reasons can be individually changed.
+Please define these lock reasons under the part area of corresponding files:
+
+\# User Defined Lock Reasons
+\# This lock reasons are configured by administrator.
+   stolen=stolen
+   lost=lost
+   defect=Defect
+   unknown=unknown
+
+Example for lock reason:
+Englisch and Default  		stolen=Stolen
+German  			            stolen=Gestohlen
+
+:warning: **As default exists the german- and englisch language files. For extendig of german-speaking reasons please make changes in in the usercertificate-lock-reasons-config_de.properties file, for englisch-speaking reasons in the usercertificate-lock-reasons-config_en.properties and usercertificate-lock-reasons-config.properties. After the changes please restart the server**
+
+#### Description of the filter for the method getUsers
+The method getUsers of the AsmManagementWs interface contains different parameters, which depend on the search filter used.
+The search filter that can be used so far is the user ID with corresponding values in brackets and quotation marks.
+
+#####	User ID
+
+Filter the result searching for the username with the data type String.
+For example: management.getUsers(“(userID= John Doe)”)
+The following filters can be passed as String and deliver, for example, a positive result for the user “appAdmin”:
+“(userID=appAdmi_)”
+“(userID=appA%)”
+
+#####	AuditingFilter
+
+The method allows to set the filters auditAction, auditSubject, operatorRoleId. These filters are Integer-values. Further information can be found in Kernel administration manual.
+
+| **ASM Action Ids**  |
+| ------------------- |
+| ASMADD              | 1001 |
+| ASMASSIGN           | 1002 |
+| ASMEXPORT           | 1003 |
+| ASMLOCK             | 1004 |
+| ASMMODIFY           | 1005 |
+| ASMREMOVE           | 1006 |
+| ASMUNASSIGN         | 1007 |
+| ASMUNLOCK           | 1008 |
+| **ASM Subject Ids** |
+| ASMACTIVATIONCODE   | 1001 |
+| ASMAPPVERSION       | 1002 |
+| ASMCERTIFICATE      | 1003 |
+| ASMDEVICE           | 1004 |
+| ASMGROUP            | 1005 |
+| ASMPUSHNOTIFICATION | 1006 |
+| ASMUSER             | 1007 |
+| ASMUSERGROUP        | 1008 |
+| ASMVERSION          | 1009 |
+| ASMVERSIONUPDATE    | 1010 |
+| ASMAPPCONFIGBUNDLE  | 1011 |
+| ASMMASSREACTIVATION | 1012 |
+| ASMTOKENPOLICY      | 1013 |
+| ASMTOKENSIGNER      | 1014 |
+
+#### AsmServicesWs
+
+Be aware that deprecated methods are not mentioned in the handbook but still be present at the javadoc!
+Please find a detailed description of the functions and of the error messages in the java documentation contained in the installation (javadoc). You can find it in form of a html file in the following directory:
+
+     <SSMS_INSTALL>\modules\asm\doc\svc_soap_api
+
+The following methods are part of this interface:
+
+| **Name** | **Description** |
+| **login** | The method carries out a log-in to SSMS with an OTP. The OTP is created by SSMS and sent to the client. The user uses this OTP to register his app on SSMS with his device (e.g. smartphone) <br/>
+The server verifies whether a session with the device for this OTP is active as well as whether the OTP is still valid. <br/> A user, a certificate and a device are associated to this session. The user and the certificate must be unlocked. |
+| **displayMessageEx** | This asynchronous method sends a message to the client based on the parameter DisplayMessageParam. For additional information about this object parameter, refer to the Javadoc. |
+| **startTransactionEx** | This asynchronous method starts a transaction based on the TransactionParam and resolves the message template, in case a template exists. The transaction data are sent to the client (e.g. smartphone) and the user must confirm or cancel the transaction. The transaction result is returned to SSMS. <br/> The SOAP client must poll the result of the transaction. |
+| **startTransactionForUser** | This asynchronous method starts a transaction based on the TransactionParam and resolves the message template, in case a template exists. <br/> Use case: SOAP-client (e.g. bank portal) knows the userId, but does/cannot control to which of the user's devices the transaction will be sent. Portal can control (with TransactionParam.pinEntryRequiredConstraint), whether the client must enter his PIN during transaction processing. <br/> The transaction data are sent to the client (e.g. smartphone) and the user must confirm or cancel the transaction. The transaction result is returned to SSMS. <br/> The SOAP client must poll the result of the transaction. |
+| **cancelTransactionEx2** | The method cancels all transactions which match the filter. The TransactionFilter parameter is either the device ID, the user ID or the transaction ID. If the transaction ID is set, only the transaction for the given ID is canceled. In both the other cases all transactions are deleted. |
+| **getTransactionResultEx** | The method retrieves the transaction result. The return value contains a result code and the signature data as byte array. The byte array is null if the transaction failed. <br/> The results contain a result code and a byte array, which holds the signature data of the transaction in DER-form. |
+| **logOffDevice** | The method terminates a session between the SSMS and the device (e.g. smartphone) identified by the certHandle. |
+| **logOffUser** | The method terminates all active sessions of a user and logs off all the correspoding devices. |
+| **getDeviceInfo** | The method returns information about a device from the database given the certHandle (certificate primary key). |
+| **getDevices** | The method returns information about devices from the database including their current status. |
+| **getCertificate** | The method returns a certificate in DER format given the certHandle. |
+| **getDeviceStateInfo** | The method returns information about a device given the device primary key in the database. |
+| **pollDeviceEvents** | The method returns a list of objects that contain information about those device events, which are specified by the filters in PollDeviceEventsParam. |
+| **pollAllDeviceEvents** | The method returns a list of all objects that contains information about all device events. |
+| **getProperties** | The method returns a list of all properties of a device, a user or a group. |
+| **searchDevicePropertyValues** | The method searches for all device property objects that match the given key-value pair. <br/> It returns a list of the matching deviceIDs. |
+| **requestLoginNonce** | The method generates a random 32-digit number, encodes it in base64 format and stores it with the portalSessionId as key in the SSMS memory. |
+| **changePin** | The method changes the PIN of a user. To be available, the feature must be set in the Advanced Settings. |
+| **verifyOfflineOtp** | Verify an OTP (created by a software device). If the given credentials (required: userId, otp; optional: sessionId and challenge; NOTE: It is forbidden to set both optional parameters together) match, the synchronization is successful. <br/> ATTENTION: It is only possible to process this function, if the SSMS Server supports the functionality 'AsmOfflineClient'. This can be configured under ASM->AdvancedSettings. If not configured, OfflineResultCode.NOT\_SUPPORTED will be returned. |
+| **verifyOfflineSecureSequence** | Verify a SecureSequence. |
+| **offlineReSync** | The method carries out the resynchronization of a user software device based on a parameter object containing userId, OTP and ATC and optionally the SessionId and Challenge. NOTE: It is forbidden to set both optional parameters together. <br/> If the given credentials match, the synchronization is successful. <br/> ATTENTION: It is only possible to process this function if the SSMS Server support the functionality 'AsmOfflineClient'. This can be configured under the ASM AdvancedSettings. |
+| **sendPushNotification** | Send a push notification to a specific device or to all devices of the given user (For detail information see PushNotificationParam). |
+| **getProperty** | The method gets an AST property based on an object parameter containing among others the key to be searched. |
+| **setProperty** | The method sets a device property. |
+| **removeProperty** | The method removes a property of a device, a user or a group. |
+| **verifyPin** | The method verifies the validity of the PIN for a user. |
+|  |
+
+
+#### The AstPortalLib
+
+     <SSMS_INSTALL>\modules\asm\libraries\java\lib-portal-ast
+     
+Find additional information, descriptions and configuration details of the AstPortalLib (deprecated) in the integration manual.
