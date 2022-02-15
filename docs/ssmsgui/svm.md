@@ -379,11 +379,11 @@ The general call of this method is:
 
 **Linux/Solaris**
 
-	./certificate-manager.sh getUserCertificatesInfo “<filter\>”
+	./certificate-manager.sh getUserCertificatesInfo “<filter>”
 
 **Windows**
 
-   certificate-manager.cmd getUserCertificatesInfo “<filter\>”
+    certificate-manager.cmd getUserCertificatesInfo “<filter>”
 
 For <filter\>, use the following parameters in brackets and quotation marks:  
 
