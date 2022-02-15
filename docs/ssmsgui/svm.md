@@ -376,10 +376,10 @@ The method getCertificatesInfo of the UserCertificateManagementWs class includes
 
 The general call of this method is:  
 
->Linux/Solaris:	./certificate-manager.sh getUserCertificatesInfo “<filter>” <br/>  
->Windows: 	certificate-manager.cmd getUserCertificatesInfo “<filter>”  
+>Linux/Solaris:	./certificate-manager.sh getUserCertificatesInfo “\<filter\>” <br/>  
+>Windows: 	certificate-manager.cmd getUserCertificatesInfo “\<filter\>”  
 
-For <filter>, use the following parameters in brackets and quotation marks:  
+For \<filter\>, use the following parameters in brackets and quotation marks:  
 
 ## certSN  
 
