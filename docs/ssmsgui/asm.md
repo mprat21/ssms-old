@@ -1013,8 +1013,8 @@ The following filters can be passed as String and deliver, for example, a positi
 
 The method allows to set the filters auditAction, auditSubject, operatorRoleId. These filters are Integer-values. Further information can be found in Kernel administration manual.
 
-| **ASM Action Ids**  |
-| ------------------- |
+| **ASM Action Ids**  |      |
+| ------------------- |------|
 | ASMADD              | 1001 |
 | ASMASSIGN           | 1002 |
 | ASMEXPORT           | 1003 |
@@ -1023,7 +1023,7 @@ The method allows to set the filters auditAction, auditSubject, operatorRoleId. 
 | ASMREMOVE           | 1006 |
 | ASMUNASSIGN         | 1007 |
 | ASMUNLOCK           | 1008 |
-| **ASM Subject Ids** |
+| **ASM Subject Ids** |      |
 | ASMACTIVATIONCODE   | 1001 |
 | ASMAPPVERSION       | 1002 |
 | ASMCERTIFICATE      | 1003 |
@@ -1049,6 +1049,7 @@ Please find a detailed description of the functions and of the error messages in
 The following methods are part of this interface:
 
 | **Name** | **Description** |
+| -------- |-----------------|
 | **login** | The method carries out a log-in to SSMS with an OTP. The OTP is created by SSMS and sent to the client. The user uses this OTP to register his app on SSMS with his device (e.g. smartphone) <br/> The server verifies whether a session with the device for this OTP is active as well as whether the OTP is still valid. <br/> A user, a certificate and a device are associated to this session. The user and the certificate must be unlocked. |
 | **displayMessageEx** | This asynchronous method sends a message to the client based on the parameter DisplayMessageParam. For additional information about this object parameter, refer to the Javadoc. |
 | **startTransactionEx** | This asynchronous method starts a transaction based on the TransactionParam and resolves the message template, in case a template exists. The transaction data are sent to the client (e.g. smartphone) and the user must confirm or cancel the transaction. The transaction result is returned to SSMS. <br/> The SOAP client must poll the result of the transaction. |
