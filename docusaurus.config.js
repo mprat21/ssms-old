@@ -15,6 +15,13 @@ const config = {
   favicon: 'img/favicon.svg',
   organizationName: 'KOBIL', // Usually your GitHub org/user name.
   projectName: 'KOBIL mID Solutions', // Usually your repo name.
+  stylesheets: ["src/css/code-block-buttons.css", "src/css/custom.scss"],
+  customFields: {
+    fonts: {
+      myFont: ["Roboto", "Serif"],
+      myOtherFont: ["-apple-system", "system-ui"]
+    }
+  },
   presets: [
     [
       'classic',
