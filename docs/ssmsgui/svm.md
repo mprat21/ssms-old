@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 # SVM
 
-## Introduction  
+## Introduction 
 
 This manual instructs you on how to manage the Signature Verification Module (SVM) on KOBIL Smart Security Management Server (SSMS). Please find a detailed description of all the settings in the administrator manual for the Kernel module. The Signature Verification Module (SVM) helps you manage certificates; more precisely, you can verify certificates, add new certificates or update them.  
 
