@@ -7,7 +7,7 @@ sidebar_position: 1
 
 This section informs you on how to use the graphical user interface of the KOBIL SSMS for the first log-in and management tasks.  
 
-Please note that the use of the SSMS requires the integration of configuration license files in order to obtain the appropriate permissions to carry out certain operations on the server. Find more information in [here](###license-management-view).
+Please note that the use of the SSMS requires the integration of configuration license files in order to obtain the appropriate permissions to carry out certain operations on the server. Find more information in [here](#license-management-view).
 
 After logging in the master tenant, try switching tenant in top right, by clicking on Login as. You will see the newly created tenant present and you can select the same from drop down list and once done click Switch to Tenant.
 
@@ -306,7 +306,7 @@ In particular, you can add other roles than the roles assigned by the system by 
 
 ![kerneladdrole](./module-files/files-kernel/kernel_addrole.png)  
 
-The newly created role can be assigned to an operator as described in [here](####operator-management).  
+The newly created role can be assigned to an operator as described in [here](#operator-management).  
 
 ##### Remove Roles  
 
@@ -390,7 +390,7 @@ If you use many portals, check the option “Authentication is required”. Only
 
 #### Add Portal-Server  
 
-You can add a portal by clicking “Add Portal-Server”. The number of portals you can add depends on the kernel license restriction indicated by the name maxPortals (check this [topic](###license-management-view)). If the restriction maxPortal is not specified, only one portal can be connected to the SSMS.  
+You can add a portal by clicking “Add Portal-Server”. The number of portals you can add depends on the kernel license restriction indicated by the name maxPortals (check this [topic](#license-management-view)). If the restriction maxPortal is not specified, only one portal can be connected to the SSMS.  
 
 You can add the information contained in the following table:  
 
@@ -448,7 +448,7 @@ The following table gives information is available about the management actions:
 |    <br/>Operator role            |    <br/>Role   of the operator.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |    <br/>IP-Address               |    <br/>SSMS   checks first the following headers in given priority:<br/>   <br/>**Request   Headers with Priorities** <br/>   1) X-Forwarded-For<br/>   2) Proxy-Client-IP<br/>   3) WL-Proxy-Client-IP<br/>   4) HTTP_X_FORWARDED_FOR<br/>   5) HTTP_X_FORWARDED<br/>   6) HTTP_X_CLUSTER_CLIENT_IP<br/>   7) HTTP_CLIENT_IP<br/>   8) HTTP_FORWARDED_FOR<br/>   9) HTTP_FORWARDED<br/>   10) HTTP_VIA<br/>   11) REMOTE_ADDR<br/>   <br/>If any of the header has IP-Address   assigned, it takes the value of the header and store it.    |  
 
-You can search for specific actions filtering the results according to the information in the table above. You can search for example by object-ID, module name etc. Please find additional information about the search in [here](###search).  
+You can search for specific actions filtering the results according to the information in the table above. You can search for example by object-ID, module name etc. Please find additional information about the search in [here](#search).  
 
 ### Monitoring View  
 
@@ -458,12 +458,12 @@ The monitoring view offers the SSMS operator an overview about important server 
 
 The following table lists the information showed in the view:  
 
-|Date||Date and time when the monitoring information was created. You can set the time interval in the Kernel Advanced Settings ([check](###advanced-settings-view)).|
+|Date||Date and time when the monitoring information was created. You can set the time interval in the Kernel Advanced Settings ([check](#advanced-settings-view)).|
 |:--|:--|:--|
 |Node State|ID|Unique name of the node|
 ||Type|MGT, SVC or both|
 ||state|The node(s) can have the states ONLINE and OFFLINE. When the node is offline, no information from the database can be delivered. |
-|Data||Information about the node. Please find more information in [here](###information-view) |  
+|Data||Information about the node. Please find more information in [here](#information-view) |  
 
 When searching within the monitoring, please note that when selecting, only entries for aggregated properties that apply to all nodes are displayed. The Count search cannot be performed on all nodes, but only applied to one node at a time.  
 
@@ -542,7 +542,7 @@ The IAM shall act as an identity provider to authenticate users to access servic
 * SSMS can communicate with any IAM application which supports the OpenID Connect protocol (part of OAuth2).  
 * User authentication during login process to SSMS will be handed over to a configured IAM.
 * If the user is authenticated by the IAM, SSMS accepts the provided ID token, verifies the validity of the ID token and the provided user (operator) information and authorizes the user for SSMS management services as usual. The operator information must match an existing operator in SSMS.  
-* If the IAM feature is enabled, no login with SSMS SSL client certificate as well as the user/password login and basic auth is possible. Except will be the use of SSMS client certificate SUPER_ADMIN, for more check [this](####help-for-locked-up-ssms-by-misconfigured-iam).  
+* If the IAM feature is enabled, no login with SSMS SSL client certificate as well as the user/password login and basic auth is possible. Except will be the use of SSMS client certificate SUPER_ADMIN, for more check [this](#help-for-locked-up-ssms-by-misconfigured-iam).  
 * During the SSMS session the validity of the ID token is not verified again. This is to ensure, that configurations done in the SSMS management GUI session will not get lost, if the ID token is limited in time (by max_age ID token claim). The outdated ID token would cause a logout propagation of the user.  
   * If the user logs out at IAM and the user has not logged out from SSMS manually before, no logout propagation by IAM is supported by SSMS. The user can still operate on SSMS. The user must logout from SSMS manually or SSMS will run into the session timeout, if the operator does not use the system for specified period.
 * No further SSMS user logout handling with the IAM is currently implemented.  
@@ -809,7 +809,7 @@ A dialog box pops up, in which you must confirm the deletion of the language.
 
 #### Add Key  
 
-Click the button “Add Key” to add language-specific entries for the language previously chosen, according to the templates described in [here](###template-description). To do this, select the respective language via the drop-down menu. If you have no added languages, the key will be added to the default language.  
+Click the button “Add Key” to add language-specific entries for the language previously chosen, according to the templates described in [here](#template-description). To do this, select the respective language via the drop-down menu. If you have no added languages, the key will be added to the default language.  
 
 The following is the window for adding a new key:  
 
@@ -913,7 +913,7 @@ Find a detailed description of the functions and of the error messages in the ja
 |**SSMS_SERVER_SSL_CERT_CREATE**|**createServerSSLCertificate**|
 ||This method creates an X.509 Server SSL certificate based on provided certificate signing request (CSR).|
 |**KERNEL_AUDITING_VIEW**|**getAuditingItems**|
-||The method returns the auditing information of the selected modules.  <br/> The method allows to set the filters auditAction, auditSubject, operatorRoleId. These filters are Integer-values. <br/> Example: auditAction=1 means that a user was added. The according mapping is done in class KernelAuditingAction, but this class is not part of the SOAP interface! <br/> A list of all related IDs can be found in [here](####kernel-auditing-filter)|
+||The method returns the auditing information of the selected modules.  <br/> The method allows to set the filters auditAction, auditSubject, operatorRoleId. These filters are Integer-values. <br/> Example: auditAction=1 means that a user was added. The according mapping is done in class KernelAuditingAction, but this class is not part of the SOAP interface! <br/> A list of all related IDs can be found in [here](#kernel-auditing-filter)|
 |**SSMS_USER_VIEW**|**getUsers**|
 ||The method returns a list of all userIDs that are matching to the given filter.|
 |**SSMS_USER_MANAGE**|**removeUser** <br/> The method removes a user from the database. <br/> **renameUser** <br/> The method changes the name of a user in the database. <br/> **addUser** <br/> The method adds a user to the database.|
