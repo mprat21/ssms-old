@@ -7,6 +7,7 @@ sidebar_position: 2
 
 This section instructs you on how to manage the App Security Management Module (ASM) on the KOBIL Smart Security Management Server (SSMS). With the App Security Management module (ASM), you can manage the apps, their users and the corresponding devices (for example smartphone or mIDentity mini). Along with these management functions of the ASM, the SOAP functions provided by the service node can for example be integrated into a web portal to verify devices and users already registered on the system. In addition, note that you must install the SVM module to be able to use ASM. With SVM you can assign certificates to the user or to the device and enforce the authentication of signed data.
 
+
 ## General Information
 
 This manual is aimed at the administrators who install, configure and use the KOBIL Smart Security Management Server. The document is also intended for those who use the App Security Technology and manage the apps.
@@ -39,7 +40,7 @@ The installation and configuration of the ASM Portal Demo is described in a sepa
 
 ### Role Management in the App Security Management module
 
-A role must be assigned to each operator of the system. The division into different roles defines the authorizations of every single operator. Please find information on how to create roles and assign them permissions manual for the Kernel module. Please find the roles and authorizations to use the Management SOAP interface in the description of the single methods in chapter 10.4. The services SOAP interface is secured via SSL server authentication and does not require any other authentication of a user.
+A role must be assigned to each operator of the system. The division into different roles defines the authorizations of every single operator. Please find information on how to create roles and assign them permissions manual for the Kernel module. Please find the roles and authorizations to use the Management SOAP interface in the description of the single methods in [soap-interfaces](#soap-interfaces). The services SOAP interface is secured via SSL server authentication and does not require any other authentication of a user.
 
 ###	Create ASM CA certificates
 
@@ -103,7 +104,7 @@ The deletion can also fail. The failure is indicated in the status column on the
 
 ###	Search devices
 
-With this function, you can search for devices and users. More precisely, you can search for or filter specific entries. Enter the desired value into the input field and click the magnifier icon. Please find additional information about the search options in the administrator manual for the Kernel module in the chapter “Search”.
+With this function, you can search for devices and users. More precisely, you can search for or filter specific entries. Enter the desired value into the input field and click the magnifier icon. Please find additional information about the search options in the administrator manual for the Kernel module in the chapter **“Search”**.
 
 
 ## Properties view
@@ -115,7 +116,7 @@ The Properties view is subdivided into three sub-views:
 -	Group Properties
 
 In addition to the default properties of an AST device, user or group, customer-specific parameters can also be set and read over the AST SDK or the ASM SOAP interface e.g. an optional device name. The view Properties displays these parameters in an overview.
-Please find more information about methods for setting and reading properties in the AST SDK manual or in the information about the SOAP methods in **chapter 10.4**.
+Please find more information about methods for setting and reading properties in the AST SDK manual or in the information about the SOAP methods in [soap-interfaces](#soap-interfaces).
 
 ###	Device Properties
 
@@ -176,7 +177,7 @@ The following attributes are part of the Device Properties view:
 
 ##	Groups view
 
-In the Groups view, different user groups can be created and managed. This helps assign the version updates of devices (virtual and hardware devices) to certain groups of users **(see chapter 6.5)**. A user can be part of only one group or of no group. In addition, users can be automatically assigned to an AUTO_GROUP when they are not part of a specific group.
+In the Groups view, different user groups can be created and managed. This helps assign the version updates of devices (virtual and hardware devices) to certain groups of users [assign-version-update](#assign-version-update). A user can be part of only one group or of no group. In addition, users can be automatically assigned to an AUTO_GROUP when they are not part of a specific group.
 The group which the user belongs to is listed in the column labeled **Group Name** in the Users view.
 In the next chapters, the functions of the group management are described. These functions can be managed via the Web GUI and the SOAP interface.
 
@@ -273,7 +274,7 @@ In the dialog box that pops up, you are prompted to confirm your action.
 ###	Add Activation Number
 
 An activation number is a one-time password, which you can set for a user in the way described below. A user can have one or multiple activation numbers depending on the number of the devices he uses.
-The user needs the activation number during the registration process, which he must perform the first time he uses his app on his device. After successful registration, the activation number is deleted, and the device is assigned to the user. To verify the registration, check whether any devices are assigned to the user in the Devices view **(chapter 1.2)**, after reloading the page.
+The user needs the activation number during the registration process, which he must perform the first time he uses his app on his device. After successful registration, the activation number is deleted, and the device is assigned to the user. To verify the registration, check whether any devices are assigned to the user in the Devices view [create-asm-ca-certificates](#create-asm-ca-certificates), after reloading the page.
 
 ![set-act-num](./module-files/files-asm/set-act-num.png)
 
@@ -407,7 +408,7 @@ In case you add an app for test purposes and do not deliver it to customers, you
 
 **Note**: If the Client Type of the app is Windows or MacOS, you must provide an Upload Installer, which is the setup file of the application. If the Client Type of the App is Android or iOS, you can enter the App Identifier
 with which the app is identified in the app store.
-If the installer setup file size is bigger than the maximum accepted the available capacity can be increased by changing <install-ssms\>/configutil/webapps/mgt/WEB-INF/web.xml. For more information, please go to Installation manual in chapter “Additional Tomcat Adjustments”.
+If the installer setup file size is bigger than the maximum accepted the available capacity can be increased by changing <install-ssms\>/configutil/webapps/mgt/WEB-INF/web.xml. For more information, please go to Installation manual in chapter -**“Additional Tomcat Adjustments”**.
 
 
 #### Submit an app (iOS) to the App Store
@@ -451,7 +452,7 @@ The input information in order to be able to download the app configuration bund
 You can find an explanation of the parameters in the following table:
 
 | Web-Portal Secure URL:| The input in this field is optional and only necessary when you use the hardened web browser of the AST (Trusted Web View) in your app. <br/> Enter the URL of your web portal that can be reached by the apps here. <br/>If this address can be reached via HTTPS, the SSMS tries to connect to the URL to automatically load the public certificate chain of the secure connection and to store it in the file “trusted\_certs.pem”. <br/> If the SSMS cannot reach the given HTTPS address, for example because of firewall restrictions, leave this field empty and create the file “trusted\_certs.pem” manually. For information, contact the administrator of the web portal. <br/> Note the information about the creation of the file „app\_config.xml“ given below:|
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ---------------------- | --------------------------------------------- |
 | ASM URL | Enter the URL of the SSMS “External Services” here. The input field is by default filled with the configured values that are defined during the installation of the SSMS with the help of the SSMS Configuration Utility e.g.: http://your-host-name:port/ssms-services/asm/rest/device <br/> your-host name  -  FQHN via which the apps access the SSMS “External Services” <br/>  port  - Port to which the devices connect to the SSMS External Services. This value is omitted for the standard http-port 80.  <br/> ssms-services  -  Name of the “SSMS Services Web Context”, as defined in the SSMS <br/> /asm/rest/device - Internal ASM path for the AST communication service <br/> Please note that you must enter the URL that is reachable by the apps. In case you use a load balancer or a reverse proxy in front of the SSMS, the URL can differ. |
 | Secure ASM URL:| Enter here the URL of the SSMS “Secure External Services”. The input field is by default filled with the configured values that are defined during the installation of the SSMS with the help of the SSMS Configuration Utility e.g.: https://your-host-name:port/ssms-services/asm/rest/device <br/> your-host name  - FQHN via which the apps access the SSMS “Secure External Services“   <br/> port -  Port to which the devices connect to the SSMS External Services. This value is omitted for the standard https-port 443.<br/> ssms-services - Name of the “SSMS Services Web Context”, as defined in the SSMS configuration utility <br/> /asm/rest/device - Internal ASM path for the AST communication service. Please note that you must enter the URL that is reachable by the apps. In case you use a load balancer or a reverse proxy in front of the SSMS, the URL can differ. <br/> The SSMS tries to connect to this URL and to load the public certificate chain of the secure connection and to store it in the file sdk\_config.xml. <br/> In case the SSMS cannot reach the HTTPS address e.g. because of Firewall restrictions, please create a certificate file from the corresponding certificates (in PEM format) and load them via the input field Trust Store in order to make them available for the SSMS. <br/> **Attention:** When the Windows or Mac App is used the appropriate certificate chains must be added for each download URL of Windows/Mac version in the Version overview. For this case please create a Certificate file which contains the certificate chains for Secure ASM URL and the certificate chains for Download-URL as well. Please load this files over „Trust Store“.|
 | Trust-Store | Optional certificate file in PEM format, see description “Secure ASM URL” |    
@@ -804,78 +805,62 @@ The following configuration parameters can be adjusted:
 | Services Maximum Retries Without Delay         | Maximum number of retries for certain services operations without delay.                                                                                                                                                                                                                                                                                                                                     |
 | Services Retry First Delay                     | If the first services operation call with delay is triggered, this time in seconds will be used as base for calculating the delay before the next services operation call is possible.                                                                                                                                                                                                                       |
 | Client Idle Timeout                            | The time (in seconds) after which the client is disconnected if it was not active. After this time elapses, the client must reconnect to SSMS.                                                                                                                                                                                                                                                               |
-| Client Reconnection Lag                        | This parameter defines how long (in seconds) SSMS waits after the _Client Idle Timeout_ before the connection to the client is terminated.
-
-With this parameter, the tolerance for delays in the network or maximum loads can be controlled.
-
-The value of the Client Reconnection Lag should not exceed the sum of connectionRetryInterval and the connectionRetryCounter as defined in the app\_config.xml |
-| Otp Live Time                                  | Time in seconds, how long an OTP created during an AST log-in will be valid                                                                                                                                                                                                                                                                                                                                  |
-| User Maximum Retries                           | Maximum number of user-retries (e.g. activation or changing pin). If setting 'Use Same Pin For All Devices' is checked, this number also defines the number of retries for pin verification.                                                                                                                                                                                                                 |
-| User Lock Period                               | When maximum user retries are reached, user is blocked for this period.                                                                                                                                                                                                                                                                                                                                      |
-| Activation Number Length                       | How many digits an activation number can have.                                                                                                                                                                                                                                                                                                                                                               |
-| Activation Code Alphanumeric                   | Enables or disables the support of alphanumeric characters in the activation number.                                                                                                                                                                                                                                                                                                                         |
-| Activation Code Max Duration                   | Maximal duration of an activation number (in hours).                                                                                                                                                                                                                                                                                                                                                         |
-| Default Activation Code Timeout                | The timeout period (in seconds) added to the expiration date of the activation number. With a timeout value of 28800, it follows that, if the activation number expires at 1 pm of the 31st of July, then:
-
-Expiration date (31.07.2013/13:00:00 + 28800) = (31.07.2013/21:00:00)                                                                                                                            |
-| Display Expired Activation Code                | Defines how long (in days) an expired activation number is displayed in the GUI.                                                                                                                                                                                                                                                                                                                             |
-| Use Same Pin For All Devices                   | With this option, the same PIN (global PIN) is used for all the devices of a user.                                                                                                                                                                                                                                                                                                                           |
-| Wrong Pins Are Counted At User                 | When a wrong PIN is delivered by app during login, verification of pin or creation of an activation code this will be counted on user-base (usual SSMS behavior is device-base). Please note: This setting is only valid, if 'Use Same Pin For All Devices' is enabled. Default: unchecked                                                                                                                   |
-| Minimum Pin Length                             | Minimum length for the PIN. This setting is only valid when the same PIN is used for all the devices.                                                                                                                                                                                                                                                                                                        |
-| QRCode Timeout                                 | Timeout (in seconds) for the display of the QRCode (find a description of the implementation of the QR code in the integration manual of SSMS).                                                                                                                                                                                                                                                              |
-| Personalized Certificates                      | Necessary use of personalized hardware certificates
-
-When this modus is active, a new personalized certificate is created for newly activated hardware devices. The personalized certificate only concerns devices which don’t have a certificate delivered by the ASM CA HARDWARE                                                                                                                           |
-| Allow Unsecured App Communication              | Enables the non-encrypted app communication where it usually is
-
-SSL-encrypted. This option can be a security leak in case the non-encrypted port is available directly from the internet.                                                                                                                                                                                                                   |
-| Transaction Timeout                            | The time period (in seconds) available to the user to accept or deny the transaction before it is discarded.                                                                                                                                                                                                                                                                                                 |
-| Device Go Online Timeout                       | Timeout (in seconds) for a device to go online. If the timeout elapses before the device goes online, the transaction related to the device is discarded.                                                                                                                                                                                                                                                    |
-| Portal Retrieve Transaction Result Timeout     | Timeout (in minutes) after which a transaction result is discarded in case the portal failed to get the result from the SSMS.                                                                                                                                                                                                                                                                                |
-| Auto Delete Old Device On New Activation       | Auto Delete Old Device On New Activation                                                                                                                                                                                                                                                                                                                                                                     | When a user activates a new virtual device, SSMS verifies whether an old virtual device with the same features as the new one exists. If so, SSMS automatically deletes the old device. This is only possible when the app is activated by the same user. |
-| Auto Delete Old Device On New Activation       |
-| Evict Device Locked Since                      | Defines after how much time (in days) locked devices are discarded. When the value is set to 0, no deletion of locked devices occurs.                                                                                                                                                                                                                                                                        |
-| Google Push Notification Server DNS            | The DNS of the Google’s Firebase Cloud Messaging (FCM) push notification server for Android.                                                                                                                                                                                                                                                                                                                 |
-| Apple Push Notification Server DNS             | The DNS of the Apple push notification server for iOS.                                                                                                                                                                                                                                                                                                                                                       |
-| Huawei Push Notification Server DNS            | The DNS of Huawei push kit server (HPK).                                                                                                                                                                                                                                                                                                                                                                     |
-| Huawei Token DNS                               | The DNS of Huawei Authorization (create/ refresh token ).                                                                                                                                                                                                                                                                                                                                                    |
-| Apple Push Notification Server Port            | The port of the Apple push notification server for iOS.                                                                                                                                                                                                                                                                                                                                                      |
-| Transaction Per Portal ID                      | Defines whether the portal which sent the transaction should be the only portal fetching the result.                                                                                                                                                                                                                                                                                                         |
-| Support Asm Offline Clients                    | Defines whether SSMS communicates with offline clients.                                                                                                                                                                                                                                                                                                                                                      |
-| Length Otp Asm Offline Clients                 | Length of an OTP for ASM offline clients in bytes. Possible values are 6 or 8.                                                                                                                                                                                                                                                                                                                               |
-| Allowed Time Difference Secure Sequence        | This value gives the allowed difference in seconds between the current server time and the time stamp of the SecureSequence. 0 means that all differences will be ignored.                                                                                                                                                                                                                                   |
-| Time Stamp Precision                           | A time stamp contributes to the calculation of OTPs. Hereto time slots, which represent all timestamps within a time range by the time value in the middle of this range, are provided. The value of the time stamp precision gives the length (in minutes) of a single time slot. Allowed values are 0, 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60.
-
-0 means that time stamp is not used for calculation.     |
-| Additional Time Slots                          | Defines whether additional time slots should be used to calculate an OTP if the generation of an OTP with a given time stamp has failed. If the value is set to 1, then the preceding and the succeeding time slots are used. If the value is set to 2, then the preceding of the preceding and the succeeding of the succeeding time stamps will be used too.                                               |
-| Atc Variance                                   | The ATC value must be the same for the client and the server If the verification of an OTP with its ATC (Application Transaction Counter), fails, then the verification with ATC+1, ATC+2 until ATC+\[ATC-Variance\] is tried.                                                                                                                                                                               |
-| Property Availability                          | Defines the value in days of the time period that a device, user or group property is available to be updated by the AST device.                                                                                                                                                                                                                                                                             |
-| Report to File                                 | Reports are stored in files not in the database. If the size of the report buffer is set to 0, this option is ignored.                                                                                                                                                                                                                                                                                       |
-| Report Buffer Size                             | Defines how many reports can be buffered before they are stored in the database or as a file. If the value is set to 0, reports are immediately stored in the database without buffering.                                                                                                                                                                                                                    |
-| Maximum Reports to store at once               | Defines how many reports (max.) must be stored in the cache until they are stored in the database or as a file.                                                                                                                                                                                                                                                                                              |
-| Report storage time                            | Defines the maximum idle time in seconds to collect the configured number of reports before store the reports in the database or as a file.                                                                                                                                                                                                                                                                  |
-| Report insert statement maximum                | Defines the maximum length of the Oracle multi-insert statement for writing the reports in the database.                                                                                                                                                                                                                                                                                                     |
-| Report Filter                                  | Sets a filter for reports which must be ignored. Format:
-
-'(ACTION,STATUS)|(ACTION,STATUS),...'. E.g. '(DEVICE\_LOGIN,OK)|(LOGIN,OK). If the size of the report buffer is set to 0, this option is ignored.                                                                                                                                                                                                  |
-| Urls Address Book Servers                      | Comma-separated list (maximum 2 entries!) Of URLs to address book servers. For example, 'http://server:1234/rest/v1/'   |
-| Address Book Eco Identifier                    | The Eco Identifier is part of the URL of an address book servers and is required to access certain methods of the Address Book server. If nothing is defined, the node ID of the SSMS server is used.                                                                                                                                                                                                        |
-| Address Book Timeout Connect                   | Period in seconds, how long the SSMS waits until a connection to the address book server can be established. 0 means unlimited.                                                                                                                                                                                                                                                                              |
-| Address Book Timeout Read                      | Period in seconds, how long the SSMS waits for a response from the address book server. 0 means unlimited.                                                                                                                                                                                                                                                                                                   |
-| Address Book Certificate Ignore                | If this parameter is enabled, the certificate server is ignored when establishing an SSL connection to the address book server.                                                                                                                                                                                                                                                                              |
-| Address Book Task Handlers                     | Maximum number of processing threads that are handled to communicate with the Address Book server.                                                                                                                                                                                                                                                                                                           |
-| Address Book Task Accept Count                 | Maximum number of messages for the address book server that are buffered by the SSMS when all the processing threads are busy in the SSMS. If the number is exceeded, each additional message is not sent to the address book server but stored in a file until processing threads are available again.                                                                                                      |
-| Start Hour For Anonymous User Cleaner Job      | Specify the time (hour of the day) at which the Cleaner job, which is still anonymous but no longer valid user will be deleted.                                                                                                                                                                                                                                                                              |
-| Device Unused Time For Anonymous User Deletion | Specify (in minutes) how long an anonymous user must be inactive before it will be deleted.                                                                                                                                                                                                                                                                                                                  |
-| Anonymous Activation Code Timeout              | Timeout for the activation code that is created for an anonymous user                                                                                                                                                                                                                                                                                                                                        |
-| Anonymous User Group Name                      | Name of the group to which the anonymous users are assigned.                                                                                                                                                                                                                                                                                                                                                 |
-| Anonymous User Member Of Contact Lists         | Comma separated listIds from Address Book Server. User becomes the member of these lists during Anonymous user creation process.                                                                                                                                                                                                                                                                             |
-| Anonymous User Accessor Of Contact Lists       | Comma separated listIds from Address Book Server. User becomes the accessor of these lists during Anonymous user creation process.                                                                                                                                                                                                                                                                           |
-| Signature Algorithm                            | Defines the signature algorithm for signing the ASM certificates (users, device certificates, etc.). Possible values are SHA1-RSA and SHA256-RSA.                                                                                                                                                                                                                                                            |
-| Push Messages To Online Devices Enabled        | When set, push messages for transactions and display messages will be sent even the device is online.                                                                                                                                                                                                                                                                                                        |
-| Duration Between AST Login Parts               | Maximum allowed duration (in milliseconds) between AST-login part 1 and 2.                                                                                                                                                                                                                                                                                                                                   |
-| Asm Reporting Tracing                          | If set, reporting information will be put to the trace. Default: unchecked                                                                                                                                                                                                                                                                                                                                   |
-
+| Client Reconnection Lag                        | This parameter defines how long (in seconds) SSMS waits after the _Client Idle Timeout_ before the connection to the client is terminated. <br/> With this parameter, the tolerance for delays in the network or maximum loads can be controlled. <br/> The value of the Client Reconnection Lag should not exceed the sum of connectionRetryInterval and the connectionRetryCounter as defined in the app\_config.xml |
+| Otp Live Time                                  | Time in seconds, how long an OTP created during an AST log-in will be valid                                      |
+| User Maximum Retries                           | Maximum number of user-retries (e.g. activation or changing pin). If setting 'Use Same Pin For All Devices' is checked, this number also defines the number of retries for pin verification.    |
+| User Lock Period                               | When maximum user retries are reached, user is blocked for this period.|
+| Activation Number Length                       | How many digits an activation number can have. |
+| Activation Code Alphanumeric                   | Enables or disables the support of alphanumeric characters in the activation number.   |
+| Activation Code Max Duration                   | Maximal duration of an activation number (in hours).    |
+| Default Activation Code Timeout                | The timeout period (in seconds) added to the expiration date of the activation number. With a timeout value of 28800, it follows that, if the activation number expires at 1 pm of the 31st of July, then: <br/> Expiration date (31.07.2013/13:00:00 + 28800) = (31.07.2013/21:00:00)  |
+| Display Expired Activation Code                | Defines how long (in days) an expired activation number is displayed in the GUI.  |
+| Use Same Pin For All Devices                   | With this option, the same PIN (global PIN) is used for all the devices of a user.    |
+| Wrong Pins Are Counted At User                 | When a wrong PIN is delivered by app during login, verification of pin or creation of an activation code this will be counted on user-base (usual SSMS behavior is device-base). Please note: This setting is only valid, if 'Use Same Pin For All Devices' is enabled. Default: unchecked   |
+| Minimum Pin Length                             | Minimum length for the PIN. This setting is only valid when the same PIN is used for all the devices.     |
+| QRCode Timeout                                 | Timeout (in seconds) for the display of the QRCode (find a description of the implementation of the QR code in the integration manual of SSMS).     |
+| Personalized Certificates                      | Necessary use of personalized hardware certificates <br/> When this modus is active, a new personalized certificate is created for newly activated hardware devices. The personalized certificate only concerns devices which don’t have a certificate delivered by the ASM CA HARDWARE |
+| Allow Unsecured App Communication              | Enables the non-encrypted app communication where it usually is SSL-encrypted. This option can be a security leak in case the non-encrypted port is available directly from the internet.   |
+| Transaction Timeout                            | The time period (in seconds) available to the user to accept or deny the transaction before it is discarded.  |
+| Device Go Online Timeout                       | Timeout (in seconds) for a device to go online. If the timeout elapses before the device goes online, the transaction related to the device is discarded.   |
+| Portal Retrieve Transaction Result Timeout     | Timeout (in minutes) after which a transaction result is discarded in case the portal failed to get the result from the SSMS.   |
+| Auto Delete Old Device On New Activation       | When a user activates a new virtual device, SSMS verifies whether an old virtual device with the same features as the new one exists. If so, SSMS automatically deletes the old device. This is only possible when the app is activated by the same user. |
+| Evict Device Locked Since                      | Defines after how much time (in days) locked devices are discarded. When the value is set to 0, no deletion of locked devices occurs.  |
+| Google Push Notification Server DNS            | The DNS of the Google’s Firebase Cloud Messaging (FCM) push notification server for Android.  |
+| Apple Push Notification Server DNS             | The DNS of the Apple push notification server for iOS.      |
+| Huawei Push Notification Server DNS            | The DNS of Huawei push kit server (HPK).   |
+| Huawei Token DNS                               | The DNS of Huawei Authorization (create/ refresh token ).    |
+| Apple Push Notification Server Port            | The port of the Apple push notification server for iOS.  |
+| Transaction Per Portal ID                      | Defines whether the portal which sent the transaction should be the only portal fetching the result.  |
+| Support Asm Offline Clients   | Defines whether SSMS communicates with offline clients.  |
+| Length Otp Asm Offline Clients                 | Length of an OTP for ASM offline clients in bytes. Possible values are 6 or 8. |
+| Allowed Time Difference Secure Sequence        | This value gives the allowed difference in seconds between the current server time and the time stamp of the SecureSequence. 0 means that all differences will be ignored.  |
+| Time Stamp Precision                           | A time stamp contributes to the calculation of OTPs. Hereto time slots, which represent all timestamps within a time range by the time value in the middle of this range, are provided. The value of the time stamp precision gives the length (in minutes) of a single time slot. Allowed values are 0, 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60. <br/> 0 means that time stamp is not used for calculation.     |
+| Additional Time Slots                          | Defines whether additional time slots should be used to calculate an OTP if the generation of an OTP with a given time stamp has failed. If the value is set to 1, then the preceding and the succeeding time slots are used. If the value is set to 2, then the preceding of the preceding and the succeeding of the succeeding time stamps will be used too.       |
+| Atc Variance                                   | The ATC value must be the same for the client and the server If the verification of an OTP with its ATC (Application Transaction Counter), fails, then the verification with ATC+1, ATC+2 until ATC+\[ATC-Variance\] is tried.   |
+| Property Availability                          | Defines the value in days of the time period that a device, user or group property is available to be updated by the AST device. |
+| Report to File                                 | Reports are stored in files not in the database. If the size of the report buffer is set to 0, this option is ignored.  |
+| Report Buffer Size                             | Defines how many reports can be buffered before they are stored in the database or as a file. If the value is set to 0, reports are immediately stored in the database without buffering.    |
+| Maximum Reports to store at once               | Defines how many reports (max.) must be stored in the cache until they are stored in the database or as a file.   |
+| Report storage time                            | Defines the maximum idle time in seconds to collect the configured number of reports before store the reports in the database or as a file.  |
+| Report insert statement maximum                | Defines the maximum length of the Oracle multi-insert statement for writing the reports in the database.      |
+| Report Filter   | Sets a filter for reports which must be ignored. Format: <br/> '(ACTION,STATUS)|(ACTION,STATUS),...'. E.g. '(DEVICE\_LOGIN,OK)|(LOGIN,OK). If the size of the report buffer is set to 0, this option is ignored.  |
+| Urls Address Book Servers   | Comma-separated list (maximum 2 entries!) Of URLs to address book servers. For example, 'http://server:1234/rest/v1/'   |
+| Address Book Eco Identifier  | The Eco Identifier is part of the URL of an address book servers and is required to access certain methods of the Address Book server. If nothing is defined, the node ID of the SSMS server is used.   |
+| Address Book Timeout Connect                   | Period in seconds, how long the SSMS waits until a connection to the address book server can be established. 0 means unlimited. |
+| Address Book Timeout Read                      | Period in seconds, how long the SSMS waits for a response from the address book server. 0 means unlimited.    |
+| Address Book Certificate Ignore                | If this parameter is enabled, the certificate server is ignored when establishing an SSL connection to the address book server.    |
+| Address Book Task Handlers      | Maximum number of processing threads that are handled to communicate with the Address Book server.    |
+| Address Book Task Accept Count    | Maximum number of messages for the address book server that are buffered by the SSMS when all the processing threads are busy in the SSMS. If the number is exceeded, each additional message is not sent to the address book server but stored in a file until processing threads are available again.  |
+| Start Hour For Anonymous User Cleaner Job      | Specify the time (hour of the day) at which the Cleaner job, which is still anonymous but no longer valid user will be deleted.  |
+| Device Unused Time For Anonymous User Deletion | Specify (in minutes) how long an anonymous user must be inactive before it will be deleted.    |
+| Anonymous Activation Code Timeout              | Timeout for the activation code that is created for an anonymous user  |
+| Anonymous User Group Name                      | Name of the group to which the anonymous users are assigned.   |
+| Anonymous User Member Of Contact Lists         | Comma separated listIds from Address Book Server. User becomes the member of these lists during Anonymous user creation process.   |
+| Anonymous User Accessor Of Contact Lists       | Comma separated listIds from Address Book Server. User becomes the accessor of these lists during Anonymous user creation process.   |
+| Signature Algorithm                            | Defines the signature algorithm for signing the ASM certificates (users, device certificates, etc.). Possible values are SHA1-RSA and SHA256-RSA.   |
+| Push Messages To Online Devices Enabled        | When set, push messages for transactions and display messages will be sent even the device is online.    |
+| Duration Between AST Login Parts               | Maximum allowed duration (in milliseconds) between AST-login part 1 and 2.|
+| Asm Reporting Tracing                          | If set, reporting information will be put to the trace. Default: unchecked |
 
 Note that your settings become effective after you confirm them with “Save”.
 
@@ -895,3 +880,190 @@ Please find a description of the Text Resources in the Kernel section.
 Transactions sent by the Portal can receive transaction IDs in order to be identified by the SSMS. Transaction IDs allow the portal to send multiple transactions and messages to a device at once. The queuing function is governed by license. This function is only possible when in ASM Transaction Queue Length has the  value > 1. We can check that in Kernel-> License management view. Accordingly, so many parallel transactions and messages can be sent by the portal to a user.
 
 As soon as the user starts one of his devices, he receives the transactions as they are sent by the portal and in this order, he can confirm them. In case the user’s devices are offline, the push notification is sent to all the devices.
+
+### SOAP interfaces
+
+Two SOAP interfaces are included in the installation of the App Security Management Module. Please find a
+detailed description of the SOAP interfaces and of their functions in the Java documentation (java doc) in HTML
+format.
+-	Windows 	
+
+     C:\Program Files\KOBIL\SSMS\modules\asm\doc
+
+-	Linux/Solaris
+
+   	 /opt/KOBIL/SSMS/modules/asm/doc
+
+The documentation is divided into management and services; consequently, into two different directories:
+One SOAP interface is on the management node (AsmManagementWs).
+
+The URL with the standard installation is:
+>https://<FQHN  or IP-address\>:8443/ssms-gui/soap/mgt/asm/AsmManagementWs
+
+The Management SOAP interface is used to integrate the management tasks concerning the different devices and users with the systems of the IT environment.
+
+The second SOAP interface is on the services node (AsmServicesWs). This interface is used for the integration into applications that communicate and interact with the devices.
+
+The URL with the standard installation is:
+>https://<FQHN or IP-address\>:8445/ssms-services/soap/svc/asm/AsmServicesWs
+
+Use these interfaces only within a secured environment. As, via the SOAP interfaces, sensitive information like configuration changes and validity verification of devices and users are carried out, it is important for security reasons that these interfaces are accessed in an environment isolated from the internet.
+
+**Roles and permissions**
+
+The use of the Management SOAP interfaces is controlled by roles, which define the permissions of every operator. The table below describes the AsmManagementWs SOAP methods and informs you about which operator of SSMS has the permission to run different methods. The Services SOAP interface is authenticated by SSL and does not need any other authentication of the operator. For the Management SOAP interface, the roles or the operators are Super Administrator, Administrator, Help desk and Reviewer.
+
+#### AsmManagementWs
+
+Be aware that deprecated methods are not mentioned in the handbook but still be present at the javadoc!
+Please find a detailed description of the functions and of the error messages in the java documentation contained in the installation (javadoc). You can find it in form of a html file in English in the following directory:
+
+     <SSMS_INSTALL>\modules\asm\doc\mgt_soap_api
+
+The following methods are part of this interface:
+
+|**Permission** |**Methods** |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ASM\_USER\_MODIFY** | **lockUser** <br/> The method locks a user in the database. <br/> It returns true if the user has been successfully locked in the database, false if the user was already locked. <br/> **unlockUser** <br/>  The method unlocks a user in the database. <br/> It returns true if the user has been successfully unlocked in the database, false if the user was already unlocked. <br/> **setPin** <br/>The method replaces the old PIN with a new PIN or creates a new PIN if no PIN was set so far. <br/> The method is only available if the setting "Use Same Pin For All Devices" is activated in the Advanced-Settings. <br/> **resetPin** <br/> The method generates a new PIN for a user, saves the PIN in the database and returns the new PIN. The PIN has the minimum length configured in the ASM Advanced Settings. <br/> The method is only available if the setting "Use Same Pin For All Devices" is activated in the Advanced-Settings. <br/> **removePin** <br/>The method removes the current PIN of a user. <br/> The method is only available if the setting "Use Same Pin For All Devices" is activated in the Advanced-Settings.|
+|**SSMS\_USER\_MANAGE**| **addUser** <br/> The method adds a new user to the database. <br/> **removeUser**  <br/>   The method deletes a user from the SSMS database. |
+|**ASM\_USER\_VIEW** |**getUserInfo** <br/> The method returns an object containing user information related to the given userID.<br/> **getUsers** <br/>The method returns a list of all userIDs that are matching to the given filter.|
+|**ASM\_USER\_ACTIVATION\_CODE\_VIEW** | **getActivationCodes** <br/> The method returns a list of all activation numbers of a user identified by his userID. |
+|**ASM\_USER\_ACTIVATION\_CODE\_MODIFY**|**createActivationCodeEx** <br/> The method adds a new activation number to the database. It returns an object with the activation number data. <br/> **removeAllActivationCodes** <br/> The method removes all activation numbers of the user identified by his userID. <br/> It returns the number of the deleted activation numbers. <br/> **removeActivationCode** <br/> The method removes an activation number from the database. It returns true if the activation number has been successfully removed, false if the activation number did not exist.|
+|**ASM\_DEVICE\_VIEW**|**getDevicesForUser** <br/> The method returns a list of all devices assigned to the given userID. It returns an empty list if no device could be found.<br/> **getDeviceMgtInfo**  <br/> The method returns an object containing device information given the deviceId.|
+|**SVM\_USER\_CERTIFICATE\_VIEW** |**getCertificate** <br/> The method returns the matching certificate given the issuerDN of the certificate and its serial number.<br/> **getCertificateByDeviceId** <br/> The method returns the matching certificate given the deviceID.|
+|**ASM\_USER\_CERT\_CREATE** | **createUserCertificate** <br/> This method creates an X.509 user certificate based on the given certificate profile and provided certificate signing request (CSR). |
+|**ASM\_DEVICE\_MODIFY** | **lockDevice** <br/> The method locks a device in the database with the given lock reason (the lock reason must be one of the currently configured ones). <br/> It returns true if the device has been successfully locked, false if the device was already locked. <br/> **unlockDevice** <br/> The method unlocks a device in the database. <br/> It returns true if the device has been successfully unlocked, false if the device was already unlocked. <br/> **lockDeviceByDeviceId** <br/>The method locks a device given the deviceID and the lock reason. The lock reason must be one of the currently configured ones. <br/> It returns true if the device has been successfully locked, false if the device was already locked. <br/> **unlockDeviceByDeviceId** <br/>The method unlocks a device given the deviceID. <br/> It returns true if the device has been successfully unlocked, false if the device was already unlocked. <br/> **copyPin** <br/> Copy the password from one virtual device to a list of virtual devices. These target devices must be assigned to the same user as the source device.|
+| **ASM\_DEVICE\_MANAGE**  | **removeDeviceEx** <br/> Removes a device from the database based on the device ID or the certificate. It returns true if the device was removed and false if the device does not exist.|
+| **ASM\_STATISTICS\_MANAGE** | **getStatistic** <br/> The method returns the selected statistics as a CSV string.|
+|**ASM\_REPORTING\_VIEW**|**getReportingItems** <br/> The method retrieves reporting records from ASM on the base of a filter containing the following information: - timestamp <br/> - user ID <br/> - device ID <br/> - action <br/> - status <br/> - details <br/> - operator <br/> |
+|**ASM\_APP\_BUNDLE** | **createAppBundle** <br/> The method creates an app configuration bundle in a zip file. The file contains the sdk\_config.xml in order to let the app communicate with ASM. |
+|**ASM\_APP\_VERSIONS\_MANAGE**| **addVersion** <br/> The method adds an app or firmware version to the database. <br/> **removeVersion** <br/> The method removes an app or firmware version from the database.<br/> **editVersion** <br/> The method updates an existing app or firmware version <br/> **removeVersionChecksum** <br/>The method removes the checksum of the app or of the firmware version on the basis of the given parameter.|
+|**ASM\_VERSION\_UPDATE\_MANAGE**| **assignVersionUpdate** <br/> The method assigns a version update for a specific version or for all older versions. <br/> **unassignVersionUpdate** <br/> The method unassigns a version update for a specific version or for all older versions. <br/> **editVersionUpdate** <br/> The method modifies the date on which the update becomes obligatory.|
+|**SSMS\_GROUP\_VIEW** | **getGroups** <br/> The method returns a list of all group names in the database that are matching to the filter.<br/> **getUserGroup** <br/> The method retrieves the group name to which the given user is assigned to.|
+|**SSMS\_GROUP\_MANAGE**|**addGroup** <br/> The method adds a group with the given name to SSMS. <br/> **modifyGroup** <br/> The method modifies group name and "auto group" flag of the given group. <br/> **removeGroup** <br/> The method removes the group with the given name from SSMS. <br/> **assignGroupToUser** <br/> The method assigns a user to a group. <br/>  **unassignGroupFromUser** <br/> The method unassigns a user from a group.|
+|**ASM\_TOKEN\_SIGNERS\_MANAGE**  | **addSigner** <br/> The method adds a new token signer in SSMS. <br/> **editSigner** <br/> The method edits an existing token signer in SSMS. <br/> **removeSigner** <br/> The method removes the token signer with the given name. |
+| **ASM\_TOKEN\_POLICIES\_MANAGE** | **addPolicy** <br/> The method adds a new token policy in SSMS. <br/> **editPolicy** <br/> The method edits existing token policy in SSMS. <br/> **removePolicy** <br/> The method removes a token policy with the given name. |
+|**ASM\_TOKEN\_SIGNERS\_VIEW** | **getSignerCertificate** <br/> The method returns a certificate (DER encoded) for the given name of the signer. <br/> **getSigner** <br/> The method returns existing token signer for the given name of the signer.|
+|**ASM\_TOKEN\_POLICIES\_VIEW** | **getPolicy** <br/> The method returns existing token policy for the given policy name. |
+
+#### Lock reasons configure
+
+In addition to the standard lock reasons you can define further lock reasons. Depending on the language the following files must be edited:
+
+usercertificate-lock-reasons-config.properties
+usercertificate-lock-reasons-config_de.properties
+usercertificate-lock-reasons-config_en.properties
+
+please refer to the folder:
+
+     <SSMS_INSTALL>\modules\svm\resources\lockReasonsBundle
+
+The files included default lock reasons, which must be not changed or deleted:
+
+\# System Defined Lock Reasons
+\# This lock reasons are used by system and administrator is not allowed to change
+   retry.limit=too many failed attempts
+   pin.invalid=PIN entered wrong
+   manual=manual blocking
+
+Further lock reasons can be individually changed.
+Please define these lock reasons under the part area of corresponding files:
+
+\# User Defined Lock Reasons
+\# This lock reasons are configured by administrator.
+   stolen=stolen
+   lost=lost
+   defect=Defect
+   unknown=unknown
+
+Example for lock reason:
+Englisch and Default  		stolen=Stolen
+German  			            stolen=Gestohlen
+
+:warning: **As default exists the german- and englisch language files. For extendig of german-speaking reasons please make changes in in the usercertificate-lock-reasons-config_de.properties file, for englisch-speaking reasons in the usercertificate-lock-reasons-config_en.properties and usercertificate-lock-reasons-config.properties. After the changes please restart the server**
+
+#### Description of the filter for the method getUsers
+The method getUsers of the AsmManagementWs interface contains different parameters, which depend on the search filter used.
+The search filter that can be used so far is the user ID with corresponding values in brackets and quotation marks.
+
+#####	User ID
+
+Filter the result searching for the username with the data type String.
+For example: management.getUsers(“(userID= John Doe)”)
+The following filters can be passed as String and deliver, for example, a positive result for the user “appAdmin”:
+“(userID=appAdmi_)”
+“(userID=appA%)”
+
+#####	AuditingFilter
+
+The method allows to set the filters auditAction, auditSubject, operatorRoleId. These filters are Integer-values. Further information can be found in Kernel administration manual.
+
+| **ASM Action Ids**  |      |
+| ------------------- |------|
+| ASMADD              | 1001 |
+| ASMASSIGN           | 1002 |
+| ASMEXPORT           | 1003 |
+| ASMLOCK             | 1004 |
+| ASMMODIFY           | 1005 |
+| ASMREMOVE           | 1006 |
+| ASMUNASSIGN         | 1007 |
+| ASMUNLOCK           | 1008 |
+| **ASM Subject Ids** |      |
+| ASMACTIVATIONCODE   | 1001 |
+| ASMAPPVERSION       | 1002 |
+| ASMCERTIFICATE      | 1003 |
+| ASMDEVICE           | 1004 |
+| ASMGROUP            | 1005 |
+| ASMPUSHNOTIFICATION | 1006 |
+| ASMUSER             | 1007 |
+| ASMUSERGROUP        | 1008 |
+| ASMVERSION          | 1009 |
+| ASMVERSIONUPDATE    | 1010 |
+| ASMAPPCONFIGBUNDLE  | 1011 |
+| ASMMASSREACTIVATION | 1012 |
+| ASMTOKENPOLICY      | 1013 |
+| ASMTOKENSIGNER      | 1014 |
+
+#### AsmServicesWs
+
+Be aware that deprecated methods are not mentioned in the handbook but still be present at the javadoc!
+Please find a detailed description of the functions and of the error messages in the java documentation contained in the installation (javadoc). You can find it in form of a html file in the following directory:
+
+     <SSMS_INSTALL>\modules\asm\doc\svc_soap_api
+
+The following methods are part of this interface:
+
+| **Name** | **Description** |
+| -------- |-----------------|
+| **login** | The method carries out a log-in to SSMS with an OTP. The OTP is created by SSMS and sent to the client. The user uses this OTP to register his app on SSMS with his device (e.g. smartphone) <br/> The server verifies whether a session with the device for this OTP is active as well as whether the OTP is still valid. <br/> A user, a certificate and a device are associated to this session. The user and the certificate must be unlocked. |
+| **displayMessageEx** | This asynchronous method sends a message to the client based on the parameter DisplayMessageParam. For additional information about this object parameter, refer to the Javadoc. |
+| **startTransactionEx** | This asynchronous method starts a transaction based on the TransactionParam and resolves the message template, in case a template exists. The transaction data are sent to the client (e.g. smartphone) and the user must confirm or cancel the transaction. The transaction result is returned to SSMS. <br/> The SOAP client must poll the result of the transaction. |
+| **startTransactionForUser** | This asynchronous method starts a transaction based on the TransactionParam and resolves the message template, in case a template exists. <br/> Use case: SOAP-client (e.g. bank portal) knows the userId, but does/cannot control to which of the user's devices the transaction will be sent. Portal can control (with TransactionParam.pinEntryRequiredConstraint), whether the client must enter his PIN during transaction processing. <br/> The transaction data are sent to the client (e.g. smartphone) and the user must confirm or cancel the transaction. The transaction result is returned to SSMS. <br/> The SOAP client must poll the result of the transaction. |
+| **cancelTransactionEx2** | The method cancels all transactions which match the filter. The TransactionFilter parameter is either the device ID, the user ID or the transaction ID. If the transaction ID is set, only the transaction for the given ID is canceled. In both the other cases all transactions are deleted. |
+| **getTransactionResultEx** | The method retrieves the transaction result. The return value contains a result code and the signature data as byte array. The byte array is null if the transaction failed. <br/> The results contain a result code and a byte array, which holds the signature data of the transaction in DER-form. |
+| **logOffDevice** | The method terminates a session between the SSMS and the device (e.g. smartphone) identified by the certHandle. |
+| **logOffUser** | The method terminates all active sessions of a user and logs off all the correspoding devices. |
+| **getDeviceInfo** | The method returns information about a device from the database given the certHandle (certificate primary key). |
+| **getDevices** | The method returns information about devices from the database including their current status. |
+| **getCertificate** | The method returns a certificate in DER format given the certHandle. |
+| **getDeviceStateInfo** | The method returns information about a device given the device primary key in the database.|
+| **pollDeviceEvents** | The method returns a list of objects that contain information about those device events, which are specified by the filters in PollDeviceEventsParam. |
+| **pollAllDeviceEvents** | The method returns a list of all objects that contains information about all device events. |
+| **getProperties** | The method returns a list of all properties of a device, a user or a group. |
+| **searchDevicePropertyValues** | The method searches for all device property objects that match the given key-value pair. <br/> It returns a list of the matching deviceIDs. |
+| **requestLoginNonce** | The method generates a random 32-digit number, encodes it in base64 format and stores it with the portalSessionId as key in the SSMS memory. |
+| **changePin** | The method changes the PIN of a user. To be available, the feature must be set in the Advanced Settings. |
+| **verifyOfflineOtp** | Verify an OTP (created by a software device). If the given credentials (required: userId, otp; optional: sessionId and challenge; NOTE: It is forbidden to set both optional parameters together) match, the synchronization is successful. <br/> ATTENTION: It is only possible to process this function, if the SSMS Server supports the functionality 'AsmOfflineClient'. This can be configured under ASM->AdvancedSettings. If not configured, OfflineResultCode.NOT\_SUPPORTED will be returned. |
+| **verifyOfflineSecureSequence** | Verify a SecureSequence. |
+| **offlineReSync** | The method carries out the resynchronization of a user software device based on a parameter object containing userId, OTP and ATC and optionally the SessionId and Challenge. NOTE: It is forbidden to set both optional parameters together. <br/> If the given credentials match, the synchronization is successful. <br/> ATTENTION: It is only possible to process this function if the SSMS Server support the functionality 'AsmOfflineClient'. This can be configured under the ASM AdvancedSettings. |
+| **sendPushNotification** | Send a push notification to a specific device or to all devices of the given user (For detail information see PushNotificationParam). |
+| **getProperty** | The method gets an AST property based on an object parameter containing among others the key to be searched. |
+| **setProperty** | The method sets a device property. |
+| **removeProperty** | The method removes a property of a device, a user or a group. |
+| **verifyPin** | The method verifies the validity of the PIN for a user. |
+
+#### The AstPortalLib
+
+     <SSMS_INSTALL>\modules\asm\libraries\java\lib-portal-ast
+
+Find additional information, descriptions and configuration details of the AstPortalLib (deprecated) in the integration manual.
