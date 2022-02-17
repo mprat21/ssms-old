@@ -17,7 +17,7 @@ The solution consists of three components:
 
 The mAST solution platform comes with these components:
 
-![IAM-SSMS-SDK](DiagramArchitectureBusiness.png)  
+![IAM-SSMS-SDK](./DiagramArchitectureBusiness.png)  
 
   * KOBIL mIDentity Server (SSMS) is the security management system with device management system that enables a constant online connection and verification of the secure app. At each point in the authentication process, it is checked whether the device, the identity and the app are in a secure environment and whether the authentication or authorization of transactions can take place. In addition to the security functions, the SSMS ensures an audited security channel for end-to-end encrypted communication and the management of identities, apps and devices.
   * SDK for the operating systems iOS and Android to integrate the KOBIL technology with the ePA app with the features:
