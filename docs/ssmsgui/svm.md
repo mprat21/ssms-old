@@ -1,3 +1,4 @@
+
 ---
 sidebar_position: 3
 ---
@@ -570,3 +571,4 @@ In the configuration of the log file, be sure that you enter the correct path an
 |getUserByDEREncodedCertificate “<path to the certificate file\>”|Returns the user name that matches the filter.|
 |addUser “<userID\>“|Adds a user to the database.|
 |removeUser “<userID\>“|Removes an already added user from the database.|
+
