@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## Deploying mID Solutions
 
-1. On AWS
+### 1. On AWS
 
-### CREATE AN EC2 INSTANCE ON AWS
+#### CREATE AN EC2 INSTANCE ON AWS
 
 - Login to AWS console.
 
@@ -36,7 +36,7 @@ Select Launch Instances -> select t2.micro (We will use free tier one) -> Config
 
 - Select checkbox and click on Launch Instances. 
 
-### LOGIN TO THE EC2 & IMPORT THE FILES IN THE EC2 
+#### LOGIN TO THE EC2 & IMPORT THE FILES IN THE EC2 
 
 - Now search for your instance ID in EC2 instances list. We need to do ssh to this instance, you need to download SSH client from google such as Putty or MobaXterm (I use MobaXterm as it offers support for many protocols, such as SSH, VNC, FTP, SFTP).
 
@@ -48,7 +48,7 @@ Select Launch Instances -> select t2.micro (We will use free tier one) -> Config
 
 ![server1](./files-deploy/server1.png) ![server2](./files-deploy/server2.png)
 
-### INSTALL THE PRE-REQUISITES NEEDED
+#### INSTALL THE PRE-REQUISITES NEEDED
 
 **You need to install docker, aws cli, eksctl, kubectl, helm before proceeding further.**
 
@@ -128,7 +128,7 @@ if .ssh folder is not present in /home/ec2-user/ just create it using,
 
     mkdir .ssh
 
-### SET UP THE CLUSTER USING EKSCTL
+#### SET UP THE CLUSTER USING EKSCTL
 
 Now we need to run makeclust.sh script file. This file consists of commands to create a cluster, managed nodegroups on AWS using eksctl.
 
@@ -204,7 +204,7 @@ Provide your cluster name instead of **yourclustername** in the command.
 
 
 
-### DEPENDENCIES FOR MBATTERY & MPOWER
+#### DEPENDENCIES FOR MBATTERY & MPOWER
 
 Now we need to run following commands after the cluster is set-up and nodes are ready.
 
@@ -239,7 +239,7 @@ To pull from Kobil repo, you would need access. If you dont have access to it pl
 
     helm pull kobil/mpower --version 7.15.1
 
-### INSTALL MBATTERY & MPOWER
+#### INSTALL MBATTERY & MPOWER
 
 Now last step is to edit mbattery and mpower values files and deploy mbattery and mpower.
 
@@ -253,7 +253,7 @@ Once mbattery is deployed, run command to deploy mpower:
 
     helm install mpower -f mpower730demo21.values-1.yaml mpower-7.15.1.tgz --debug
 
-### CONFIGURE ROUTE53 ON AWS
+#### CONFIGURE ROUTE53 ON AWS
 
 First run below command in your EC2 instance:
 
@@ -272,7 +272,7 @@ Once this step is complete, click on Add another record and do the same steps, j
 Eg:  if your domain is midboxtest, so two records would be midboxtest and *.midboxtest
 
 
-### Delete the Cluster
+#### Delete the Cluster
 
 Once you are done with exploring and testing, please do not forget to delete the cluster in case no longer in use.
 Run the following command to delete the cluster in the ec2:
