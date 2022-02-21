@@ -3,7 +3,9 @@ sidebar_position: 1
 ---
 # Deployment With IDP
 
-## Running mID Solutions on AWS
+## Deploying mID Solutions
+
+1. On AWS
 
 ### CREATE AN EC2 INSTANCE ON AWS
 
