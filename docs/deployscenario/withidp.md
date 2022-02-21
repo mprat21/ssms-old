@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Deployment With IDP
 
-## 1. On AWS
+## 1. On AWS Cloud
 
 ### Create an EC2 Instance On AWS
 
