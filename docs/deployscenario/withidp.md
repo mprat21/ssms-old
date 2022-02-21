@@ -372,7 +372,10 @@ spec:
             path: "/etc/ssl/certs/ca-bundle.crt"
 
 ```
-Run the script by using following command.
+
+In the autoscaler you need to replace **${cluster}** with **your clustername**
+
+Now run the script by using following command
 
     sh makeclust.sh yourclustername
 
@@ -505,8 +508,6 @@ store:
     password: "1Z8X7dcdcsuf36y7i9ShiQ8st0GuFlQl9l"
 
 ```
-
-
 
 #### mpower730demo21.values-1.yaml
 
@@ -760,45 +761,13 @@ idp:
       user: postgres
       password: 3mmQaglOkUwFssyhtdffJH9jVpUhmCn9HX
 
-dashboard:
-  ingress:
-    tlsSecret: mpower-ingress-tls
-  # jlie az acr image
-  containerConfig:
-    nginx_proxy: kobilsystems.azurecr.io/dashboard/proxy:1.10.7
-    kong: kobilsystems.azurecr.io/dashboard/kong:1.0.3-9
-    konga: kobilsystems.azurecr.io/dashboard/konga:0.14.4-1
-    konga_prepare: kobilsystems.azurecr.io/dashboard/konga:0.14.4-1
-
-
-  postgres:
-    ensureDB: true
-    host: postgres
-    dbName: dashboard_midtest
-    dbPrefix: dashboard_midtest
-    user: postgres
-    password: jdwdjwjdqojsoqsssqsmqksmqks
-  dashboard:
-    smtp:
-      host: "mail2.kobil.com"
-      port: "587"
-      starttls: "true"
-      ssl: "false"
-      user: "support.midentitybox"
-      password: ""
-      from: "support@midentitybox.com"
-      fromDisplayName: "mPower Dashboard"
-      envelopeFrom: ""
-      replyTo: "support@midentitybox.com"
-      replyToDisplayName: "Support"
-
 # jlie - manually added landing
     landingPage:
       enabled: false
       ingress:
         tlsSecret: mpower-ingress-tls
-    midentityIamAdminPartnershipEmail: support@midentitybox.com
-    contactUsEmail: support@midentitybox.com
+    midentityIamAdminPartnershipEmail: support@abc.com
+    contactUsEmail: support@abc.com
     backendDeployments:
     - name: dashboard-backend
       nameSuffix: backend
