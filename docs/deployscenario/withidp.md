@@ -379,7 +379,7 @@ Run the script by using following command.
 Provide your cluster name instead of **yourclustername** in the command.
 
 
-### DEPENDENCIES FOR MBATTERY & MPOWER
+### Dependencies For mbattery & mpower
 
 Now we need to run following commands after the cluster is set-up and nodes are ready.
 
@@ -423,7 +423,7 @@ To pull from Kobil repo, you would need access. If you dont have access to it pl
 
     helm pull kobil/mpower --version 7.15.1
 
-### INSTALL MBATTERY & MPOWER
+### Install mbattery & mpower
 
 Now last step is to edit mbattery and mpower values files and deploy mbattery and mpower.
 
@@ -871,7 +871,7 @@ Once mbattery is deployed, run command to deploy mpower:
 
     helm install mpower -f mpower730demo21.values-1.yaml mpower-7.15.1.tgz --debug
 
-### CONFIGURE ROUTE53 ON AWS
+### Configure ROUTE53 On AWS
 
 First run below command in your EC2 instance:
 
