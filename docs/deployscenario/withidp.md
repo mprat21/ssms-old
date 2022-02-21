@@ -777,7 +777,7 @@ dashboard:
     dbName: dashboard_midtest
     dbPrefix: dashboard_midtest
     user: postgres
-    password: 3mmQaglOkUwFyhtdfzJH9jVpUhmCn9HX
+    password: jdwdjwjdqojsoqsqsmqksmqks
   dashboard:
     smtp:
       host: "mail2.kobil.com"
@@ -785,7 +785,7 @@ dashboard:
       starttls: "true"
       ssl: "false"
       user: "support.midentitybox"
-      password: "R8mUen.CBrg-qV9"
+      password: ""
       from: "support@midentitybox.com"
       fromDisplayName: "mPower Dashboard"
       envelopeFrom: ""
