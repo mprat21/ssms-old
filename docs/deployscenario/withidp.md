@@ -465,9 +465,9 @@ certs:
     # Change acmeurl to https://acme-v02.api.letsencrypt.org/directoryUncomment
     # to use the Let's Encrypt production environment
     dns:
-      zone: midboxtest.aws1.kobil.com
-      accessKeyID: AKIA4MBqawfAPNTERSW
-      secretAccessKey: ZR9YJN1q11uLZrtGvZvUCVu4pD7SdQG9NGKJ278PC
+      zone: midtest.aws.kobil.com
+      accessKeyID: AKIA4MeeeBqawfAPNTERSW
+      secretAccessKey: ZR9YJN1q1eeee1uLZrtGvZvUCVu4pD7SdQG9NGKJ278PC
     acmeurl: https://acme-v02.api.letsencrypt.org/directory
     ca:
       key: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBcHE5RE4zd3hoU1gyQTdtdDA0aXhzSm1BVThXV0lOWDN1MUZkOTI4VU0wbTRZbjBCClN0Z0c5ZGJHVTNhRHNsT3NBTHdPaCs2ZVR5ckFxaGFEMmxObWIrSlVKeGFQNU9IQmY1SVZXSUVpN2RZamRCaysKSXdTeDFmYU1LSzk5RFY2Sjk2T21jb25iY1hNQ2c0NTgzYnZRcWFKUjNPMjJyZ2I4SzJSOW5HOHZBOWRaaGwzNwpQcVN6SFcxUlFWTVpkemRSYk5kNkxZQXFIcjVzK1JnTWFkSUJDTmZ6Q1o0dkk3UkppcUZyalVMSFU0RjdieWRkCnVFRHV0YzZZZGFhVk5RdG1lMjhMblJDU0J0VVhjTk9NRHVoV2lJSGJRL3B4b3A0cTMwWkhJL0dwMm1raGlQOHIKTXJveXRaNGFPMGVDQjV3dWRKSTBvWjRPYmV4VlcwbWN2RWQ4andJREFRQUJBb0lCQVFDRGh4VGhPWXpSNWl5RQpzQVhzUDVjSEpYbFBvVUJmMUxkUkJsbkJuOU11eldORHhDUTY3TkJCT1NMeVJUaVNoTmZiRkluYTFYM3lObWdsClR2TG9XcHNnZWxXeEttcU5UMThpelNFdTMyZXlpU0Vjd2JaNFo0SDB0a0hPOFBzYWk1a080Z0c3cS9DUFN4T1cKdjk3a0VRb01jVnRybStCazNub3B1M2dxOHNrRW02bTFiUGY5QkJ2U2I5Rlo5VlhtVHc5c0NScXJDaVgyZDkxTApMT1VBRmxZRzF0amRGRzhNdHdmcitZWVhzZ3VPSVJ6ZkhKNEoxQmJIMm1rMkFhTVV0UHNRT002ZWg2b3NQbjV4CkJrK0RTNVNNaUVHLytEK3JzcGVyK3pKUmZiZHBYQkQwZWpnNW84UzhDTlV4NlpOTXI2cSs4Q011bnM1Yk01Um8KYlRhaHp4R2hBb0dCQU03QUdwMDVpaDBIZlhtbGtCNjdJalpYYnRaVjJVVEM3RGh5VmFDWkVnYlFuaXNXNXZOUQo4eitzRUNuSVUwVklRczdkT25ocjBzSDFtNEtUbERCMGFJc1I0cFBodUZmbkpMa1BxM3ozY2RjbWZLWk13amlFCk03aWx1K3gwdnhobUNnWkRvbVFjZStMOHdadkdjaWRVM2Flb2sxa1F6WkhnT0YxdXhONDhRbnRIQW9HQkFNNWoKNWJOVll5eGlWTzJ3R3A3TXByd3pZQktQWnpYVDZBd090ckt0Mm9LdkRHaDFCV2lDU0JIZE5ybTFoNUN5S202cgptYVZNZjhGWmFscjFJdDlvenJ6YVl2WFBOcmhNTGREYzFNVzY2QmFJNzRYdWh1S2VFcXVueFA1NkF1UnRIZkJ0CnB1NEVTeXVpcUFqUzFmdGZ0b1VQcm41dFNvUS9Dd0d5SGVHcGR3aDVBb0dBS2lwM3d4VVhHL0NKSUtRcGpucnYKOFZGSG82TUNtc2wrVDh6UnRkMUNGZTI2TkdPSldwcHA0ZFIvdjJYQnhlR0U3cGVqOHlkYVpvQm01T3lnVG5tUApVTDJuRGkzODRNQ2RkcmpCYXMwMGhJS3U3V08rUUxTRnIrVHRQTDVhc3Vrc3BqWnBDaTNjL21BNlJFRG15eXE5CndoSFphMUxIK2paV2lJZXMwdjVMT01VQ2dZQlJ2Qm9obFRVN1JJM2h1NVl2UVZqZXUzSFdwOWYxNXovRVZxZGYKeDUzN2x4dFEydGNUZGxUWVRrVDM4cjRIUGFlMFFGME9xMmNFeVVablV5RkdYSmxURFNHWHUwSXVabXpXaEQzMwpPSGZsUk1HbXhybkFVVjJQZ1Zkd2VCMWhIUjE0TTlTaCtpMVMwSTIvUU0vaFJ4eGZRY0NXN08xUHhpK3pzamhIClAvZVY4UUtCZ0ZVLzFva3h6blZwTVlVeTFxTHBmdDQ2V2t5eXF2dHgyemlpNkovMVNReWFQK1BndmhtMmpIcFoKT05lcFBJYm5POWMrdy8vQzdrWDNPaVNnNVEydzFtMFkzV2l6b0xMcVdsw1qQjFsT0JYc05CblplSHpkTXZuaQoyMDFHZFVzaTkra3VzVWVIU0ZVaGM0bEFGaGdDcHhhcWxsT0o0SmJadE5ZN0VwWEY1WmtqCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0t
@@ -479,7 +479,7 @@ store:
   mysql:
     enabled: true
     size: 20Gi
-    password: 8BPaEcMcPhwEtJKI2YZ0TaVsahMSL11N
+    password: 8BPaEcMcPhwEtJKI2YZss0TaVsahMSL11N
 
   elasticsearch:
     enabled: true
@@ -491,18 +491,18 @@ store:
           storage: 15G
     extraEnvs:
       - name: ELASTIC_PASSWORD
-        value: "MROtRGwsadE2X1j9HTbGFQnwQaeOoRLT"
+        value: "MROtRGwsadE2X1j9HTsssbGFQnwQaeOoRLT"
       - name: ELASTIC_USERNAME
         value: admin
 
   postgres:
     enabled: true
     size: 20Gi
-    password: 3mmQaglOssdeFyhtdfzJH9jVpUhmCn9HX
+    password: 3mmQaglOssdeFyhtdfzJH9jssVpUhmCn9HX
 
   redis:
     enabled: true
-    password: "1Z8X7dcdcuf36y7i9ShiQ8t0GuFlQl9l"
+    password: "1Z8X7dcdcsuf36y7i9ShiQ8st0GuFlQl9l"
 
 ```
 
@@ -540,7 +540,7 @@ global:
     service:
       auth:
         username: scp-services
-        password: "IeOIGpEhFcLuTkoiRqZD9AX0anGVK5lo"
+        password: "IeOIGpEhFcLuTkoiRqZD9AXss0anGVK5lo"
     enableP2PChat: true
 
   idp:
@@ -557,10 +557,10 @@ global:
     portalServices:
       idp:
         username: idp
-        password: "oEKMjiel6trFDhY"
+        password: "oEKMjiel6sstrFDhY"
       tis:
         username: tis
-        password: "nKcLBuAQ1rdsY"
+        password: "nKcLBussAQ1rdsY"
 
   dashboard:
     enabled: false
@@ -574,7 +574,7 @@ scp:
   ingress:
     tlsSecret: mpower-ingress-tls
   auth:
-    passwordHash: "W1391NUAgkkoUwlrSdsrp5amwLLmpSo0l3hgq2627q4uG8mx"
+    passwordHash: "W1391NUAgksskoUwlrSdsrp5amwLLmpSo0l3hgq2627q4uG8mx"
 
   mongoDb:
     # host: internal-box-mongodb-clb-1338118338.eu-central-1.elb.amazonaws.com
@@ -585,7 +585,7 @@ scp:
 
   tis:
     auth:
-      publicKey: "-----BEGIN PUBLIC KEY-----\\nMIIBIjANBuhhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAszZEuGl1asPirHJfgUbH\\n5ruiidfbsqYgjyDJzbSdqccBZeuw7PrK6/D5/YwvY6xqVN9ewk6trB+NazfUJwGH\\nmtc0RhNTrjo08ltLw5rWYtn1dFcxfPnPJQ3ghmKaDne8p7vzkLKVd2ElFx7wm+ug\\n4JKYzK7RqSvcSdzUcLmVezJwT/F8c6jEuEVSFKAtf8vkYrCnCXS2fi+5uzlfpbt0\\ndQnioOyX3j88Ch1/xbu8GaOShxSDLVSRgmBa1p7+o/GA7LAHl6ozhDwCSWKxTw8\\nsUqtVUASvLXijLjfV39XSTVyxpIrfrihKO1rTAusDf6gcxw50F1oeOZedKIJyJyI\\n/wIDAQAB\\n-----END PUBLIC KEY-----"
+      publicKey: "-----BEGIN PUBLIC KEY-----\\nMIIBIjANBuhhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAszZEuGl1asPirHJfgUbH\\n5ruiidfbsqYgjyDJzbSdqccBZeuw7PrK6/D5/YwvY6xqVN9ewk6trB+NazfssUJwGH\\nmtc0RhNTrjo08ltLw5rWYtn1dFcxfPnPJQ3ghmKaDne8p7vzkLKVd2ElFx7wm+ug\\n4JKYzK7RqSvcSdzUcLmVezJwT/F8c6jEuEVSFKAtf8vkYrCnCXS2fi+5uzlfpbt0\\ndQnioOyX3j88Ch1/xbu8GaOShxSDLVSRgmBa1p7+o/GA7LAHl6ozhDwCSWKxTw8\\nsUqtVUASvssLXijLjfV39XSTVyxpIrfrihKO1rTAusDf6gcxw50F1oeOZedKIJyJyI\\n/wIDAQAB\\n-----END PUBLIC KEY-----"
 
   services:
     addressbook:
@@ -595,7 +595,7 @@ scp:
       db:
         name: addressbook
         username: addressbook
-        password: "qIKniK8uGi2pZ"
+        password: "qIKnisssK8uGi2pZ"
     messenger:
       # jlie az acr image
       image: kobilsystems.azurecr.io/scp/messenger:3.30.1
@@ -603,7 +603,7 @@ scp:
       db:
         name: messenger
         username: messenger
-        password: "jvYGozZBzunmhD"
+        password: "jvYGosszZBzunmhD"
     media:
       # jlie az acr image
       image: kobilsystems.azurecr.io/scp/media:3.9.1
@@ -611,7 +611,7 @@ scp:
       db:
         name: media
         username: media
-        password: "XuDnfujb5WZhMj"
+        password: "XuDnfujb5ssWZhMj"
     gateway:
       # jlie az acr image
       image: kobilsystems.azurecr.io/scp/gateway:3.31.0
@@ -619,7 +619,7 @@ scp:
       db:
         name: gateway
         username: gateway
-        password: "9t6juqSnjhsxAy"
+        password: "9t6juqSnjsshsxAy"
     presence:
       # jlie az acr image
       image: kobilsystems.azurecr.io/scp/presence:3.20.2
@@ -627,7 +627,7 @@ scp:
       db:
         name: presence
         username: presence
-        password: "vj3CABUxDjjkbWv"
+        password: "vj3CAssBUxDjjkbWv"
 
 tis:
   # jlie az acr image
@@ -638,8 +638,8 @@ tis:
     replicas: 1
     auth:
       keyStore:
-        # file: "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"
-        file: "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"
+        # file: "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"
+        file: "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"
 
 ssms:
   ingress:
@@ -665,10 +665,10 @@ ssms:
     driver: "https://www.kobil.com/download/presales/DevEx/mysql-connector-java-8.0.20.jar"
     mgtUser:
       name: root
-      password: 8BPaEcMcPhwEtJKI2YZ0TbVxxhMSL11N
+      password: 8BPaEcMcPhwEtJKI2YZss0TbVxxhMSL11N
     adminUser:
       name: root
-      password: 8BPaEcMcPhwkjJKI2YZ0TaVxxhMSL11N
+      password: 8BPaEcMcPhwsskjJKI2YZ0TaVxxhMSL11N
 
   cluster:
     managementNodes:
@@ -716,7 +716,7 @@ idp:
       replicas: 1
     redis:
       host: mbattery-redis-master
-      password: "1Z8X7GVSouf36y7i9ShuQ8t0GuFlQl9l"
+      password: "1Z8X7GVSouf3ss6y7i9ShuQ8t0GuFlQl9l"
 
   scp:
     mPowerRest:
@@ -758,7 +758,7 @@ idp:
       port: 5432
       database: iam_midtest
       user: postgres
-      password: 3mmQaglOkUwFyhtdffJH9jVpUhmCn9HX
+      password: 3mmQaglOkUwFssyhtdffJH9jVpUhmCn9HX
 
 dashboard:
   ingress:
@@ -777,7 +777,7 @@ dashboard:
     dbName: dashboard_midtest
     dbPrefix: dashboard_midtest
     user: postgres
-    password: jdwdjwjdqojsoqsqsmqksmqks
+    password: jdwdjwjdqojsoqsssqsmqksmqks
   dashboard:
     smtp:
       host: "mail2.kobil.com"
