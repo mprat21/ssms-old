@@ -3,24 +3,30 @@ sidebar_position: 1
 ---
 # Kernel
 
+## General Features of the User Interface
+
+This section informs you on how to use the graphical user interface of the KOBIL SSMS for the first log-in and management tasks.  
+
+Please note that the use of the SSMS requires the integration of configuration license files in order to obtain the appropriate permissions to carry out certain operations on the server. Find more information in [here](#license-management-view).
+
 After logging in the master tenant, try switching tenant in top right, by clicking on Login as. You will see the newly created tenant present and you can select the same from drop down list and once done click Switch to Tenant.
 
 ![kernelmastertenant](./module-files/files-kernel/kernel_mastertenant.png)  
 
-•	Once you are switched to the newly created tenant, please create new operator and new portal user credentials for this tenant. These operator credentials and portal user credentials will be shared with partners for making SOAP calls to MGT and SVC modules respectively.  
+•	Once you are switched to the newly created tenant, please create new operator and new portal user credentials for this tenant. These operator credentials and portal user credentials will be shared with partners for making SOAP calls to MGT and SVC modules respectively.   
 
-## Role Management  
+### Role Management  
 
 Each operator of the system must have a role which defines the permissions assigned
 to the operators.  
 
-## Log-in  
+### Log-in  
 
 The operator requires a certificate, which must be imported into the browser (find a more detailed description in the SSMS installation manual), to log into the system. The certificate defines the role and the authorization of the operator. The certificate defines which role and consequently which permissions the operator possesses. The super administrator can create the certificates via the SSMS GUI: The operator needs the certificate to log into the KOBIL SSMS; consequently, he must receive it along with its password.  
 
-## Navigation Menu  
+### Navigation Menu  
 
-You can access the Management System via the home page (see Figure 3) with the following URL:
+You can access the Management System via the home page with the following URL:
 
 **https:<Servername\>/ssms-gui/faces/**  
 
@@ -34,17 +40,17 @@ After logging into the SSMS, every operator is notified about which role has bee
 
 The home page leads the user to the different module views of the SSMS. The available modules are displayed in the navigation menu at the top of the page. If you click on any module, its submenu is then shown a level deeper in the navigation menu.  
 
-## Select Entries  
+### Select Entries  
 
 In some views, the data are displayed as lists, as shown in Figure. Check or uncheck the boxes on the left of the data to select or unselect entries. In order to select all entries, check the box “all”, as shown by the red marking in the following Figure.  
 
 ![kernelusers](./module-files/files-kernel/kernel_users.png)  
 
-## Search  
+### Search  
 
-In a list of entries, you can search or filter specific entries. You can type your search string into the field as shown in Figure 4 (top left marking) or you can perform an advanced search. Find information about the filter options in the following paragraphs.  
+In a list of entries, you can search or filter specific entries. You can type your search string into the field as shown in the Figure above or you can perform an advanced search. Find information about the filter options in the following paragraphs.  
 
-##	Search for User(s)  
+####	Search for User(s)  
 
 You can search or filter entries according to specific attributes, whose values can be set in the search field. Afterwards, you start the search by clicking on the magnifier symbol   next to the search field.
 The values can include the following wildcards (placeholders).  
@@ -57,13 +63,13 @@ The values can include the following wildcards (placeholders).
 
 Note that, particularly in the advanced search, you can use the wildcards only in alphanumerical text searches; (the database type of the target field must be: VARCHAR, CHAR, Text, etc.) moreover, they only work with the "equal" and “not equal” operators. (Depending on database types, wildcards can be used with "not equal" type of search and not only with "equal" and can also be used with "not equal" type of search and not only with "equal".  
 
-##	Reset Search  
+#### Reset Search  
 
 By clicking on the other magnifier symbol ![kernelsymbolmagnifier](./module-files/files-kernel/kernelsymbol_magnifier.png), you can delete a search result and return to the standard display.  
 
-##  2.6.3	Advanced Search  
+#### Advanced Search  
 
-With the advanced search, you can combine a selection of attributes in different search queries. These attributes allow you to specify complex search queries. Attributes and conditions can be added or removed with the symbols + or - (see Figure).  
+With the advanced search, you can combine a selection of attributes in different search queries. These attributes allow you to specify complex search queries. Attributes and conditions can be added or removed with the symbols + or - .  
 
 ![kerneladvancedsearch](./module-files/files-kernel/kernel_advancedsearch.png)  
 
@@ -92,7 +98,7 @@ This search query consists therefore of 4 criteria:
 
 **Note**: In the advanced search filter for a point in time, you can only enter the date. A further time specification is currently not supported.  
 
-##	Buttons  
+###	Buttons  
 
 The buttons are placed above and below the table and offer the same functionalities twice. With the buttons, you can carry out an action for one or many users or devices. To carry out an action, check the boxes on the left of the ID entries, corresponding to the users or to the devices and click the button of the action. In addition, you can carry out the action for all users, checking “all” on the bottom- or on the top-left.  
 
@@ -100,9 +106,9 @@ The buttons are placed above and below the table and offer the same functionalit
 
 With these buttons you can carry out actions for a single user or for a group (Add User cannot be a group action), while with the actions icons on the right, you can only carry out actions for a single user or device.  
 
-##	Actions Icons  
+###	Actions Icons  
 
-As mentioned above, with the action icons on the right of each row, you can only carry out actions for a single object. In contrast to the buttons, you can click the icon directly in the particular row to carry out the action and you do not need to select the user or the device beforehand (see previous chapter).  
+As mentioned above, with the action icons on the right of each row, you can only carry out actions for a single object. In contrast to the buttons, you can click the icon directly in the particular row to carry out the action and you do not need to select the user or the device beforehand.  
 
 ![kernelactionicons](./module-files/files-kernel/kernel_actionicons.png)  
 
@@ -120,7 +126,7 @@ The Administration view contains a menu to access the functions for administrati
 * IAM Settings  
 * Advanced-Settings  
 
-## Information View  
+### Information View  
 
 The information view informs you in detail about the system configuration. As shown in Figure 8, the view is divided into the two areas listed below. The number of the nodes in the first area can vary, depending on how many nodes (servers) you have configured.  
 
@@ -188,7 +194,7 @@ Database information:
 |    <br/>Database schema version(s)                  |    <br/>Schema   version of the database for every module.     |
 |    <br/>Total number of currently stored   users    |    <br/>Number of users added to the   database.               |  
 
-## Diagnostic
+#### Diagnostic
 
 Via a diagnostic feature in the information view, you can receive additional information about the SSMS. In particular, by clicking the button “Diagnostic”, a dialog box appears where you can choose the date when you want to generate a diagnostics file, which is per default the current date. After clicking “Create Diagnostics” a .zip file is created containing the SSMS log file, the settings of every module and database information.  
 
@@ -207,7 +213,7 @@ The following information is generated:
 * Radius trace file (in case Radius is used)  
 * Tomcat trace file  
 
-## Access Management View  
+### Access Management View  
 
 The Access Management view is divided into three submenus:  
 
@@ -217,7 +223,7 @@ The Access Management view is divided into three submenus:
 
 These menus stand for creating certificates for SSMS operators, giving operators roles and granting specific permissions to roles respectively.  
 
-## Operator Management  
+#### Operator Management  
 
 In the Operator Management view, you can create certificates for all the operators of the SSMS. The certificates assigned to the operators define their roles. They are listed in tabular form in the Operator Management view.  
 
@@ -248,9 +254,9 @@ The table with the certificates contains the following information.
 
 In addition to the actions in the table, you can also manage the operators by means of the buttons above the table. In particular, you can remove, lock or unlock the operators by selecting one or multiple operators in the left-most column and by clicking the action button.  
 
-##	Add Operator  
+#####	Add Operator  
 
-In order to produce certificates assigned to operators click “Add Operator” on the top left of the page. In the window that pops up, you enter the operator name, his e-mail and the role assigned to the operator. In addition, you must generate a password for the certificate and enter your CA (Certificate Authority) password (see Figure).  
+In order to produce certificates assigned to operators click “Add Operator” on the top left of the page. In the window that pops up, you enter the operator name, his e-mail and the role assigned to the operator. In addition, you must generate a password for the certificate and enter your CA (Certificate Authority) password.  
 
 ![kerneladdoperator](./module-files/files-kernel/kernel_addoperator.png)  
 
@@ -260,11 +266,11 @@ The certificate is generated and has the status “Produced”. Via the action b
 
 :warning:: For security reasons, send the password and the certificate separated from each other.  
 
-## Remove, lock and unlock Operator  
+##### Remove, lock and unlock Operator  
 
 In the view Operator Management, you also have the possibility to remove, lock and unlock operators. You achieve this by selecting an operator or all the operators in the left-most column “Select” and by clicking the corresponding button.  
 
-## Create Server SSL Certificate  
+##### Create Server SSL Certificate  
 
 By clicking on the button „Create Server SSL Certificate“, you have the possibility to create an X.509 certificate for the purpose of SSL server authentication.  
 
@@ -274,7 +280,7 @@ A dialog will pop up where you can upload the certificate signing request, initi
 
 Certificates are issued by the SSMS CA using the signing algorithm "SHA256-RSA". The certificate request must be uploaded as a PKCS#10-file within the dialog from the local directory. From the request file, the name of the applicant (field subject) and the public key (field subjectPublicKey) are used as input for the certificate creation. The name of the applicant is also taken as the value for the X.509 "Subject Alternative Name" extension of type "DNS Name" or "IP Address" accordingly chosen to the syntax of that name. The supported encoding formats of the PKCS#10-file are DER, PEM and Base64.  
 
-## Role Management  
+#### Role Management  
 
 The Role Management view lists the system roles available directly after the SSMS installation and the roles that you add by yourself.  
 
@@ -294,29 +300,29 @@ The roles table contains the following information:
 
 In addition to the action in the table, you can also manage roles by means of the buttons above the table.  
 
-## Add Role  
+##### Add Role  
 
 In particular, you can add other roles than the roles assigned by the system by clicking the button “Add Role”. In the window that pops up, you can enter a name for the new role, define whether the role has access to all users and select the already existing role that has similar permissions to the new role.  
 
 ![kerneladdrole](./module-files/files-kernel/kernel_addrole.png)  
 
-The newly created role can be assigned to an operator as described in chapter 3.2.1.  
+The newly created role can be assigned to an operator as described in [here](#operator-management).  
 
-## Remove Roles  
+##### Remove Roles  
 
 In addition, you can remove already added roles by selecting one or multiple roles in the most-left column and by clicking the button “Remove Roles”. Please note that you are **only** allowed to remove roles with specific features: different roles than the role assigned to you or to another operator, non-system roles and roles that have no permissions assigned. If you try to remove prohibited roles, a red cross appears on the left of the role name and an error message appears above the table.  
 
-## Activate and deactivate Roles  
+##### Activate and deactivate Roles  
 
 When you add a role, it is automatically active, so you need the option “Activate Roles” only in case you deactivated a role beforehand. You can deactivate roles by selecting one or multiple roles in the most-left column and by clicking the button “Deactivate Roles”. Please note that you are **not** allowed to deactivate the role assigned to you or to another operator.  
 
-## Modify Role  
+##### Modify Role  
 
 You can modify the role by clicking ![kernelsymbolmodifyrole](./module-files/files-kernel/kernelsymbol_modifyrole.png) . In particular, you can change the role name and the permission to access all users.  
 
 ![kernelmodifyrole](./module-files/files-kernel/kernel_modifyrole.png)  
 
-## Role-Permissions  
+#### Role-Permissions  
 
 You can view the system roles and the roles that you created in the view “Role Management” with their permissions in the view “Role-Permissions”.  
 
@@ -328,7 +334,7 @@ To make your changes effective, you must confirm them by clicking on the “Save
 
 Roles and permissions are also needed for the management of the SOAP interface. You can find a description of the single methods in the single administrator manuals. The services SOAP interface is secured by a SSL authentication and does not require any further user authentication.  
 
-## Users View  
+### Users View  
 
 The Kernel Users view shows all the users of the SSMS in tabular form.  
 
@@ -346,7 +352,7 @@ The following table lists the information contained in the view.
 |--|||  
 |Actions||Action for changing the user. In particular, the user ID (given by the user) can be changed.|  
 
-## Add User  
+#### Add User  
 
 You can a user to the Kernel module by clicking on the button “Add User” and entering the unique username.  
 
@@ -360,11 +366,11 @@ Please note that the maximal size of the user ID is 64 bytes, which does not alw
 
 Therefore, according to the character type, 64, 32 or 21 characters can be used for a user.  
 
-## Remove User  
+#### Remove User  
 
 You can remove one or multiple users by making one or multiple selections on the left-most column and clicking the “Remove User” button.  
 
-## Role Access Authorization  
+#### Role Access Authorization  
 
 You can decide which role or roles have the permission to one or multiple users by making one or multiple selections on the left-most column and clicking the button “Role Access Authorization”. A window pops up where the User-ID is shown and where you can select which role or roles have access to that user. The name of the role shows up in the column Authorized Role(s).  
 
@@ -372,19 +378,19 @@ You can decide which role or roles have the permission to one or multiple users 
 
 Please press “OK” in order to save your changes.  
 
-## Portal Services View  
+### Portal Services View  
 
 The function of the Portal-Services is to manage the portals that communicate with the SSMS via the SOAP interface. In case many portals are active, the SSMS must be able to identify the single portals. This authentication is accomplished by HTTP BASIC Authentication (RFC 2617). More precisely, the Portal ID functions as UserName and the portal password (SharedSecret) functions as password. As the communication with the SOAP interface is SSL-based, the UserName and the Password are protected against unauthorized access.  
 
-## Authentication required  
+#### Authentication required  
 
 If you use many portals, check the option “Authentication is required”. Only afterwards, you can then configure a portal with an ID, a password and additional comments.  
 
 ![kernelportalservices](./module-files/files-kernel/kernel_portalservices.png)  
 
-## Add Portal-Server  
+#### Add Portal-Server  
 
-You can add a portal by clicking “Add Portal-Server”. The number of portals you can add depends on the kernel license restriction indicated by the name maxPortals (see chapter 3.5). If the restriction maxPortal is not specified, only one portal can be connected to the SSMS.  
+You can add a portal by clicking “Add Portal-Server”. The number of portals you can add depends on the kernel license restriction indicated by the name maxPortals (check this [topic](#license-management-view)). If the restriction maxPortal is not specified, only one portal can be connected to the SSMS.  
 
 You can add the information contained in the following table:  
 
@@ -397,11 +403,11 @@ Be careful when portal IDs are used these must be unique for each portal.
 
 After you added one or multiple portals, remember to click “Save” in order to make your changes effective.  
 
-## Remove Portal-Server  
+#### Remove Portal-Server  
 
 You can remove portals by selecting the appropriate checkboxes on the left and by clicking “Remove Portal-Server”.  
 
-## License Management View  
+### License Management View  
 
 The KOBIL SSMS has a license system for the entire product portfolio. The license file defines how long you are authorized to use the licenses for the modules installed. During this time period, you can use a certain number of devices or tokens. The license file also defines, according to the license scope, which access rights you have to the different modules. If the license has expired, you have restricted access to the system. You receive an error message and the service will not work anymore. The data stored in the database remain preserved.  
 
@@ -413,17 +419,17 @@ Along with the expiration date of the license, some modules have additional rest
 
 A license change can be requested at KOBIL. The license file is sent by KOBIL in XML format contains the module-specific restrictions. It must be then imported in the License import GUI.  
 
-## Download the SSMS-CA Certificate  
+#### Download the SSMS-CA Certificate  
 
 You can download the certificate via the button „Download“. This certificate is needed during the order process of a new license.  
 
-## Change the CA Certificate Password  
+#### Change the CA Certificate Password  
 
 You can change the SSMS CA certificate password via the button „Change Password“. Please enter the old as well as the new password into the input field and confirm via the button “OK”.  
 
 ![kernelcapasswordchange](./module-files/files-kernel/kernel_capasswordchange.png)  
 
-## Audit View  
+### Audit View  
 
 In the Audit view all administrative actions that an operator successfully completed on the SSMS via GUI or SOAP are recorded. The actions recorded and shown in this view concern all SSMS modules.  
 
@@ -442,9 +448,9 @@ The following table gives information is available about the management actions:
 |    <br/>Operator role            |    <br/>Role   of the operator.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |    <br/>IP-Address               |    <br/>SSMS   checks first the following headers in given priority:<br/>   <br/>**Request   Headers with Priorities** <br/>   1) X-Forwarded-For<br/>   2) Proxy-Client-IP<br/>   3) WL-Proxy-Client-IP<br/>   4) HTTP_X_FORWARDED_FOR<br/>   5) HTTP_X_FORWARDED<br/>   6) HTTP_X_CLUSTER_CLIENT_IP<br/>   7) HTTP_CLIENT_IP<br/>   8) HTTP_FORWARDED_FOR<br/>   9) HTTP_FORWARDED<br/>   10) HTTP_VIA<br/>   11) REMOTE_ADDR<br/>   <br/>If any of the header has IP-Address   assigned, it takes the value of the header and store it.    |  
 
-You can search for specific actions filtering the results according to the information in the table above. You can search for example by object-ID, module name etc. Please find additional information about the search in chapter 2.6.  
+You can search for specific actions filtering the results according to the information in the table above. You can search for example by object-ID, module name etc. Please find additional information about the search in [here](#search).  
 
-## Monitoring View  
+### Monitoring View  
 
 The monitoring view offers the SSMS operator an overview about important server information. The information is displayed for one node, MGT or SVC, or for both nodes. You can decide which node to show in the monitoring by choosing one or both in the drop-down list on the top left of the GUI. In addition, you can choose to show the results of a specific time period: unlimited, but also of the last day, week, month or year.  
 
@@ -452,26 +458,26 @@ The monitoring view offers the SSMS operator an overview about important server 
 
 The following table lists the information showed in the view:  
 
-|Date||Date and time when the monitoring information was created. You can set the time interval in the Kernel Advanced Settings (see chapter 3.8).|
+|Date||Date and time when the monitoring information was created. You can set the time interval in the Kernel Advanced Settings ([check](#advanced-settings-view)).|
 |:--|:--|:--|
 |Node State|ID|Unique name of the node|
 ||Type|MGT, SVC or both|
 ||state|The node(s) can have the states ONLINE and OFFLINE. When the node is offline, no information from the database can be delivered. |
-|Data||Information about the node. Please find more information in chapter 3.1. |  
+|Data||Information about the node. Please find more information in [here](#information-view) |  
 
 When searching within the monitoring, please note that when selecting, only entries for aggregated properties that apply to all nodes are displayed. The Count search cannot be performed on all nodes, but only applied to one node at a time.  
 
-## Download Monitoring Information  
+#### Download Monitoring Information  
 
 Monitoring information can be downloaded in CSV or in XML format via the button „Download“.  
 
-## Advanced-Settings View  
+### Advanced-Settings View  
 
 The Advanced Settings view can only be accessed by the Super Administrator and the Administrator. The other SSMS operators (roles) have no access to this view.  
 
 This chapter explains the advanced settings and the configuration possibilities of the KOBIL SSMS. The values in the table are default values:
 
-## Description of the Settings  
+#### Description of the Settings  
 
 |    <br/>Log Level                      |    <br/>Setting   of the log mode (WARN, INFO, DEBUG and TRACE). Loggers forward ERROR, WARNING   and INFO logs to the chosen logging system. Default value is INFO.                                                                                                            |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -521,9 +527,9 @@ This chapter explains the advanced settings and the configuration possibilities 
 
 :warning:: Please do not change these parameters unless you are fully aware of the consequences of the changes.  
 
-## IAM Settings  
+### IAM Settings  
 
-### Identity and Access Management support feature  
+#### Identity and Access Management support feature  
 
 SSMS provides the feature of using an external authentication & authorization application, especially an Identity- & Access Management System, named IAM in the following.  
 
@@ -536,15 +542,15 @@ The IAM shall act as an identity provider to authenticate users to access servic
 * SSMS can communicate with any IAM application which supports the OpenID Connect protocol (part of OAuth2).  
 * User authentication during login process to SSMS will be handed over to a configured IAM.
 * If the user is authenticated by the IAM, SSMS accepts the provided ID token, verifies the validity of the ID token and the provided user (operator) information and authorizes the user for SSMS management services as usual. The operator information must match an existing operator in SSMS.  
-* If the IAM feature is enabled, no login with SSMS SSL client certificate as well as the user/password login and basic auth is possible. Except will be the use of SSMS client certificate SUPER_ADMIN, for more see section 3.9.4.  
+* If the IAM feature is enabled, no login with SSMS SSL client certificate as well as the user/password login and basic auth is possible. Except will be the use of SSMS client certificate SUPER_ADMIN, for more check [this](#help-for-locked-up-ssms-by-misconfigured-iam).  
 * During the SSMS session the validity of the ID token is not verified again. This is to ensure, that configurations done in the SSMS management GUI session will not get lost, if the ID token is limited in time (by max_age ID token claim). The outdated ID token would cause a logout propagation of the user.  
   * If the user logs out at IAM and the user has not logged out from SSMS manually before, no logout propagation by IAM is supported by SSMS. The user can still operate on SSMS. The user must logout from SSMS manually or SSMS will run into the session timeout, if the operator does not use the system for specified period.
 * No further SSMS user logout handling with the IAM is currently implemented.  
-* SSMS_Operatorname custom claim as a SSMS user attribute must be added to the ID token returned by the IAM. For more see section 3.9.1.1.  
+* SSMS_Operatorname custom claim as a SSMS user attribute must be added to the ID token returned by the IAM.  
 
 The current implementation is a basic design of OpenID Connect protocol and the authorization grant flow standard for authenticating a user using an IAM. Following protocol attributes are supported.  
 
-## Additional claims to be added to the ID token  
+##### Additional claims to be added to the ID token  
 
 **The ID token**  
 
@@ -560,7 +566,7 @@ Beside the default JWT claims the ID token must provide following custom claim:
 |------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    <br/>SSMS_Operatorname     |    <br/>String        |    <br/>IAM   must return the operator name in this claim. This is to provide the   possibility for IAM administration to use the default claim “sub” for whatever   the IAM administration requires it for other managed applications (i.e. the   username). <br/>   <br/>The   operator name is the username in SSMS provided by the user /password login or   the SSL client certificate. <br/>   <br/>This   is mandatory.<br/>   <br/>NOTE:<br/>   <br/>IAM   administration must compile this custom claim into the ID token. Otherwise   the SSMS will return 401, unauthorized message.    |   
 
-## Supported claims  
+##### Supported claims  
 
 Accordingly to the default scope “openid” SSMS supports following claims:  
 
@@ -574,7 +580,7 @@ Additional supported claims:
 
 All other claims are ignored.  
 
-## The IAM Settings view  
+#### The IAM Settings view  
 
 To use the IAM feature, SSMS has integrated a view in Administration view, named “IAM Settings”. This view is to configure, if the IAM authentication shall be used or not, and to define the required attributes to communicate with the IAM server endpoints. If an IAM is configured, the use of the IAM can be toggled on and off without the need to redefine all the properties again. If changes done here, SSMS nodes get informed automatically, no restart of SSMS is required.  
 
@@ -589,7 +595,7 @@ To enable to view this submodule and manage the settings two permissions are pro
 |    <br/>KERNEL_IAM_SETTINGS_VIEW      |    <br/>Kernel   IAM Settings View      |    <br/>Display   IAM settings view    |    <br/>None                          |
 |    <br/>KERNEL_IAM_SETTINGS_MANAGE    |    <br/>Kernel   IAM Settings Manage    |    <br/>Edit   IAM settings            |    <br/>None                          |  
 
-## Description of the Settings  
+#### Description of the Settings  
 
 This chapter explains the IAM settings and the configuration possibilities of the KOBIL SSMS.
 Following IAM settings can be adjusted:  
@@ -607,7 +613,7 @@ Following IAM settings can be adjusted:
 |    <br/>Connect Timeout                 |    <br/>The   connection timeout in milliseconds for establishing the connection to IAM   when sending the ID token request. <br/>   <br/>Default:   5000                                                                                                                                                                                                                                                                                                          |
 |    <br/>Connection   Request Timeout    |    <br/>The   connection request timeout in milliseconds for requesting a connection for   establishing the connection to IAM when sending the ID token request.   <br/>   <br/>Default:   1000                                                                                                                                                                                                                                                                    |  
 
-## Help for locked up SSMS by misconfigured IAM  
+#### Help for locked up SSMS by misconfigured IAM  
 
 This section shall give you information what needs to be done, if SSMS is configured to use the IAM feature and:
 * IAM settings have been misconfigured
@@ -620,7 +626,7 @@ To prevent this lock of SSMS Management GUI, it is possible to by-pass the IAM a
 
 Some modules of the SSMS (ASM, SecOVID) contain a function in the Advanced Settings for creating Text Resources. Text resources are templates to display transaction-related messages to the users. The following chapters describe the creation of templates and the settings of the values connected to them.  
 
-## Text Resources View  
+### Text Resources View  
 
 The customer can sign payment transactions with his app. During the transaction, relevant information about the transaction is displayed to the customer on the app. To show the transaction information, templates can be created in this view, which are, then, dynamically filled in with the concrete values of a transaction (for example Amount, Currency, Reference).  
 
@@ -646,7 +652,7 @@ The list in the Text Resources view informs about the key, its value, its state 
 |Actions|:x:|This action deletes a template|
 |Actions||A template not saved yet can be reset with this option.|  
 
-## Template Description  
+### Template Description  
 
 Templates allow re-using information with content, which varies only in part. More precisely, during the web services method calls, the template stored in the text resources is referenced and the variable content is written in an ItemList and passed. A template contains text and formatted elements (items). An item consists of the following elements.
 1. Start sequence	                 {
@@ -781,7 +787,7 @@ The SSMS resolves the {pre- … {suf- template and the following message is gene
 
 >Hello Mr. Kazunori Yamauchi. Do you want to transfer 1000 Japanese YEN to JP 03 1234 1234 1234 1234 56, ABCDEFGH? Thank you for using All Nippon Bank. Have a great day.  
 
-## Add Language  
+#### Add Language  
 
 You can add languages by clicking the button “Add language”. Default value is no language; consequently, all input values of the text resources are saved under the setting “Default”. After you chose the desired language, you can define the text resources with respect to it.  
 
@@ -791,7 +797,7 @@ After clicking the button “Add language”, this window opens where you can ch
 
 To save the languages, you must “Save” your settings in the text resources view.  
 
-## Delete Language  
+#### Delete Language  
 
 To delete a previously added language, you can select the language and click “Delete Language”.  
 
@@ -801,9 +807,9 @@ A dialog box pops up, in which you must confirm the deletion of the language.
 
 :warning:: Please note that the removal of an entry cannot be reset.  
 
-## Add Key  
+#### Add Key  
 
-Click the button “Add Key” to add language-specific entries for the language previously chosen, according to the templates described in chapter 4.2. To do this, select the respective language via the drop-down menu (see marking in Figure 27). If you have no added languages, the key will be added to the default language.  
+Click the button “Add Key” to add language-specific entries for the language previously chosen, according to the templates described in [here](#template-description). To do this, select the respective language via the drop-down menu. If you have no added languages, the key will be added to the default language.  
 
 The following is the window for adding a new key:  
 
@@ -818,7 +824,7 @@ To confirm the input values, click “Save” in the general Text Resources view
 
 :warning:: During the creation of a key, the syntax of the value is **not verified**.  
 
-## Delete Key  
+#### Delete Key  
 
 To delete an already existing key, select the language of the key, check the box of the key and click the button “Delete key”. If you have no added languages, the key will be removed from the default language.  
 
@@ -842,11 +848,11 @@ To confirm the input values, click “Save” in the general Text Resources view
 
 You can also delete a key by clicking the red cross in the actions icon column and by saving the changes.  
 
-## Revert/ Revert all  
+#### Revert/ Revert all  
 
 With the buttons “Revert” and “Revert all”, you can reset the changes that have not been saved on the server yet and bring the Text Resources to the original condition.  
 
-## Import  
+#### Import  
 
 In the area “Import“, you can simultaneously import many templates saved in a file.  
 
@@ -856,7 +862,7 @@ After importing the templates from an external file, click “Save” to confirm
 
 :warning:: Please note that the encoding of the imported file must be UTF-8.  
 
-## Export  
+#### Export  
 
 In the area “Export”, you can store templates saved on the server in an external file, by clicking “Download”.  
 
@@ -894,7 +900,7 @@ Use these interfaces only within a secured environment. As, via the SOAP interfa
 
 The use of the Management SOAP interfaces is controlled by roles which define the permissions of every operator. The table below describes the KernelManagementWs SOAP methods and informs you about which operator of the SSMS have the permission to run the methods. The Services SOAP interface is authenticated only by SSL and does not need any other authentication of the operator.  
 
-## KernelManagementWs  
+### KernelManagementWs  
 
 Find a detailed description of the functions and of the error messages in the java documentation contained in the installation (javadoc). You can find it in form of a html file in the following directory: <SSMS_INSTALL>\modules\kernel\doc\mgt_soap_api. The following methods are part of this interface:  
 
@@ -907,7 +913,7 @@ Find a detailed description of the functions and of the error messages in the ja
 |**SSMS_SERVER_SSL_CERT_CREATE**|**createServerSSLCertificate**|
 ||This method creates an X.509 Server SSL certificate based on provided certificate signing request (CSR).|
 |**KERNEL_AUDITING_VIEW**|**getAuditingItems**|
-||The method returns the auditing information of the selected modules.  <br/> The method allows to set the filters auditAction, auditSubject, operatorRoleId. These filters are Integer-values. <br/> Example: auditAction=1 means that a user was added. The according mapping is done in class KernelAuditingAction, but this class is not part of the SOAP interface! <br/> A list of all related IDs can be found in chapter 6.1.1|
+||The method returns the auditing information of the selected modules.  <br/> The method allows to set the filters auditAction, auditSubject, operatorRoleId. These filters are Integer-values. <br/> Example: auditAction=1 means that a user was added. The according mapping is done in class KernelAuditingAction, but this class is not part of the SOAP interface! <br/> A list of all related IDs can be found in [here](#kernel-auditing-filter)|
 |**SSMS_USER_VIEW**|**getUsers**|
 ||The method returns a list of all userIDs that are matching to the given filter.|
 |**SSMS_USER_MANAGE**|**removeUser** <br/> The method removes a user from the database. <br/> **renameUser** <br/> The method changes the name of a user in the database. <br/> **addUser** <br/> The method adds a user to the database.|
@@ -923,7 +929,7 @@ Find a detailed description of the functions and of the error messages in the ja
 |**KERNEL_IAM_SETTINGS_VIEW**|**getIamSettings** <br/> The method returns the values of IAM settings.|
 |**KERNEL_IAM_SETTINGS_MANAGE**|	**setIamSettings** <br/> The method sets the values for IAM settings variables.|
 
-## KernelAuditingFilter  
+#### KernelAuditingFilter  
 
 The method getAuditingItems allows to set the filters auditAction, auditSubject, operatorRoleId. These filters are Integer-values.  
 
@@ -978,7 +984,7 @@ Default role Ids
 |    <br/>SSMSUSERROLE            |    <br/>12    |
 |    <br/>SSMSX509CERTIFICATE     |    <br/>13    |
 
-## KernelServicesWs  
+### KernelServicesWs  
 
 Find a detailed description of the functions and of the error messages in the java documentation contained in the installation (javadoc). You can find it in form of a html file in the following directory: <SSMS_INSTALL>\modules\kernel\doc\svc_soap_api. The following methods are part of this interface:  
 
