@@ -98,7 +98,7 @@ Select Launch Instances -> select t2.micro (We will use free tier one) -> Config
 
 **Now, run below command and when prompted enter your aws Access key ID", the "Secret Access key" , Region as Eu-central-1 and default output format as json**
 
-Refer [i](./files-deploy/server1.png#create-an-ec2-instance-on-aws) where you have downloaded AWS access key file locally in your machine.
+where you have downloaded AWS access key file locally in your machine.
 
     aws configure
 
