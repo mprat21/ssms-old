@@ -871,7 +871,7 @@ Once mbattery is deployed, run command to deploy mpower:
 
     helm install mpower -f mpower730demo21.values-1.yaml mpower-7.15.1.tgz --debug
 
-### Configure ROUTE53 On AWS
+### Configure Route53 On AWS
 
 First run below command in your EC2 instance:
 
