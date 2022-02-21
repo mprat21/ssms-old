@@ -52,27 +52,34 @@ Select Launch Instances -> select t2.micro (We will use free tier one) -> Config
 
 - To install docker, run below commands
 
-     sudo yum update -y
+    sudo yum update -y
 
-     sudo yum install -y docker
 
-     sudo service docker start
+    sudo yum install -y docker
 
-     sudo usermod -a -G docker ec2-user
+
+    sudo service docker start
+
+
+    sudo usermod -a -G docker ec2-user
 
 - To install aws cli, run below commands
 
-     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
-     unzip awscliv2.zip
 
-     sudo ./aws/install
+    unzip awscliv2.zip
+
+
+    sudo ./aws/install
 
 - To install eksctl, run below commands
 
-     curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+    curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 
-     sudo mv /tmp/eksctl /usr/local/bin
+
+    sudo mv /tmp/eksctl /usr/local/bin
+
 
     eksctl version
 
@@ -80,11 +87,15 @@ Select Launch Instances -> select t2.micro (We will use free tier one) -> Config
 
     curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/kubectl
 
+
     chmod +x ./kubectl
+
 
     mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
 
+
     echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+
 
     kubectl version --short --client
 
@@ -92,13 +103,15 @@ Select Launch Instances -> select t2.micro (We will use free tier one) -> Config
 
     curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
 
+
     chmod 700 get_helm.sh
+
 
     ./get_helm.sh
 
 **Now, run below command and when prompted enter your aws Access key ID", the "Secret Access key" , Region as Eu-central-1 and default output format as json**
 
-where you have downloaded AWS access key file locally in your machine.
+Refer step [1](#create-an-ec2-instance-on-aws) where you have downloaded AWS access key file locally in your machine.
 
     aws configure
 
@@ -130,8 +143,7 @@ if .ssh folder is not present in /home/ec2-user/ just create it using,
 
 Now we need to run makeclust.sh script file. This file consists of commands to create a cluster, managed nodegroups on AWS using eksctl.
 
-
-'''shell
+```shell
 ####!/usr/bin/env bash
 cluster="${1}"
 if [[-z ${cluster}]]
@@ -192,7 +204,7 @@ aws eks --region eu-central-1 update-kubeconfig --name ${cluster} --alias ${clus
 
 kubectl apply --context=${cluster} -f cluster-autoscaler-autodiscover.yaml
 kubectl apply --context=${cluster} -f cluster-autoscaler-deployment.yaml
-'''
+```
 
 Run the script by using following command.
 
@@ -210,19 +222,28 @@ Please enter your azure username and password. If you dont have one contact us
 
     kubectl create secret docker-registry registry-azure --docker-server=kobilsystems.azurecr.io --docker-username=your-azure-user --docker-password=your-azure-password           
 
+To pull from Kobil repo, you would need access. If you dont have access to it please contact us.
+
     helm repo add kobil https://charts.kobil.com --username helm-username --password helm-password
+
 
     helm repo add appscode https://charts.appscode.com/stable/
 
+
     helm repo add jetstack https://charts.jetstack.io
+
 
     helm repo update
 
+
     helm install releasename appscode/kubedb --version v0.13.0-rc.0
+
 
     helm install cert-manager jetstack/cert-manager --version v1.3.1 --set installCRDs=true
 
+
     helm pull kobil/mbattery --version 7.1.2
+
 
     helm pull kobil/mpower --version 7.15.1
 
