@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # KOBIL mID Server (SSMS)
 KOBIL System's Smart Security Management Server (SSMS) is a multi-client capable server that handles identities and provides security features. SSMS manages users and their devices. A user can have one or more devices, one device can be used by one or more users. The devices can be either mobile (iOS or Android) or desktop devices (Windows, MacOS). SSMS manages and protects the apps which are operated on the devices. SSMS also interacts with the customer's back end systems to protect business processes end-2-end. The security features of SSMS are based on the included PKI (public key infrastructure) and the included CA (certificate authority).
 
