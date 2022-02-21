@@ -52,62 +52,49 @@ Select Launch Instances -> select t2.micro (We will use free tier one) -> Config
 
 - To install docker, run below commands
 
-    sudo yum update -y
+      sudo yum update -y
 
+      sudo yum install -y docker
 
-    sudo yum install -y docker
+      sudo service docker start
 
-
-    sudo service docker start
-
-
-    sudo usermod -a -G docker ec2-user
+      sudo usermod -a -G docker ec2-user
 
 - To install aws cli, run below commands
 
-    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
+      unzip awscliv2.zip
 
-    unzip awscliv2.zip
-
-
-    sudo ./aws/install
+      sudo ./aws/install
 
 - To install eksctl, run below commands
 
-    curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+      curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 
+      sudo mv /tmp/eksctl /usr/local/bin
 
-    sudo mv /tmp/eksctl /usr/local/bin
-
-
-    eksctl version
+      eksctl version
 
 - To install kubectl, run below commands
 
-    curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/kubectl
+      curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/kubectl
 
+      chmod +x ./kubectl
 
-    chmod +x ./kubectl
+      mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
 
+      echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 
-    mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
-
-
-    echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
-
-
-    kubectl version --short --client
+      kubectl version --short --client
 
 - To install helm, run below commands
 
-    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+      curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
 
+      chmod 700 get_helm.sh
 
-    chmod 700 get_helm.sh
-
-
-    ./get_helm.sh
+      ./get_helm.sh
 
 **Now, run below command and when prompted enter your aws Access key ID", the "Secret Access key" , Region as Eu-central-1 and default output format as json**
 
@@ -204,15 +191,18 @@ aws eks --region eu-central-1 update-kubeconfig --name ${cluster} --alias ${clus
 
 kubectl apply --context=${cluster} -f cluster-autoscaler-autodiscover.yaml
 kubectl apply --context=${cluster} -f cluster-autoscaler-deployment.yaml
+
 ```
 
 Run the script by using following command.
 
     sh makeclust.sh yourclustername
 
-Provide your cluster name instead of 'yourclustername' in the command.
+Provide your cluster name instead of **yourclustername** in the command.
 
-### DEPENDENCIES FOR MBATTERY & MPOWER
+
+
+### DEPENDENCIES FOR MBATTERY & MPOWER
 
 Now we need to run following commands after the cluster is set-up and nodes are ready.
 
@@ -265,7 +255,7 @@ Once mbattery is deployed, run command to deploy mpower:
 
 First run below command in your EC2 instance:
 
-   kubectl get svc
+    kubectl get svc
 
 and note the External-IP value of mbattery-nginx-controller service
 
