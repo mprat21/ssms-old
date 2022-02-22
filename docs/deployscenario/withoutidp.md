@@ -45,8 +45,6 @@ We need to have installed a database management system (DBMS) to set up and adju
 
 According to the installation Operating system, choose the following version of Database verified from the respective release notes. In the figure below it shows a microsoft Operating system, similarly we can choose for our desired Operating system accordingly and install the database and its Workrbench in order to run the SQL commands.  
 
-:warning: When installing MYSQL Workbench, make sure to install the same version as the MYSQL database.  
+:warning: When installing MYSQL Workbench, make sure to install the same version as the MYSQL database.
 
-![ohneidpssmsdb](./files-deploy/ohneidpdatabase.png)  
-
-  
+**windows**:  
