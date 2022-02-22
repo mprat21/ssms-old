@@ -5,6 +5,20 @@ sidebar_position: 2
 
 Standalone way of deployment comes with the package of setup files for the respective OS systems (Windows, linux and others if supported).  
 
+**Shared folder for the Internal team purpose only**:  
+
+![ohneidpinternal](./files-deploy/ohneidpinternal.png)  
+
+**For Customers**:  
+
+please contact the responsible technical consultant assigned for you regarding the version releases and others if any.  
+
+
+
+
+
+
+
 This Package is shared with a folder named "SSMS" as shown in the following figure below.  
 
 ![ohneidpssms](./files-deploy/ohneidpssms.png)  
@@ -29,7 +43,7 @@ The supported operating System comes with their own setup or files.
 
 * **Solaris**: setup.bin  
 
-## System Requirements:  
+## System Requirements  
 
 Requirements for the hardware and software as well as for the versions used can be found Precisely on the respective operating systems **release notes**.    
 
@@ -39,12 +53,29 @@ Requirements for the hardware and software as well as for the versions used can 
 
 We need to have installed a database management system (DBMS) to set up and adjust all the required SSMS components with the configuration utility. The SSMS currently supports the MSSQL, MySQL and Oracle Database systems. Set up a user for the corresponding DBMS with the required permissions. The system supports the UTF-8 character set. No additional character rules are needed.  
 
-:warning: If you have already created a database for the SSMS, it will be automatically detected by the configuration utility. If a database administrator has created the SSMS database manually, the database must contain no tables and must be empty, otherwise the configuration utility returns the error message “This is not an SSMS database”.  
+:warning: If you have already created a database for the SSMS, it will be automatically detected by the configuration utility. If a database administrator has created the SSMS database manually, the database must contain no tables and must be empty, otherwise the configuration utility returns the error message “This is not an SSMS database”.    
+
+According to the installation Operating system, choose the following version of Database verified from the respective release notes. In the URL's below you can download and install the respective database, similarly install the database along with its Workrbench in order to run the SQL commands.  
+
+:warning: When installing MYSQL Workbench, make sure to install the same version as the MYSQL database.  
+
+Download links with its different operating systems and different versions of databases are linked below.  
 
 **MYSQL**:  
 
-According to the installation Operating system, choose the following version of Database verified from the respective release notes. In the figure below it shows a microsoft Operating system, similarly we can choose for our desired Operating system accordingly and install the database and its Workrbench in order to run the SQL commands.  
+> https://dev.mysql.com/downloads/mysql/   
 
-:warning: When installing MYSQL Workbench, make sure to install the same version as the MYSQL database.
+**MYSQL Workbench**  
 
-**windows**:  
+> https://dev.mysql.com/downloads/workbench/  
+
+
+**MSSQL**  
+
+> https://www.microsoft.com/en-us/sql-server/sql-server-downloads  
+
+**Oracle DB**    
+
+> https://www.oracle.com/database/technologies/oracle-database-software-downloads.html  
+
+  
