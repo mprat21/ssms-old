@@ -5,19 +5,13 @@ sidebar_position: 2
 
 Standalone way of deployment comes with the package of setup files for the respective OS systems (Windows, linux and others if supported).  
 
-**Shared folder for the Internal team purpose only**:  
+**Shared folder for the Internal team purpose only**:
 
-![ohneidpinternal](./files-deploy/ohneidpinternal.png)  
+> Network/10.21.0.200/shared_development/Release/SSMS  
 
 **For Customers**:  
 
 please contact the responsible technical consultant assigned for you regarding the version releases and others if any.  
-
-
-
-
-
-
 
 This Package is shared with a folder named "SSMS" as shown in the following figure below.  
 
@@ -77,5 +71,3 @@ Download links with its different operating systems and different versions of da
 **Oracle DB**    
 
 > https://www.oracle.com/database/technologies/oracle-database-software-downloads.html  
-
-  
