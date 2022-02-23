@@ -73,7 +73,7 @@ In conclusion, you receive a summary of the installation process with informatio
 
 Once you have completed the installation, the program starts automatically the configuration utility with its web interface for the SSMS configuration.  
 
-## Installation on Linux
+### Installation on Linux
 
 Run the following command on terminal in Linux:
 
