@@ -81,27 +81,50 @@ Run the following command on terminal in Linux:
 
 You will be prompted to accept the instructions, terms and conditions etc. Simply accept those by pressing Enter.
 
-  ![linux1](./files/linux1.PNG) ![linux2](./files/linux2.PNG)
+  ![linux1](./files/linux1.PNG)
 
-  and so on. Once this is done, you will be prompted to Accept the terms of License Agreement. Simply accept it by typing 'Y'
+### License Agreement   
+
+Simply accept it by typing 'Y'
+
+
+  ![linux2](./files/linux2.PNG)
+
+  and so on.
 
   ![linux10](./files/linux10.PNG)
 
+
+### Selecting the Installation Path  
+
   After this installation starts, please click Enter to accept the default settings prompted or enter your own values to change the installation.
 
-  ![linux11](./files/linux11.PNG)  
+  ![linux11](./files/linux11.PNG)
+
+
+### Choose Link Location  
 
   ![linux12](./files/linux12.PNG)
 
+### Configuration  
+
   ![linux13](./files/linux13.PNG)
+
+### Creating password for the Configuration Utility  
 
   ![linux15](./files/linux15.PNG)
 
+### Create Startup Scripts  
+
   ![linux16](./files/linux16.PNG)
+
+### Summary of the Settings
 
   ![linux17](./files/linux17.PNG)
 
   ![linux18](./files/linux18.PNG)
+
+### Completing the Installation
 
   Once all the steps are completed, you should now see that installation is successful.
 
