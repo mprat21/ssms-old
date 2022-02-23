@@ -85,12 +85,10 @@ You will be prompted to accept the instructions, terms and conditions etc. Simpl
 
 ### License Agreement   
 
-Simply accept it by typing 'Y'
-
-
   ![linux2](./files/linux2.PNG)
 
   and so on.
+  Simply accept it by typing 'Y'
 
   ![linux10](./files/linux10.PNG)
 
