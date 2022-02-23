@@ -7,7 +7,7 @@ Standalone way of deployment comes with the package of setup files for the respe
 
 **Shared folder for the Internal team purpose only**:  
 
-![ohneidpspath123](./files-deploy/ohneidppath123.png)  
+![ohneidpspath123](./files-deploy/ohneidppath123.PNG)  
 
 > Network/10.21.0.200/shared_development/Release/SSMS  
 
