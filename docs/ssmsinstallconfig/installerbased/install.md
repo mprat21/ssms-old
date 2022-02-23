@@ -9,7 +9,7 @@ The following provides the complete installation process on Windows and Linux. I
 
 Please carry out the installation with administrator rights on Windows and as root user on Linux.
 
-### Windows based Installation
+## Windows based Installation
 
 Start setup.exe by double clicking with the left mouse button or by running this command on terminal : setup.exe -i  console  
 
@@ -19,13 +19,13 @@ The possible options during the installation and general information about the i
 
 Click "Next" to continue or "Cancel" to terminate the process. In the further steps, click "Previous" to return to the previous step of the installation.  
 
-#### License Agreement  
+### License Agreement  
 
 Please accept the license agreement before installing the SSMS:  
 
 ![Licenceagreement](./files/installation_licenceagreement.png)  
 
-#### Selecting the Installation Path  
+### Selecting the Installation Path  
 
 You can change the default installation paths described below:
 * Windows:
@@ -35,13 +35,13 @@ You can change the default installation paths described below:
 
 ![chooseinstallfolder](./files/installation_chooseinstallfolder.png)  
 
-#### Creating the Shortcuts  
+### Creating the Shortcuts  
 
 The following illustrates the options to create shortcuts on Windows.
 
 ![chooseshortcutfolder](./files/installation_chooseshortcutfolder.png)  
 
-#### Configuration  
+### Configuration  
 
 At Windows it is possible to specify the user which is used to start the SSMS service.
 
@@ -53,19 +53,19 @@ The configuration utility requires a port to access its user interface. Default 
 
 ![configuration9000](./files/installation_configuration9000.png)  
 
-#### Creating password for the Configuration Utility  
+### Creating password for the Configuration Utility  
 
 The access to the Configuration Utility is only possible with a password. Please set the password for the Configuration Utility. The password must contain 4 to 20 characters. Initially, the plain text password is transferred to CU. Once CU has been started this password becomes encrypted and stored in the configuration file. This password prevents unauthorized access to the settings you have configured.  
 
 ![configurationpassword](./files/installation_configurationpassword.png)  
 
-#### Summary of the Settings  
+### Summary of the Settings  
 
  Before completing the installation, you receive a summary of the settings configured so far. You can confirm them by clicking on "Install":  
 
  ![pre-installationsummary](./files/installation_summary.png)  
 
-#### Completing the Installation  
+### Completing the Installation  
 
 In conclusion, you receive a summary of the installation process with information about the directory path where you can find the respective log file. Click on "Done" to end the installation program.  
 
@@ -73,7 +73,7 @@ In conclusion, you receive a summary of the installation process with informatio
 
 Once you have completed the installation, the program starts automatically the configuration utility with its web interface for the SSMS configuration.  
 
-### Installation on Linux
+## Linux based Installation
 
 Run the following command on terminal in Linux:
 
