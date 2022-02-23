@@ -5,7 +5,9 @@ sidebar_position: 2
 
 Standalone way of deployment comes with the package of setup files for the respective OS systems (Windows, linux and others if supported).  
 
-**Shared folder for the Internal team purpose only**:
+**Shared folder for the Internal team purpose only**:  
+
+![ohneidpspath123](./files-deploy/ohneidppath123.png)  
 
 > Network/10.21.0.200/shared_development/Release/SSMS  
 
